@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-game-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-[#0a0a0f] via-game-bg to-[#12121a] text-game-text font-sans;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Light mode styles */
+  .light-mode {
+    --game-bg: #f5f5f7;
+    --game-surface: #ffffff;
+    --game-surface-hover: #f0f0f2;
+    --game-primary: #0071e3;
+    --game-primary-hover: #0077ed;
+    --game-text: #1d1d1f;
+    --game-text-muted: #6e6e73;
+    --game-border: #d2d2d7;
+  }
+
+  .light-mode body {
+    @apply bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 text-gray-900;
+  }
+
+  /* Light mode overrides for specific elements */
+  .light-mode .bg-game-bg {
+    background: linear-gradient(to bottom right, #f5f5f7, #e8e8ed);
+  }
+
+  .light-mode .bg-game-surface {
+    background-color: #ffffff;
+  }
+
+  .light-mode .bg-game-surface-hover {
+    background-color: #f0f0f2;
+  }
+
+  .light-mode .text-game-text {
+    color: #1d1d1f;
+  }
+
+  .light-mode .text-game-text-muted {
+    color: #6e6e73;
+  }
+
+  .light-mode .border-game-border {
+    border-color: #d2d2d7;
+  }
+
+  .light-mode .shadow-game-primary\/20 {
+    box-shadow: 0 10px 25px rgba(0, 113, 227, 0.15);
+  }
+
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-game-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-game-primary to-blue-600 rounded-md;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply from-blue-600 to-game-primary;
+  }
+}
+
+@layer components {
+  /* Ad banner placeholder styling */
+  .ad-banner {
+    @apply bg-gradient-to-br from-game-surface to-game-surface-hover border border-game-border rounded-lg flex items-center justify-center text-game-text-muted text-sm font-medium;
+  }
+
+  /* Theater mode custom styles */
+  .theater-container {
+    @apply min-h-screen bg-gradient-to-br from-[#0a0a0f] via-game-bg to-[#12121a];
+  }
+
+  /* Game card hover effect - improved */
+  .game-card {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .game-card:hover {
+    @apply transform scale-105 shadow-2xl shadow-game-primary/20;
+  }
+}
+
+/* Smooth animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
