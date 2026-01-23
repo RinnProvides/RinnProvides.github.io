@@ -54,7 +54,7 @@ export const games: Game[] = [
     id: 'moto-x3m',
     title: 'Moto X3M',
     thumbnail: 'https://www.coolmathgames.com/sites/default/files/MotoX3M_OG-logo.jpg',
-    embedUrl: 'https://moto-x3monline.github.io/',
+    embedUrl: 'https://www.friv.com/z/games/motox3m/game.html',
     category: 'racing',
     featured: true,
     isHot: true,
@@ -137,8 +137,8 @@ export const games: Game[] = [
   {
     id: 'vex-3',
     title: 'Vex 3',
-    thumbnail: 'https://raw.githubusercontent.com/vex-3/vex-3.github.io/master/icon.png',
-    embedUrl: 'https://vex-3.github.io/',
+    thumbnail: 'https://www.coolmathgames.com/sites/default/files/Vex3_OG-logo.jpg',
+    embedUrl: 'https://games-site.github.io/projects/vex3/index.html',
     category: 'action',
     isHot: true,
     description: 'Vex 3 is an adrenaline-fueled stickman platformer that tests your parkour skills, reaction time, and patience through a series of brutally challenging obstacle courses. As a nimble stickman character, you must run, jump, climb, swim, and slide through ten main acts plus numerous challenge stages filled with deadly traps and precision platforming sequences. The game is notorious for its difficulty - one wrong move means instant death and respawning at the last checkpoint. Despite the punishing difficulty, the game is incredibly fair: every death is your fault, and with practice, every obstacle can be mastered. Controls are fluid and responsive: use ARROW KEYS or WASD to move, DOWN KEY to crouch and slide under low obstacles, and SPACEBAR to interact with certain objects. The movement mechanics include wall climbing by jumping toward walls and holding the direction, wall jumping by pressing away from the wall while climbing, swimming with directional controls, and sliding to gain speed or fit under tight spaces. The physics are finely tuned, giving your stickman weight and momentum that you must account for when making precise jumps. Each act introduces new hazards and mechanics progressively: spinning blades that require careful timing, moving platforms you must ride, spikes protruding from walls and floors, blocks that crumble when stepped on, pools of toxic water, laser beams, and pneumatic crushers. The level design is ingenious, combining these hazards in creative ways that require split-second decision-making and flawless execution. Checkpoints appear regularly, softening the blow of the game\'s difficulty by respawning you at recent progress points rather than restarting entire acts. The game rewards speedrunning - each act tracks your completion time, and leaderboards encourage competitive play among friends. Challenge rooms unlock after completing main acts, featuring even more difficult obstacle courses designed for hardcore players seeking the ultimate test. Collectible stars scattered throughout acts add exploration and completionist objectives beyond simply reaching the finish line. The minimalist art style keeps focus on gameplay, with smooth animations making movement feel fluid and satisfying.'
@@ -146,16 +146,16 @@ export const games: Game[] = [
   {
     id: 'vex-4',
     title: 'Vex 4',
-    thumbnail: 'https://raw.githubusercontent.com/vex-3/vex-3.github.io/master/images/vex4.jpg',
-    embedUrl: 'https://vex4.github.io/',
+    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRfKev7DhGRFt2tsXCUlFzYr-AHKW8JObqCw&s',
+    embedUrl: 'https://vex4.io/',
     category: 'action',
     description: 'Vex 4 continues the legendary stickman platformer series with nine new acts filled with even more devious traps, tighter platforming challenges, and creative obstacle designs. Building upon Vex 3\'s foundation, this installment introduces several new mechanics that add fresh complexity to the proven formula. The core gameplay remains tight precision platforming where your stickman must navigate deadly obstacle courses filled with spinning saws, spike pits, moving platforms, and timing-based hazards. New additions include sticky walls that let you climb vertical surfaces more easily, proximity mines that explode when you get close, zip lines for rapid traversal, and double jump pads that launch you higher. Controls mirror previous entries: ARROW KEYS or WASD for movement, DOWN KEY to duck and slide, with the addition of wall running mechanics activated by jumping toward walls at speed. The movement feels even more fluid than before, with improved physics that make navigating complex obstacle chains satisfying and intuitive. Each act presents escalating difficulty, starting with relatively simple introductions to new mechanics before combining them in challenging ways that test everything you\'ve learned. Vex 4 also introduces a comprehensive achievement system beyond simple act completion - challenges include completing acts under target times, collecting all hidden stars scattered throughout levels, and completing entire acts without dying. These optional objectives provide substantial replay value for completionists. The game includes a level editor feature allowing players to create and share custom acts, extending longevity through community-generated content. User-created levels range from accessible fun courses to nearly impossible death traps designed by masochistic creators. The visual style maintains the series\' minimalist aesthetic with smooth animations and clear visual language that lets you understand threats at a glance. Death animations are comically brutal, with your stickman meeting various grisly fates depending on what killed you. The checkpoint system remains forgiving, respawning you at regular intervals so failed attempts don\'t feel too punishing.'
   },
   {
     id: 'vex-5',
     title: 'Vex 5',
-    thumbnail: 'https://raw.githubusercontent.com/vex-3/vex-3.github.io/master/images/vex5.jpg',
-    embedUrl: 'https://vex5.github.io/',
+    thumbnail: 'https://static.keygames.com/0/114160/99829/672x378/vex-5.webp',
+    embedUrl: 'https://vex5online.github.io/file/',
     category: 'action',
     isHot: true,
     description: 'Vex 5 represents the current evolution of the stickman platforming series, introducing polished mechanics and the most challenging level designs yet. This entry refines everything that made previous Vex games great while adding quality-of-life improvements and new gameplay elements. The stickman protagonist returns for ten brutal acts plus bonus challenge stages, each packed with deadly traps, precise platforming sequences, and secrets to discover. New mechanics include the ability to grab and hang from ledges, giving you more control during difficult jumps, regenerating checkpoints that slowly reappear if destroyed, and intelligent camera work that zooms to show upcoming hazards. The physics feel tighter than ever, with perfectly tuned jump arcs and momentum that reward skillful play while remaining accessible to newcomers willing to learn. Controls remain intuitive: ARROW KEYS or WASD for directional movement, with improved wall mechanics that automatically grab nearby walls when jumping toward walls at speed. The game introduces "Acts" as major challenges broken into smaller checkpoint-separated sections, making progress feel more achievable even in difficult stages. New hazard types include laser grids with narrow safe windows, ice physics that reduce traction, bounce pads that launch you in specific directions, and moving platforms with complex patterns requiring prediction and timing. Environmental variety increases dramatically - levels take place across different themes including industrial facilities, alien laboratories, and high-tech installations, each with unique visual aesthetics and hazard types. Vex 5 features robust achievement and completion tracking, encouraging speedruns with visible timers and leaderboards. Trophy system rewards specific accomplishments like completing acts under target times, finding all collectible stars, and completing hitless runs. The visual presentation is the most polished yet, with smooth 60fps animations, particle effects, and background details that add personality without cluttering the screen. Quality-of-life features include instant restarts via hotkey, practice mode that lets you attempt specific sections repeatedly, and ghost replays showing your previous attempts.'
@@ -163,8 +163,8 @@ export const games: Game[] = [
   {
     id: 'blumgi-rocket',
     title: 'Blumgi Rocket',
-    thumbnail: 'https://3kh0-assets.github.io/blumgi-rocket/thumbnail.png',
-    embedUrl: 'https://3kh0-assets.github.io/blumgi-rocket/',
+    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/672fb98802b00740e3c885cb2b31fc51/blumgi-rocket.png',
+    embedUrl: 'https://majesticwafer.github.io/BlumgiRocket',
     category: 'racing',
     isNew: true,
     description: 'Blumgi Rocket is an innovative physics-based racing game where you control a car equipped with a rocket booster, using controlled explosions to launch, flip, and navigate through obstacle courses. The twist is that you don\'t have traditional steering - instead, you aim your rocket and fire it to propel your car in the opposite direction through physics. This creates unique puzzle-platforming gameplay where understanding angles, momentum, and trajectory is essential for success. Each level presents a goal: reach the finish line, collect stars, or land in target zones, all while managing your car\'s orientation and momentum. Controls are unconventional: use MOUSE to aim the rocket direction, and LEFT MOUSE BUTTON to fire. The rocket provides thrust in the opposite direction you\'re aiming, following Newton\'s third law. This means if you want to go right, aim left and fire; if you need to flip, aim down and fire while airborne. The physics are realistic and satisfying - your car has weight and rotational momentum that must be managed carefully. Firing too much thrust can send you tumbling out of control, while insufficient power leaves you short of your target. Each level is a physics puzzle requiring you to analyze the layout, plan your rocket bursts, and execute precise sequences. Obstacles include gaps you must launch across, walls requiring careful navigation, moving platforms you must time correctly, and zones that trigger instant failure if touched. The game features multiple vehicles with different stats affecting weight, rocket power, and handling. Heavier vehicles are more stable but require more thrust to move; lighter vehicles respond quickly but can easily flip out of control. Unlocking new vehicles provides fresh challenges as you adapt to their unique physics. The visual design is bright and colorful with clean geometric shapes that keep focus on physics challenges rather than overwhelming detail. The ragdoll car physics create hilarious failures when things go wrong - your vehicle cartwheel across levels in comical fashion after miscalculated rocket blasts.'
@@ -232,8 +232,8 @@ export const games: Game[] = [
   {
     id: 'tunnel-rush',
     title: 'Tunnel Rush',
-    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/bc1f10f67ae95eab7e44b1e9d30c4d1e/tunnel-rush.png',
-    embedUrl: 'https://ovo-unblocked-game.github.io/tunnelrush/',
+    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ13q6aHn1f3Dd4U3w_mjs8NOot8U2bV0M8ZA&s',
+    embedUrl: 'https://tunnelrush-game.github.io/',
     category: 'racing',
     isNew: true,
     isHot: true,
@@ -243,7 +243,7 @@ export const games: Game[] = [
   {
     id: 'getaway-shootout',
     title: 'Getaway Shootout',
-    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/a66eb6ea32f16c54fced68584f085b2b/getaway-shootout.png',
+    thumbnail: 'https://imgs.crazygames.com/getaway-shootout_16x9/20241230044730/getaway-shootout_16x9-cover?metadata=none&quality=100&width=1200&height=630&fit=crop',
     embedUrl: 'https://getawayshootout.io/',
     category: 'multiplayer',
     isNew: true,
@@ -253,7 +253,7 @@ export const games: Game[] = [
   {
     id: 'house-of-hazards',
     title: 'House of Hazards',
-    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/45e028cbca00432f8e72f9e27a1b29e3/house-of-hazards.png',
+    thumbnail: 'https://imgs.crazygames.com/house-of-hazards_16x9/20250108101728/house-of-hazards_16x9-cover?metadata=none&quality=60&height=5729',
     embedUrl: 'https://houseofhazards.io/',
     category: 'multiplayer',
     isNew: true,
@@ -263,8 +263,8 @@ export const games: Game[] = [
   {
     id: 'ovo',
     title: 'OvO',
-    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/c30e099bfc7c422bbdb5abf2fdcf16ee/ovo.png',
-    embedUrl: 'https://ovo-games.github.io/',
+    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/85db6b2eb81ca64d881a950a43744389/ovo-classic.png',
+    embedUrl: '"https://ovoclassic-pro.github.io/file/"',
     category: 'action',
     isNew: true,
     description: 'OvO is a fast-paced precision platformer where you control a stickman character through increasingly difficult obstacle courses filled with spikes, moving platforms, and timing-based challenges. The game emphasizes speed and fluidity, rewarding players who master the movement mechanics to complete levels quickly and efficiently. With over 50 levels of progressive difficulty, OvO starts accessible but ramps up to genuinely challenging platforming that demands precise inputs and perfect timing. Controls are deceptively simple: use ARROW KEYS or WASD for movement, with additional actions like sliding (DOWN ARROW while running), wall jumping (jumping toward walls), and dive moves that grant temporary momentum boosts. The depth comes from combining these moves smoothly - experienced players chain wall jumps into slides into momentum-preserving jumps to maintain speed through complex obstacle sequences. The movement feels incredibly responsive and fluid, creating a satisfying skill ceiling where perfect play results in flowing, dance-like runs through levels. Each level is a tightly designed gauntlet of hazards: spike floors and walls that kill instantly on contact, moving platforms requiring precise timing, crumbling blocks that fall moments after stepping on them, and gaps demanding perfectly timed jumps. The level design is brilliant, introducing mechanics gradually through easier stages before combining them in creative ways that challenge even experienced platformer players. Checkpoints appear regularly within levels, softening the difficulty by respawning you at recent progress rather than restarting entirely. The game emphasizes speedrunning with visible timers on every level. Completing levels quickly unlocks medals - bronze, silver, and gold - based on time thresholds. These medals add substantial replay value as you optimize routes and perfect execution to achieve faster times. Leaderboards let you compete with friends for best times, creating competitive motivation beyond simply completing levels. The game includes multiple distinct worlds, each introducing unique aesthetic themes and new obstacle types that keep gameplay fresh. The minimal art style uses simple geometric shapes and limited color palettes that keep focus on gameplay rather than overwhelming visual detail. The stickman character animates smoothly, making movement feel precise and intentional. Sound design emphasizes impact - jumps, landings, and deaths have distinct audio cues that provide feedback without becoming repetitive. Background music is upbeat and energetic, maintaining momentum during difficult sections without causing fatigue during repeated attempts. OvO successfully captures the essence of precision platforming: simple to understand, challenging to master, with high skill ceiling rewarding practice and dedication. The combination of responsive controls, clever level design, and speedrunning focus creates an addictive loop where you\'re always motivated to try one more time, perfect one more section, or shave a few more seconds off your time. Whether you\'re casually completing levels or obsessively hunting gold medals on every stage, OvO offers tight platforming challenge that respects player skill and never feels unfair. Its minimalist presentation and focused design philosophy make it a standout in the crowded platformer genre.'
