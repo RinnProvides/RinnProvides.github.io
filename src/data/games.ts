@@ -67,10 +67,10 @@ export const games: Game[] = [
   {
     id: '1v1-lol',
     title: '1v1.LOL',
-    thumbnail: 'https://play-lh.googleusercontent.com/eRvMNKNf35wHnqw7hUYGVq1dIVR34v6xZuFIBPHd5wVL5XKZnGJJPgHpqPqOjHDRqw',
+    thumbnail: 'https://azgames.io/upload/imgs/1v1lol.png',
     embedUrl: 'https://play-1v1-lol.github.io/',
     category: 'multiplayer',
-    isNew: true,
+    isNew: false,
     isHot: true,
     isTwoPlayer: true,
     description: '1v1.LOL is a competitive online third-person shooter that combines fast-paced combat with building mechanics inspired by Fortnite. This game puts you in direct 1v1 battles against other players where quick reflexes, sharp aim, and strategic building skills determine victory. The core gameplay involves shooting opponents while simultaneously constructing defensive structures and gaining positional advantages through building. You can create walls, ramps, floors, and roofs to protect yourself from incoming fire, gain high ground advantage, or trap opponents. The game offers multiple modes including Box Fight where players battle in confined arenas, Build Fight where building skills are emphasized, and Practice Mode for honing your mechanics. Controls are comprehensive: use WASD KEYS for movement, MOUSE to aim and left-click to shoot, number keys 1-5 to switch between weapons and building pieces, and G to edit structures. The building system requires memorization and practice - Q key builds walls, E builds floors, R builds ramps, and F builds pyramids. Quick building is essential for survival, as experienced players can construct elaborate defensive structures in seconds. The shooting mechanics reward accuracy with damage multipliers for headshots. Weapons include assault rifles for medium-range combat, shotguns for close-quarters devastating blows, sniper rifles for long-range elimination, and SMGs for rapid fire suppression. The game features multiple maps with different layouts and height variations, requiring adaptive strategies. Resource management matters - you start with limited building materials and must collect more from eliminations. The ranking system matches you against similarly skilled opponents, creating balanced and competitive matches. Customization options let you change your character skin, pickaxe design, and emotes. The practice arena includes aim training courses, building drills, and bot matches to improve your skills before facing real opponents. With its blend of shooting and building mechanics, 1v1.LOL offers depth that rewards both mechanical skill and strategic thinking.'
@@ -78,13 +78,42 @@ export const games: Game[] = [
   {
     id: 'fireboy-watergirl',
     title: 'Fireboy and Watergirl',
-    thumbnail: 'https://fireboyandwatergirl-unblocked.github.io/images/icon_game.png',
-    embedUrl: 'https://fireboy-and-watergirl.gitlab.io/',
+    thumbnail: 'https://amhooman.github.io/fireboywatergirl/img.gamedistribution.com/gamedistributionid-512x512.jpeg',
+    embedUrl: 'https://amhooman.github.io/fireboywatergirl/game.html',
     category: 'puzzle',
-    isNew: true,
+    isNew: false,
     isTwoPlayer: true,
     description: 'Fireboy and Watergirl is the beloved puzzle-platformer series that challenges players to control two characters simultaneously through elaborate temple mazes filled with puzzles, traps, and collectibles. Fireboy is immune to lava but dies in water, while Watergirl is immune to water but perishes in lava. Both characters die if they touch green toxic sludge. This elemental dynamic creates unique puzzle scenarios where players must carefully navigate each character through their respective safe zones while working together to activate switches, push buttons, and unlock doors. The game can be played solo controlling both characters with different keys, or cooperatively with a friend in local multiplayer. Controls for solo play: use ARROW KEYS to move Fireboy and WASD KEYS to move Watergirl. The challenge comes from coordinating both characters\' movements, especially during timed sequences or when both need to activate pressure plates simultaneously. Each level features cleverly designed puzzles that exploit the characters\' elemental properties: Fireboy must walk through lava to reach switches while Watergirl takes alternative water routes, or both must work together to position movable boxes. The game includes collectible diamonds - red diamonds for Fireboy, blue diamonds for Watergirl - scattered throughout levels, encouraging exploration and perfect playthroughs. The level design progressively introduces new mechanics: doors that only open when both characters stand on pressure plates, moving platforms that require precise timing, light-beam puzzles where mirrors must be positioned correctly, and ice floors that change movement physics. The Forest Temple (first game) features 32 levels of increasing complexity, with later temples introducing themed mechanics like light manipulation, ice physics, and crystal teleportation. Completing levels quickly and collecting all diamonds unlocks achievement medals and bragging rights. The game emphasizes cooperation and communication in two-player mode, as both players must coordinate their actions and problem-solve together. The simple graphics and intuitive controls make the game accessible to all ages, while the increasingly complex puzzles provide satisfying mental challenges. Fireboy and Watergirl has spawned multiple sequels, each introducing new temples with unique puzzle mechanics, ensuring fresh content for fans of the series.'
   },
+  
+  {
+    id: 'wings-io',
+    title: 'Wings.io',
+    thumbnail: 'https://static-cdn.jtvnw.net/ttv-boxart/492922_IGDB-272x380.jpg',
+    embedUrl: 'https://wings.io/',
+    category: 'io',
+    isHot: true,
+    description: 'Wings.io is a high-octane multiplayer dogfighting game that puts you in the cockpit of a fighter jet battling for air superiority. Unlike slower-paced IO games, Wings.io is pure chaos from the moment you spawn. You control your plane with your mouse—the jet follows your cursor—and shoot automatically or by clicking, depending on your settings. The sky is filled with glowing weapon crates falling via parachutes; collecting these upgrades your standard machine gun to powerful weapons like homing missiles, double-barrel cannons, laser beams, and bomb droppers. The objective is simple: shoot down other players to score points and climb the leaderboard to become the "King of the Sky." When you kill the current King, you receive a massive score bonus, but be warned: the King\'s position is marked for everyone to see, making you the primary target. The game also features naval warfare elements—ships on the ocean surface will fire anti-air cannons at you, but destroying them yields huge point rewards. The pacing is incredibly fast, rewarding twitch reflexes and aggressive maneuvers. Since your health drains slowly over time (or quickly when hit), you must constantly be on the offensive to survive. With its satisfying combat and "bullet hell" intensity, Wings.io is one of the most exciting shooters in the browser genre.'
+  },
+  {
+    id: 'digdig-io',
+    title: 'Digdig.io',
+    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/7e8a9372138c42b254502d9cc245645e.png',
+    embedUrl: 'https://digdig.io/',
+    category: 'io',
+    isNew: true,
+    description: 'Digdig.io is a unique excavation and combat IO game from the creators of the classic Diep.io. You play as a circular excavator digging through a destructible map to grow in size. As you dig, you collect water (to grow) and gold (to buy armor/health). The twist is that digging helps you grow, but also makes you a target for other players. Combat is distinct from other games: to damage an opponent, you must spin your saw blades faster than theirs or be larger than them. When you aren\'t digging, you recover health, creating a strategic balance between aggressive expansion and retreating to heal. The game features multiple modes including FFA (Free For All), TDM (Team Deathmatch), and Tag. You can also unlock achievements to gain different skins and starting bonuses. The map contains various biomes, including lava zones that damage you and obsidian which is harder to break but yields more points. The "fog of war" mechanic means you can only see a short distance around you, adding tension as you never know if a massive player is tunneling right toward you. Mastering the movement—pointing your mouse to move and clicking to sprint/dig—is key to outmaneuvering opponents and trapping them in tunnels.'
+  },
+  {
+    id: 'zombs-royale',
+    title: 'Zombs Royale',
+    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/5e67839352e8d3566d895525547c87c8.png',
+    embedUrl: 'https://zombsroyale.io/',
+    category: 'multiplayer',
+    isHot: true,
+    description: 'Zombs Royale is a massive 2D battle royale game that brings the complete Fortnite/PUBG experience to your browser in a top-down perspective. You and 99 other players are dropped onto a large map via parachute, and you must scramble to find weapons, shields, and supplies to survive. A deadly gas storm continuously shrinks the playable area, forcing players into tighter combat zones until only one survivor remains. The game features a vast arsenal of weapons with different rarities (Common, Uncommon, Rare, Epic, Legendary, Mythic), ranging from assault rifles and shotguns to sniper rifles and RPGs. You can also find utility items like healing potions, shield hybrid potions, and impulse grenades to outplay opponents. The map is diverse, featuring locations like "Lucky Lake," "Tinker Town," and various bases that encourage close-quarters or long-range combat. Controls are standard WASD movement with E to interact and Left Click to shoot. The game shines with its seasonal updates, adding new modes like 50v50, Superpowers, and Weapons Race. You can customize your character with hundreds of skins, sprays, and parachute designs. The fast matches (usually 5-7 minutes) and high skill ceiling make it one of the most replayable and competitive browser games available.'
+  },
+
   {
     id: 'retro-bowl',
     title: 'Retro Bowl',
