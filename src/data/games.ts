@@ -127,7 +127,7 @@ export const games: Game[] = [
   {
     id: 'duck-life',
     title: 'Duck Life',
-    thumbnail: 'https://ducklifegame.github.io/images/class-477.png',
+    thumbnail: 'https://www.coolmathgames.com/sites/default/files/styles/mobile_game_image/public/DuckLife_OG-logo.jpg.webp?itok=YPMNTKNM',
     embedUrl: 'https://ducklifegame.github.io/',
     category: 'puzzle',
     isNew: true,
