@@ -44,7 +44,7 @@ export const games: Game[] = [
     id: 'cookie-clicker',
     title: 'Cookie Clicker',
     thumbnail: 'https://play-lh.googleusercontent.com/Z1MOuuiD05ZN5LkVmMEvKF0mqAc-FknaQ2j8s4dZiO-LSPQX4EEA3RVJdlQEtxe96ok',
-    embedUrl: 'https://g8hh.github.io/cookieclicker/',
+    embedUrl: 'https://cookieclicker-unblocked.online/',
     category: 'puzzle',
     featured: true,
     isNew: true,
@@ -98,7 +98,7 @@ export const games: Game[] = [
   {
     id: 'digdig-io',
     title: 'Digdig.io',
-    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/7e8a9372138c42b254502d9cc245645e.png',
+    thumbnail: 'https://i.ytimg.com/vi/g7I2gKVbCYE/maxresdefault.jpg',
     embedUrl: 'https://digdig.io/',
     category: 'io',
     isNew: true,
@@ -107,7 +107,7 @@ export const games: Game[] = [
   {
     id: 'zombs-royale',
     title: 'Zombs Royale',
-    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/5e67839352e8d3566d895525547c87c8.png',
+    thumbnail: 'https://kevin.games/assets/images/games/zombs-royale.jpg',
     embedUrl: 'https://zombsroyale.io/',
     category: 'multiplayer',
     isHot: true,
@@ -172,8 +172,8 @@ export const games: Game[] = [
   {
     id: 'among-us-single',
     title: 'Among Us',
-    thumbnail: 'https://raw.githubusercontent.com/sagedev0/among-us-single-player/master/assets/images/icon.png',
-    embedUrl: 'https://sagedev0.github.io/among-us-single-player/',
+    thumbnail: 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000036098/758ab0b61205081da2466386940752c70e0e5ea43bd39e8b9b13eaa455c69b7e',
+    embedUrl: 'https://amongusplay.online/',
     category: 'action',
     isHot: true,
     description: 'Among Us Single Player is a fan-made recreation of the viral social deduction hit, designed specifically for browsers without the need for server connections. In this version, you play as the Imposter every time, tasked with eliminating the computer-controlled Crewmates before they complete their tasks. This creates a stealth-action puzzle experience where you must isolate victims, utilize vents, and sabotage ship systems to win. The game perfectly captures the tension and mechanics of the original but focuses entirely on the Imposter gameplay loop. Your objective is to kill everyone on the ship without being caught. Controls mimic the original: use WASD or ARROW KEYS to move, and click on-screen buttons to Kill, Sabotage, or Vent. As you roam the Skeld (the classic spaceship map), you must watch the movement patterns of the AI bots. They move between rooms completing tasks just like real players. If a bot sees you kill someone or sees you pop out of a vent, they will run to the emergency button to call a meeting. During meetings, you must vote to try and blend in, though in this single-player version, the focus is more on the stealth mechanics than the social debate. You can trigger sabotages like Reactor Meltdowns or O2 Depletion to force the AI bots to move to specific locations, creating opportunities for isolated kills or separating groups. You can also lock doors to trap victims in rooms with you. The visual style is identical to the original game, featuring the iconic colorful bean astronauts and familiar ship layout. This version is perfect for practicing Imposter routes, learning vent connections, and understanding sabotage timing without the pressure of online ranked play. It runs smoothly in any browser and requires no download, making it the perfect way to experience the thrill of being the Imposter in a quick, accessible format.'
@@ -185,7 +185,7 @@ export const games: Game[] = [
   {
     id: 'defly-io',
     title: 'Defly.io',
-    thumbnail: 'https://defly.io/img/logo.png',
+    thumbnail: 'https://defly.io/img/facebook-share.png',
     embedUrl: 'https://defly.io/',
     category: 'io',
     isNew: true,
@@ -195,7 +195,7 @@ export const games: Game[] = [
   {
     id: 'paper-io-2',
     title: 'Paper.io 2',
-    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/66bd63283257858c8945f3c9d7496660.png',
+    thumbnail: 'https://paperiogame.io/data/image/game/paper-io-game.jpg',
     embedUrl: 'https://paper-io-2.github.io/',
     category: 'io',
     isNew: true,
@@ -204,8 +204,8 @@ export const games: Game[] = [
   {
     id: 'hole-io',
     title: 'Hole.io',
-    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/55b741513222db2a24555891338423f4.png',
-    embedUrl: 'https://hole-io.github.io/',
+    thumbnail: 'https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000069917/28c5a57b2711d70dbeb4dd55155691e8135a3069bad3455547392878c0162861',
+    embedUrl: 'https://holeio.com/',
     category: 'io',
     isHot: true,
     description: 'Hole.io is a chaotic physics-based destruction game where you play as a sentient black hole with an insatiable appetite. Dropped into a bustling city environment alongside other player-controlled holes, your objective is to consume everything in sight to grow larger. You start small, only able to eat pedestrians, traffic cones, and small bushes. As you eat, you grow in size, allowing you to consume cars, fences, and streetlights. Reach massive sizes, and you can swallow entire buildings, skyscrapers, and even other smaller players. The match is a timed battle royale against the clock and other players. The controls are extremely simple: use your MOUSE or WASD to slide your hole across the pavement. The physics are the star of the show here—objects tumble realistically into your void, and watching an entire apartment complex collapse into your hole is immensely satisfying. There is a strong competitive element; if you are larger than an enemy hole, you can eat them, removing them from the game for a few seconds and stealing their points. This creates a predator-prey dynamic where you must hunt smaller holes while fleeing from the giants. The game rewards aggressive expansion in the early game to get a size advantage. Various maps differ from the standard city, including medieval themes or futuristic layouts, keeping the destruction fresh. Strategically, you need to memorize where high-density areas of small objects are (like parks or parking lots) to level up quickly in the first 30 seconds. Hole.io is a power fantasy of pure destruction, offering bite-sized matches that are perfect for quick breaks or competitive sessions with friends.'
@@ -213,7 +213,7 @@ export const games: Game[] = [
   {
     id: 'krunker-io',
     title: 'Krunker.io',
-    thumbnail: 'https://krunker.io/img/logo_1.png',
+    thumbnail: 'https://imgs.crazygames.com/games/krunker-io/cover-1591336739727.png?metadata=none&quality=100&width=1200&height=630&fit=crop',
     embedUrl: 'https://krunker.io/',
     category: 'multiplayer',
     isHot: true,
