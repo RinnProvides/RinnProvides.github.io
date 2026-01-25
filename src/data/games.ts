@@ -117,7 +117,7 @@ export const games: Game[] = [
   {
     id: 'retro-bowl',
     title: 'Retro Bowl',
-    thumbnail: 'https://play-lh.googleusercontent.com/RM8KJj7KK8IbN68ZY9W5KDOmabmqYBIbZ8mqD0G2Kp3bBPNOeJ7RcfgDqsj6fKdPKaY',
+    thumbnail: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/Retro_Bowl_cover.png/250px-Retro_Bowl_cover.png',
     embedUrl: 'https://retrobowl.github.io/playgame/',
     category: 'sports',
     isNew: true,
