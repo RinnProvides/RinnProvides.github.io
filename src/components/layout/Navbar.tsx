@@ -27,7 +27,7 @@ interface NavbarProps {
 const categories = [
   { id: 'all', label: 'Home', icon: Gamepad2 },
   { id: 'favorites', label: 'Favorites', icon: Heart },
-    { id: 'casual', label: 'Casual', icon: Coffee },
+  { id: 'casual', label: 'Casual', icon: Coffee },
   { id: 'action', label: 'Action', icon: Zap },
   { id: 'puzzle', label: 'Puzzle', icon: Brain },
   { id: 'io', label: 'IO', icon: Globe },
