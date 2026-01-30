@@ -472,8 +472,8 @@ export const games: Game[] = [
   {
     id: 'poly-track',
     title: 'PolyTrack',
-    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/87504f47577553cb7ba338167f08021c.png',
-    embedUrl: 'https://kodub.github.io/polytrack/',
+    thumbnail: 'https://i.ytimg.com/vi/wXsG1d9TzdI/maxresdefault.jpg',
+    embedUrl: 'https://www.kodub.com/apps/polytrack',
     category: 'racing',
     isNew: true,
     isHot: true,
@@ -482,7 +482,7 @@ export const games: Game[] = [
   {
     id: 'stack',
     title: 'Stack',
-    thumbnail: 'https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/9f/8e/33/9f8e3308-f9b2-2970-bf7f-6824c3db3513/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg',
+    thumbnail: 'https://www.ketchappgames.com/images/games/Big/Stack.webp',
     embedUrl: 'https://stackgame.github.io/',
     category: 'puzzle',
     description: 'Stack is a minimalist arcade puzzle game where your goal is to build the highest tower possible by stacking moving blocks on top of each other. A block slides back and forth across the screen, and you must click or tap to place it on top of the previous one. If you mistime it and the block hangs over the edge, the overhanging part is sliced off, making your platform smaller for the next turn. As the tower gets higher, the blocks move faster, requiring intense concentration and rhythm. It is visually stunning with a color palette that shifts smoothly as you progress. The satisfaction of hitting "perfect" stacks (where the block aligns perfectly and makes a satisfying chime sound) makes it incredibly addictive. It is the perfect "just one more try" game.'
@@ -490,7 +490,7 @@ export const games: Game[] = [
   {
     id: 'crossy-road',
     title: 'Crossy Road',
-    thumbnail: 'https://crossyroad.io/assets/images/logo.png',
+    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo1ahBbcHTmbJp7ymTw8LABGF949PSHgBN1g&s',
     embedUrl: 'https://crossy-road-unblock.github.io/crossy-road/', 
     // Note: Poki links sometimes block iframes. If this fails, use: https://nguyenthanh1995.github.io/CrossyRoad/
     category: 'action',
@@ -508,8 +508,8 @@ export const games: Game[] = [
   {
     id: 'tanuki-sunset',
     title: 'Tanuki Sunset',
-    thumbnail: 'https://img.itch.zone/aW1nLzI1ODk2NTAucG5n/original/Uf%2Fq%2B9.png',
-    embedUrl: 'https://tanukisunset.com/', 
+    thumbnail: 'https://i.ytimg.com/vi/et0YhBBihNk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCAaq7w2UYWEIOIkTmbBwLocL358w',
+    embedUrl: 'https://maxwellstevenson.com/Vafor_IT/tanuki-sunset/', 
     category: 'racing',
     isNew: true,
     description: 'Tanuki Sunset is a synthwave-soaked longboard racing game where you play as a skateboarding raccoon. Yes, really. You speed down procedurally generated seaside roads, drifting around corners and collecting bits while avoiding cars and obstacles. The game is oozing with style, featuring a vibrant retro color palette and a chill lo-fi soundtrack. Controls involve using the analog stick (or keys) to drift: holding a direction charges a drift meter, allowing you to take tight corners at high speeds. Doing tricks and collecting points fills a meter that eventually lets you spin a roulette for bonus points. It is less about high-stress racing and more about "flow state" and enjoying the vibes, though the later levels do get challenging.'
@@ -517,8 +517,8 @@ export const games: Game[] = [
   {
     id: 'bloons-td-4',
     title: 'Bloons TD 4',
-    thumbnail: 'https://play-lh.googleusercontent.com/Eqb29K_E5p_xVj1xR_JgLwz4FvJ4_9vF7_8vF7_8vF7_8vF7_8vF7_8', // Generic BTD placeholder
-    embedUrl: 'https://bloonstd4.github.io/',
+    thumbnail: 'https://static.wikia.nocookie.net/b__/images/4/4b/BTD4-PromoArt.png/revision/latest/thumbnail/width/360/height/360?cb=20200711194940&path-prefix=bloons', // Generic BTD placeholder
+    embedUrl: 'https://bagelcomics.com/games/html/bloonstd4.html',
     category: 'puzzle',
     isHot: true,
     description: 'Bloons Tower Defense 4 is a classic strategy game where you must stop waves of colorful balloons (bloons) from reaching the end of the track. You do this by placing monkeys equipped with darts, boomerangs, cannons, and magic spells along the path. As you pop bloons, you earn money to upgrade your towers or buy new ones. This version introduces the "Sun God" temple and other iconic high-tier upgrades. It features multiple tracks with varying difficulty levels (Beginner, Intermediate, Advanced, Expert). The strategy comes from balancing your economy (building Banana Farms) with your defense. Different bloon types require different counters: Lead bloons can only be popped by explosives or fire, while Camo bloons need towers with special detection. It is arguably the peak of the classic Flash-era tower defense games.'
@@ -526,7 +526,7 @@ export const games: Game[] = [
   {
     id: 'bad-time-simulator',
     title: 'Bad Time Simulator (Sans)',
-    thumbnail: 'https://ih1.redbubble.net/image.1098586202.9366/st,small,507x507-pad,600x600,f8f8f8.jpg',
+    thumbnail: 'https://lgames.littlegames.io/bgames/game_image/1745767774bad-time-simulator.webp',
     embedUrl: 'https://jcw87.github.io/c2-sans-fight/',
     category: 'action',
     description: 'Bad Time Simulator is a browser-based recreation of the famous "Sans Fight" from the game Undertale. It isolates the most difficult boss battle of the game, allowing players to practice against Sans without playing through the entire RPG. You control a small red heart (your soul) inside a box, dodging an onslaught of bone attacks and laser blasts (Gaster Blasters). It is a "bullet hell" game that requires pixel-perfect movement and memorization of attack patterns. You can heal using items, but Sans dodges your attacks, making it a test of endurance. This web version is incredibly accurate to the original and includes an endless mode for hardcore players who want to see how long they can survive.'
