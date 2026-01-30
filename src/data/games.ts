@@ -496,6 +496,15 @@ export const games: Game[] = [
     category: 'action',
     description: 'Crossy Road is the endless arcade hopper that famously answered the question "Why did the chicken cross the road?" You control a blocky character (starting with a chicken) navigating through an endless stream of traffic, rivers, and train tracks. The gameplay is simple: tap to hop forward, swipe to move sideways. The goal is to get as far as possible without getting flattened by cars, eaten by eagles, or drowning in the river. The game features a unique voxel art style and dozens of unlockable characters, each with their own funny sound effects and visual themes. It is endless, procedurally generated, and increasingly difficult as traffic speeds up. A modern classic that works perfectly in browsers.'
   },
+   {
+    id: 'raft-wars-2',
+    title: 'Raft Wars 2',
+    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/8ce3d09339bcb18c63bf9f1780795944/raft-wars-2.png',
+    embedUrl: '  https://77pen.github.io/p6/raft-wars-2', 
+    // Note: Poki links sometimes block iframes. If this fails, use: https://nguyenthanh1995.github.io/CrossyRoad/
+    category: 'action',
+    description: 'Crossy Road is the endless arcade hopper that famously answered the question "Why did the chicken cross the road?" You control a blocky character (starting with a chicken) navigating through an endless stream of traffic, rivers, and train tracks. The gameplay is simple: tap to hop forward, swipe to move sideways. The goal is to get as far as possible without getting flattened by cars, eaten by eagles, or drowning in the river. The game features a unique voxel art style and dozens of unlockable characters, each with their own funny sound effects and visual themes. It is endless, procedurally generated, and increasingly difficult as traffic speeds up. A modern classic that works perfectly in browsers.'
+  },
   {
     id: 'tanuki-sunset',
     title: 'Tanuki Sunset',
