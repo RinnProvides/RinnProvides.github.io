@@ -45,7 +45,7 @@ export const games: Game[] = [
     id: 'cookie-clicker',
     title: 'Cookie Clicker',
     thumbnail: 'https://play-lh.googleusercontent.com/Z1MOuuiD05ZN5LkVmMEvKF0mqAc-FknaQ2j8s4dZiO-LSPQX4EEA3RVJdlQEtxe96ok',
-    embedUrl: 'https://cookieclicker-unblocked.online/',
+    embedUrl: 'https://g8hh.github.io/cookieclicker/',
     category: 'puzzle',
     featured: true,
     isNew: true,
