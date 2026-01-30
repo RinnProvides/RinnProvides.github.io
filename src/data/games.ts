@@ -465,6 +465,62 @@ export const games: Game[] = [
     category: 'puzzle',
     isNew: true,
     description: 'BitLife is a text-based life simulation game where you live an entire life from birth to death through a series of decisions and random events. This addictive game puts you in control of a character\'s entire existence, letting you make choices that shape their life story. You\'ll experience everything from childhood through old age, making decisions about education, relationships, career, finances, and more. The game starts by generating a random character with specific attributes including appearance, country of birth, initial family situation, and starting stats like Health, Happiness, Smarts, and Looks. From there, every year of your character\'s life presents new situations and choices. Controls are entirely MOUSE-based, with a simple interface presenting text descriptions and button options for each decision. Click "Age Up" to advance one year, triggering events and aging your character. Each year brings random events drawn from hundreds of possibilities: you might get invited to a party, encounter bullies at school, find money on the street, or experience family drama. Your responses to these events affect your character\'s stats and future opportunities. The game simulates realistic life progression: during childhood, focus on education and extracurriculars; as a teen, maintain grades, work part-time jobs, and navigate social situations; in adulthood, pursue higher education or careers, find romantic partners, buy houses and cars, and raise children. The career system is extensive, featuring dozens of jobs from regular positions to special careers like actor, musician, athlete, or even criminal. Each career path has unique events and progression mechanics. Relationships are complex: you can date, get married, have children, divorce, and maintain connections with family and friends. Each relationship requires maintenance through interactions like spending time together, giving gifts, or having conversations. The game includes random challenges and scenarios keeping gameplay unpredictable: you might inherit money, face lawsuits, win the lottery, or get diagnosed with illnesses. Financial management matters - buy houses and cars, invest in businesses, gamble at casinos, or go bankrupt. The ultimate goal is to create interesting life stories, whether that means living virtuously, becoming a criminal, accumulating wealth, or exploring different life paths. Death is inevitable, concluding your character\'s story with a summary of their life achievements, relationships, and legacy. The game encourages replayability through its randomness and vast number of possible life outcomes.'
+  },
+  // ========================================
+  // NEW RECOMMENDED ADDITIONS
+  // ========================================
+  {
+    id: 'poly-track',
+    title: 'PolyTrack',
+    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/87504f47577553cb7ba338167f08021c.png',
+    embedUrl: 'https://kodub.github.io/polytrack/',
+    category: 'racing',
+    isNew: true,
+    isHot: true,
+    description: 'PolyTrack is a low-poly racing game that combines the precision of TrackMania with the clean aesthetic of modern web games. It is rapidly becoming a favorite for speedrunners due to its tight physics and built-in level editor. You race against the clock on tracks featuring loops, jumps, and sharp turns, trying to beat target times for Gold, Silver, and Bronze medals. The car physics are arcade-style but predictable, allowing for satisfying drifts and air control. The standout feature is the Level Editor, which lets you build your own tracks using a simple grid system and share them via codes. The community has created thousands of custom tracks, offering endless replayability. Controls are standard: WASD or Arrow Keys to drive, and R to restart instantly (which you will do often). The game runs incredibly smoothly on almost any device due to its optimized 3D engine.'
+  },
+  {
+    id: 'stack',
+    title: 'Stack',
+    thumbnail: 'https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/9f/8e/33/9f8e3308-f9b2-2970-bf7f-6824c3db3513/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg',
+    embedUrl: 'https://stackgame.github.io/',
+    category: 'puzzle',
+    description: 'Stack is a minimalist arcade puzzle game where your goal is to build the highest tower possible by stacking moving blocks on top of each other. A block slides back and forth across the screen, and you must click or tap to place it on top of the previous one. If you mistime it and the block hangs over the edge, the overhanging part is sliced off, making your platform smaller for the next turn. As the tower gets higher, the blocks move faster, requiring intense concentration and rhythm. It is visually stunning with a color palette that shifts smoothly as you progress. The satisfaction of hitting "perfect" stacks (where the block aligns perfectly and makes a satisfying chime sound) makes it incredibly addictive. It is the perfect "just one more try" game.'
+  },
+  {
+    id: 'crossy-road',
+    title: 'Crossy Road',
+    thumbnail: 'https://crossyroad.io/assets/images/logo.png',
+    embedUrl: 'https://crossy-road-unblock.github.io/crossy-road/', 
+    // Note: Poki links sometimes block iframes. If this fails, use: https://nguyenthanh1995.github.io/CrossyRoad/
+    category: 'action',
+    description: 'Crossy Road is the endless arcade hopper that famously answered the question "Why did the chicken cross the road?" You control a blocky character (starting with a chicken) navigating through an endless stream of traffic, rivers, and train tracks. The gameplay is simple: tap to hop forward, swipe to move sideways. The goal is to get as far as possible without getting flattened by cars, eaten by eagles, or drowning in the river. The game features a unique voxel art style and dozens of unlockable characters, each with their own funny sound effects and visual themes. It is endless, procedurally generated, and increasingly difficult as traffic speeds up. A modern classic that works perfectly in browsers.'
+  },
+  {
+    id: 'tanuki-sunset',
+    title: 'Tanuki Sunset',
+    thumbnail: 'https://img.itch.zone/aW1nLzI1ODk2NTAucG5n/original/Uf%2Fq%2B9.png',
+    embedUrl: 'https://tanukisunset.com/', 
+    category: 'racing',
+    isNew: true,
+    description: 'Tanuki Sunset is a synthwave-soaked longboard racing game where you play as a skateboarding raccoon. Yes, really. You speed down procedurally generated seaside roads, drifting around corners and collecting bits while avoiding cars and obstacles. The game is oozing with style, featuring a vibrant retro color palette and a chill lo-fi soundtrack. Controls involve using the analog stick (or keys) to drift: holding a direction charges a drift meter, allowing you to take tight corners at high speeds. Doing tricks and collecting points fills a meter that eventually lets you spin a roulette for bonus points. It is less about high-stress racing and more about "flow state" and enjoying the vibes, though the later levels do get challenging.'
+  },
+  {
+    id: 'bloons-td-4',
+    title: 'Bloons TD 4',
+    thumbnail: 'https://play-lh.googleusercontent.com/Eqb29K_E5p_xVj1xR_JgLwz4FvJ4_9vF7_8vF7_8vF7_8vF7_8vF7_8', // Generic BTD placeholder
+    embedUrl: 'https://bloonstd4.github.io/',
+    category: 'puzzle',
+    isHot: true,
+    description: 'Bloons Tower Defense 4 is a classic strategy game where you must stop waves of colorful balloons (bloons) from reaching the end of the track. You do this by placing monkeys equipped with darts, boomerangs, cannons, and magic spells along the path. As you pop bloons, you earn money to upgrade your towers or buy new ones. This version introduces the "Sun God" temple and other iconic high-tier upgrades. It features multiple tracks with varying difficulty levels (Beginner, Intermediate, Advanced, Expert). The strategy comes from balancing your economy (building Banana Farms) with your defense. Different bloon types require different counters: Lead bloons can only be popped by explosives or fire, while Camo bloons need towers with special detection. It is arguably the peak of the classic Flash-era tower defense games.'
+  },
+  {
+    id: 'bad-time-simulator',
+    title: 'Bad Time Simulator (Sans)',
+    thumbnail: 'https://ih1.redbubble.net/image.1098586202.9366/st,small,507x507-pad,600x600,f8f8f8.jpg',
+    embedUrl: 'https://jcw87.github.io/c2-sans-fight/',
+    category: 'action',
+    description: 'Bad Time Simulator is a browser-based recreation of the famous "Sans Fight" from the game Undertale. It isolates the most difficult boss battle of the game, allowing players to practice against Sans without playing through the entire RPG. You control a small red heart (your soul) inside a box, dodging an onslaught of bone attacks and laser blasts (Gaster Blasters). It is a "bullet hell" game that requires pixel-perfect movement and memorization of attack patterns. You can heal using items, but Sans dodges your attacks, making it a test of endurance. This web version is incredibly accurate to the original and includes an endless mode for hardcore players who want to see how long they can survive.'
   }
 ];
 
