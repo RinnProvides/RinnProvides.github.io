@@ -234,7 +234,7 @@ export const games: Game[] = [
     thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROd5taXLOo-oUF4ThK6qFN1zfgW0UDzsggdQ&s',
     embedUrl: '  https://growden.io/', 
     category: 'casual',
-    description: 'Little Alchemy 2 is a relaxing crafting game about discovery and combination. You start with just four basic elements: Air, Earth, Fire, and Water. By dragging and dropping one element on top of another, you create new items. For example, combining Earth and Water makes Mud. Combining Fire and Mud might make a Brick. Your goal is to discover all hundreds of possible items, ranging from simple things like "Rain" or "Plant" to complex concepts like "Life," "Time," "Internet," or "Cyborg." The game encourages lateral thinking and experimentation. There is no time limit, no way to lose, and no pressure. It is purely about the joy of figuring out the logic behind the combinations. The visual style is clean and modern, with satisfying icons for every new discovery. The game also features an encyclopedia that gives you funny or interesting descriptions for every item you craft. It is a fantastic game to play in the background while listening to music or podcasts, as it engages your brain without requiring fast reflexes.'
+    description: 'buy plants, grow the plants, sell the plants, repeat.'
   },
 
   // ========================================
