@@ -13,7 +13,7 @@
  */
 
 import { useState, useEffect } from 'react';
-import { Gamepad2, Search, X, Zap, Brain, Globe, Car, Trophy, Users, Heart, Sun, Moon } from 'lucide-react';
+import { Gamepad2, Search, X, Zap, Brain, Coffee, Globe, Car, Trophy, Users, Heart, Sun, Moon } from 'lucide-react';
 import { useTheme } from '@/hooks/useTheme';
 import { getFavoritesCount } from '@/lib/favorites';
 
