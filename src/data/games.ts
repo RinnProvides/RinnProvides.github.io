@@ -196,8 +196,8 @@ export const games: Game[] = [
   {
     id: 'monkey-mart',
     title: 'Monkey Mart',
-    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/0270633b49f91a5472852233b8a3e75e.png',
-    embedUrl: 'https://monkeymart.github.io/',
+    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkeOcqPpp9QQqO55o-XO79PKDLxMym34K2Wg&s',
+    embedUrl: 'https://classroom-6x.org/games/monkey-mart-unblocked/',
     category: 'casual',
     isNew: true,
     description: 'Monkey Mart is an adorable and bustling management simulation game where you control a hard-working monkey running a grocery store. You start with a humble banana stand, planting trees, harvesting the fruit, and placing it on shelves for customers. As you earn money, you expand your empire to include corn, eggs, milk, popcorn, and more. The game is highly active—you must physically run your character around the store to manage stock, collect cash from the register, and clean up messes. However, the game introduces automation features that turn it into a management sim: you can hire assistants to restock shelves, farmers to harvest crops, and cashiers to handle the money. Your job then shifts to managing your staff and upgrading their speed and capacity. You can upgrade your character\'s movement speed and carrying capacity to be more efficient. The graphics are vibrant and 3D, with hilarious animations for the monkeys. There are multiple aisles and even different store levels to unlock. It is satisfying to watch your store go from a quiet stand to a chaotic, money-making supermarket.'
@@ -212,10 +212,10 @@ export const games: Game[] = [
     description: 'Eggy Car is a physics-based driving game that is equal parts cute and infuriating. Your mission is simple: drive a car as far as possible. The catch? There is a giant, fragile egg loosely balanced on top of your car. The terrain is filled with steep hills, sudden drops, and bumpy roads that threaten to launch your egg into the air. If the egg falls off and cracks, it is game over. The controls require extreme finesse—you cannot just hold the gas pedal down. You must feather the throttle (using the Arrow Keys or A/D) to gently climb hills without tipping the egg backward, and brake carefully on descents to keep the egg from flying forward. As you collect coins scattered on the road, you can unlock new vehicles with different shapes and physics profiles, such as trucks, buses, or sports cars. Some cars have deeper "pockets" to hold the egg more securely, while others are faster but riskier. The game also features power-ups like the "Freeze" which turns your egg into a solid block of ice, preventing it from cracking for a few seconds. It is a fantastic casual game because runs are short, but the desire to beat your high score is addictive.'
   },
   {
-    id: 'cut-the-rope',
-    title: 'Cut The Rope',
+    id: 'idle-lumber-inc',
+    title: 'Idle lumber inc',
     thumbnail: 'https://store-images.s-microsoft.com/image/apps.43224.13510798887500496.0b673663-36ce-4674-89c0-c4e1008cb0c4.1772670e-1175-470a-8533-c8d195392bc6',
-    embedUrl: 'https://cuttherope-game.github.io/',
+    embedUrl: 'https://77pen.github.io/p5/idle-lumber-inc/',
     category: 'casual',
     description: 'Cut the Rope is a legendary physics-based puzzle game that has charmed millions of players. You are tasked with feeding candy to a cute little green monster named Om Nom. The candy hangs by ropes, and you must swipe your mouse (or finger) to cut the ropes at the precise moment to let gravity swing or drop the candy into Om Nom\'s mouth. However, it is never that simple. You must also try to collect three gold stars placed in difficult spots on the screen to get a perfect score. The levels introduce creative mechanics like bubbles that float the candy upward, air cushions that blow the candy sideways, sliding connecters, and spiders that try to steal the candy. The physics are incredibly smooth—the ropes swing realistically, and momentum is key to solving later puzzles. You often need to cut ropes in a specific order or with split-second timing to navigate obstacles like spikes or electricity. The animations for Om Nom are full of personality; he reacts with excitement when the candy gets close and looks sad if you lose it. With hundreds of levels and a gentle difficulty curve, it is the perfect brain-teasing casual game for all ages.'
   },
