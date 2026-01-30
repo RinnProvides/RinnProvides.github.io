@@ -1,14 +1,4 @@
-/**
- * AD BANNER COMPONENT
- * 
- * Placeholder containers for ad networks (e.g., Google AdSense).
- * Standard IAB sizes included for easy integration.
- * 
- * HOW TO ADD REAL ADS:
- * 1. Replace the placeholder content with your ad network code
- * 2. Common networks: Google AdSense, Media.net, Ezoic
- * 3. Keep the className="ad-banner" for consistent styling
- */
+import { useEffect, useRef } from 'react';
 
 interface AdBannerProps {
   size: 'leaderboard' | 'rectangle' | 'skyscraper' | 'mobile-banner';
@@ -16,41 +6,62 @@ interface AdBannerProps {
 }
 
 const adSizes = {
-  'leaderboard': { width: 728, height: 90, label: '728x90 Leaderboard' },
-  'rectangle': { width: 300, height: 250, label: '300x250 Rectangle' },
-  'skyscraper': { width: 160, height: 600, label: '160x600 Skyscraper' },
-  'mobile-banner': { width: 320, height: 50, label: '320x50 Mobile Banner' },
+  'leaderboard': { width: 728, height: 90 },
+  'rectangle': { width: 300, height: 250 },
+  'skyscraper': { width: 160, height: 600 },
+  'mobile-banner': { width: 320, height: 50 },
 };
 
 export default function AdBanner({ size, className = '' }: AdBannerProps) {
   const adSize = adSizes[size];
+  const bannerRef = useRef<HTMLDivElement>(null);
+  
+  // This is your specific Adsterra Key
+  const AD_KEY = "25eda8a4a8c0e5a7567249b284cf2c40";
+
+  useEffect(() => {
+    if (!bannerRef.current) return;
+
+    // Clear the container to prevent duplicate ads on re-renders
+    bannerRef.current.innerHTML = '';
+
+    const confScript = document.createElement('script');
+    const adScript = document.createElement('script');
+
+    confScript.type = 'text/javascript';
+    confScript.innerHTML = `
+      atOptions = {
+        'key' : '${AD_KEY}',
+        'format' : 'iframe',
+        'height' : ${adSize.height},
+        'width' : ${adSize.width},
+        'params' : {}
+      };
+    `;
+
+    adScript.type = 'text/javascript';
+    adScript.src = `https://www.highperformanceformat.com/${AD_KEY}/invoke.js`;
+
+    bannerRef.current.appendChild(confScript);
+    bannerRef.current.appendChild(adScript);
+  }, [size]); // Re-run if the size changes
 
   return (
     <div
-      className={`ad-banner bg-game-surface rounded-lg border-2 border-game-border flex items-center justify-center ${className}`}
+      className={`ad-banner bg-game-surface rounded-lg border-2 border-game-border flex flex-col items-center justify-center overflow-hidden ${className}`}
       style={{
         width: `${adSize.width}px`,
         height: `${adSize.height}px`,
         maxWidth: '100%',
       }}
     >
-      {/* REAL Google AdSense Integration */}
-      {/* To activate: Replace data-ad-client and data-ad-slot with your AdSense codes */}
-      <ins
-        className="adsbygoogle"
-        style={{ display: 'block' }}
-        data-ad-client="ca-pub-0000000000000000" // Replace with your AdSense publisher ID
-        data-ad-slot="0000000000" // Replace with your ad unit ID
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      ></ins>
+      {/* Container where Adsterra will inject the iframe */}
+      <div ref={bannerRef} />
       
-      {/* Fallback placeholder (shown until AdSense loads) */}
-      <div className="text-center p-4">
-        <p className="text-game-text-muted font-semibold">Advertisement</p>
-        <p className="text-xs text-game-text-muted mt-1">{adSize.label}</p>
-        <p className="text-xs text-game-primary mt-2">Replace AdSense codes to activate</p>
-      </div>
+      {/* Optional: Small label so users know it's an ad */}
+      <span className="text-[10px] text-game-text-muted uppercase tracking-widest mt-1">
+        Advertisement
+      </span>
     </div>
   );
 }
