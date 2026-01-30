@@ -187,7 +187,7 @@ export const games: Game[] = [
   {
     id: 'tiny-fishing',
     title: 'Tiny Fishing',
-    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/46797438692797ac3dc302b1be75db74.png',
+    thumbnail: 'https://www.coolmathgames.com/sites/default/files/TinyFishing_OG-logo.jpg',
     embedUrl: 'https://tinyfishing.github.io/',
     category: 'casual',
     isHot: true,
@@ -205,8 +205,8 @@ export const games: Game[] = [
   {
     id: 'eggy-car',
     title: 'Eggy Car',
-    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/5c26b840049e7939be821422792b0c34.png',
-    embedUrl: 'https://eggycar.github.io/',
+    thumbnail: 'https://i.ytimg.com/vi/U2SgrOeRrrs/maxresdefault.jpg',
+    embedUrl: 'https://eggycar-game.io/game/eggy-car/',
     category: 'casual',
     isHot: true,
     description: 'Eggy Car is a physics-based driving game that is equal parts cute and infuriating. Your mission is simple: drive a car as far as possible. The catch? There is a giant, fragile egg loosely balanced on top of your car. The terrain is filled with steep hills, sudden drops, and bumpy roads that threaten to launch your egg into the air. If the egg falls off and cracks, it is game over. The controls require extreme finesse—you cannot just hold the gas pedal down. You must feather the throttle (using the Arrow Keys or A/D) to gently climb hills without tipping the egg backward, and brake carefully on descents to keep the egg from flying forward. As you collect coins scattered on the road, you can unlock new vehicles with different shapes and physics profiles, such as trucks, buses, or sports cars. Some cars have deeper "pockets" to hold the egg more securely, while others are faster but riskier. The game also features power-ups like the "Freeze" which turns your egg into a solid block of ice, preventing it from cracking for a few seconds. It is a fantastic casual game because runs are short, but the desire to beat your high score is addictive.'
@@ -222,9 +222,17 @@ export const games: Game[] = [
   {
     id: 'little-alchemy-2',
     title: 'Little Alchemy 2',
-    thumbnail: 'https://littlealchemy2.com/static/icons/icon_512.png',
+    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvoWlgkI-DBkpEZN6Jn_zMpbPnmdnJWDWFng&s',
     embedUrl: 'https://littlealchemy2.com/', 
     // Note: If the official site blocks embeds, try: https://littlealchemy-2.github.io/
+    category: 'casual',
+    description: 'Little Alchemy 2 is a relaxing crafting game about discovery and combination. You start with just four basic elements: Air, Earth, Fire, and Water. By dragging and dropping one element on top of another, you create new items. For example, combining Earth and Water makes Mud. Combining Fire and Mud might make a Brick. Your goal is to discover all hundreds of possible items, ranging from simple things like "Rain" or "Plant" to complex concepts like "Life," "Time," "Internet," or "Cyborg." The game encourages lateral thinking and experimentation. There is no time limit, no way to lose, and no pressure. It is purely about the joy of figuring out the logic behind the combinations. The visual style is clean and modern, with satisfying icons for every new discovery. The game also features an encyclopedia that gives you funny or interesting descriptions for every item you craft. It is a fantastic game to play in the background while listening to music or podcasts, as it engages your brain without requiring fast reflexes.'
+  },
+   {
+    id: 'grow-a-garden',
+    title: 'Grow A Garden',
+    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROd5taXLOo-oUF4ThK6qFN1zfgW0UDzsggdQ&s',
+    embedUrl: '  https://growden.io/', 
     category: 'casual',
     description: 'Little Alchemy 2 is a relaxing crafting game about discovery and combination. You start with just four basic elements: Air, Earth, Fire, and Water. By dragging and dropping one element on top of another, you create new items. For example, combining Earth and Water makes Mud. Combining Fire and Mud might make a Brick. Your goal is to discover all hundreds of possible items, ranging from simple things like "Rain" or "Plant" to complex concepts like "Life," "Time," "Internet," or "Cyborg." The game encourages lateral thinking and experimentation. There is no time limit, no way to lose, and no pressure. It is purely about the joy of figuring out the logic behind the combinations. The visual style is clean and modern, with satisfying icons for every new discovery. The game also features an encyclopedia that gives you funny or interesting descriptions for every item you craft. It is a fantastic game to play in the background while listening to music or podcasts, as it engages your brain without requiring fast reflexes.'
   },
