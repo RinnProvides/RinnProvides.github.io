@@ -214,7 +214,7 @@ export const games: Game[] = [
   {
     id: 'idle-lumber-inc',
     title: 'Idle lumber inc',
-    thumbnail: 'https://store-images.s-microsoft.com/image/apps.43224.13510798887500496.0b673663-36ce-4674-89c0-c4e1008cb0c4.1772670e-1175-470a-8533-c8d195392bc6',
+    thumbnail: 'https://play-lh.googleusercontent.com/oZbEiSliZD0Qi8BnDgVki6covTBPIg0a_jgpJ_0tp3cE5Zu6bEqxqh8CjF0Z0_9xRw',
     embedUrl: 'https://77pen.github.io/p5/idle-lumber-inc/',
     category: 'casual',
     description: 'Cut the Rope is a legendary physics-based puzzle game that has charmed millions of players. You are tasked with feeding candy to a cute little green monster named Om Nom. The candy hangs by ropes, and you must swipe your mouse (or finger) to cut the ropes at the precise moment to let gravity swing or drop the candy into Om Nom\'s mouth. However, it is never that simple. You must also try to collect three gold stars placed in difficult spots on the screen to get a perfect score. The levels introduce creative mechanics like bubbles that float the candy upward, air cushions that blow the candy sideways, sliding connecters, and spiders that try to steal the candy. The physics are incredibly smooth—the ropes swing realistically, and momentum is key to solving later puzzles. You often need to cut ropes in a specific order or with split-second timing to navigate obstacles like spikes or electricity. The animations for Om Nom are full of personality; he reacts with excitement when the candy gets close and looks sad if you lose it. With hundreds of levels and a gentle difficulty curve, it is the perfect brain-teasing casual game for all ages.'
