@@ -4,7 +4,7 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import { Game } from '@/types/game';
 import { FaPlay, FaStar } from 'react-icons/fa';
-import Badge from '@/components/common/Badge';
+import Badge from '@/components/ui/Badge';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
