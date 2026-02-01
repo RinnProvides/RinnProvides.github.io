@@ -1,121 +1,117 @@
-/**
- * FEATURED GAMES SECTION
- * 
- * Magazine-style hero section with:
- * - Large hero card (2 columns wide) for first featured game
- * - Two smaller cards stacked vertically on the right
- * - Creates visual hierarchy and professional look
- */
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+import { Game } from '@/types/game';
+import { FaPlay, FaStar } from 'react-icons/fa';
+import Badge from '@/components/common/Badge';
 
-import { Game } from '@/data/games';
-import { Star, Play } from 'lucide-react';
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 interface FeaturedSectionProps {
   games: Game[];
-  onGameClick: (gameId: string) => void;
+  onGameClick?: (gameId: string) => void;
 }
 
 export default function FeaturedSection({ games, onGameClick }: FeaturedSectionProps) {
+  const [index, setIndex] = useState(0);
+  const navigate = useNavigate();
+
   if (games.length === 0) return null;
 
-  const [heroGame, ...sideGames] = games;
+  const handlePlayClick = (gameId: string) => {
+    if (onGameClick) {
+      onGameClick(gameId);
+    } else {
+      navigate(`/play/${gameId}`);
+    }
+  };
+
+  const currentGame = games[index];
 
   return (
-    <section className="mb-12">
-      {/* Section header */}
-      <div className="flex items-center space-x-2 mb-6">
-        <Star className="w-6 h-6 text-yellow-400 fill-yellow-400" />
-        <h2 className="text-3xl font-bold text-game-text">Featured Games</h2>
-      </div>
-
-      {/* HUGE Hero Game (Epic/Steam style) - Takes full width on mobile, 2 cols on desktop */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* MASSIVE Hero Card - Takes 2 columns and 2 rows for Epic impact */}
-        <div
-          onClick={() => onGameClick(heroGame.id)}
-          className="lg:col-span-2 lg:row-span-2 game-card cursor-pointer group bg-game-surface rounded-xl overflow-hidden shadow-2xl hover:shadow-[0_0_50px_rgba(88,101,242,0.5)] transition-all duration-500"
+    <section className="mb-16">
+      <div className="relative h-[600px] md:h-[500px] bg-game-card-dark rounded-3xl overflow-hidden shadow-2xl group">
+        {/* NEW LAYOUT: Split View
+          On mobile: Image top (h-1/2), text bottom (h-1/2)
+          On desktop: Image left (w-2/3), text right (w-1/3)
+        */}
+        <AutoPlaySwipeableViews
+          index={index}
+          onChangeIndex={setIndex}
+          enableMouseEvents
+          interval={5000}
+          className="h-full"
+          containerStyle={{ height: '100%' }}
+          slideStyle={{ height: '100%' }}
         >
-          <div className="relative lg:aspect-[16/10] aspect-video overflow-hidden bg-game-bg">
-            <img
-              src={heroGame.thumbnail}
-              alt={heroGame.title}
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              style={{ objectFit: 'cover' }}
-            />
-            
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-            
-            {/* Play button overlay */}
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <div className="bg-game-primary rounded-full p-8 transform scale-90 group-hover:scale-100 transition-transform duration-300">
-                <Play className="w-14 h-14 text-white fill-white" />
-              </div>
-            </div>
-
-            {/* Game info overlay (bottom) */}
-            <div className="absolute bottom-0 left-0 right-0 p-8">
-              <div className="flex items-center space-x-2 mb-3">
-                <span className="bg-yellow-400 px-4 py-2 rounded-full text-sm font-bold text-black uppercase flex items-center space-x-2">
-                  <Star className="w-4 h-4 fill-black" />
-                  <span>Hero Game</span>
-                </span>
-                <span className="bg-game-primary/90 px-3 py-1 rounded-full text-xs font-bold text-white uppercase">
-                  {heroGame.category}
-                </span>
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">{heroGame.title}</h3>
-              {heroGame.description && (
-                <p className="text-base text-gray-200">{heroGame.description}</p>
-              )}
-            </div>
-          </div>
-        </div>
-
-        {/* Side Cards - Stacked vertically */}
-        <div className="flex flex-col gap-6">
-          {sideGames.slice(0, 2).map((game) => (
-            <div
-              key={game.id}
-              onClick={() => onGameClick(game.id)}
-              className="game-card cursor-pointer group bg-game-surface rounded-xl overflow-hidden shadow-xl hover:shadow-2xl"
-            >
-              <div className="relative lg:aspect-[16/10] aspect-video overflow-hidden bg-game-bg">
-                <img
-                  src={game.thumbnail}
+          {games.map((game) => (
+            <div key={game.id} className="flex flex-col md:flex-row h-full">
+              {/* LEFT SIDE: BIG IMAGE */}
+              <div className="w-full h-1/2 md:h-full md:w-2/3 relative overflow-hidden">
+                <div className="absolute inset-0 bg-game-accent/10 z-10"></div>
+                <img 
+                  src={game.thumbnail} 
                   alt={game.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  style={{ objectFit: 'cover' }}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                
-                {/* Play button overlay */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="bg-game-primary rounded-full p-5 transform scale-90 group-hover:scale-100 transition-transform duration-300">
-                    <Play className="w-8 h-8 text-white fill-white" />
-                  </div>
-                </div>
+              </div>
 
-                {/* Game info overlay (bottom) */}
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <span className="bg-game-primary/90 px-3 py-1 rounded-full text-xs font-bold text-white uppercase">
-                      {game.category}
-                    </span>
-                    <span className="bg-yellow-500 px-2 py-0.5 rounded-full text-xs font-bold text-black uppercase flex items-center space-x-1">
-                      <Star className="w-3 h-3 fill-black" />
-                      <span>Featured</span>
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-1">{game.title}</h3>
-                  {game.description && (
-                    <p className="text-xs text-gray-200 line-clamp-1">{game.description}</p>
+              {/* RIGHT SIDE: CONTENT BOX */}
+              <div className="w-full h-1/2 md:h-full md:w-1/3 bg-gradient-to-br from-game-card-dark to-game-bg p-6 md:p-10 flex flex-col justify-center relative z-20 border-t md:border-t-0 md:border-l border-white/10">
+                
+                {/* Badges & Rating */}
+                <div className="flex items-center space-x-2 mb-4">
+                  <Badge variant="accent" size="md">Featured</Badge>
+                  {game.rating > 4.5 && (
+                    <Badge variant="success" size="md" icon={<FaStar className="text-yellow-400" />}>
+                      Top Rated
+                    </Badge>
                   )}
                 </div>
+
+                {/* Title */}
+                <h2 className="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">
+                  {game.title}
+                </h2>
+
+                {/* Description */}
+                <p className="text-game-text-muted text-sm md:text-base mb-6 line-clamp-3 md:line-clamp-5 font-medium">
+                  {game.description}
+                </p>
+
+                {/* Categories */}
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {game.categories.slice(0, 3).map(cat => (
+                    <span key={cat} className="text-xs px-3 py-1 rounded-full bg-white/10 text-game-text-light uppercase tracking-wider font-bold">
+                      {cat}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Play Button */}
+                <button
+                  onClick={() => handlePlayClick(game.id)}
+                  className="btn-game-primary w-full md:w-auto text-lg py-4 flex items-center justify-center space-x-3 group/btn"
+                >
+                  <FaPlay className="group-hover/btn:scale-110 transition-transform" />
+                  <span>Play Now</span>
+                </button>
               </div>
             </div>
+          ))}
+        </AutoPlaySwipeableViews>
+
+        {/* Carousel Indicators (Bottom Right) */}
+        <div className="absolute bottom-6 right-6 flex space-x-2 z-30">
+          {games.map((_, i) => (
+            <button
+              key={i}
+              className={`h-3 rounded-full transition-all duration-300 ${
+                i === index ? 'w-8 bg-game-accent' : 'w-3 bg-white/30 hover:bg-white/50'
+              }`}
+              onClick={() => setIndex(i)}
+            />
           ))}
         </div>
       </div>
