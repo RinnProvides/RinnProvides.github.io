@@ -15,21 +15,38 @@ const badgeVariants = cva(
         destructive:
           "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
         outline: "text-foreground",
+        // NEW VARIANTS ADDED BELOW
+        accent:
+          "border-transparent bg-purple-500 text-white hover:bg-purple-600",
+        success:
+          "border-transparent bg-green-600 text-white hover:bg-green-700",
+      },
+      size: {
+        default: "px-2.5 py-0.5 text-xs",
+        sm: "px-2 py-0.5 text-[10px]",
+        md: "px-3 py-1 text-sm",
+        lg: "px-4 py-1.5 text-base",
       },
     },
     defaultVariants: {
       variant: "default",
+      size: "default",
     },
   }
 )
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof badgeVariants> {}
+    VariantProps<typeof badgeVariants> {
+  icon?: React.ReactNode // Added support for icon prop
+}
 
-function Badge({ className, variant, ...props }: BadgeProps) {
+function Badge({ className, variant, size, icon, children, ...props }: BadgeProps) {
   return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
+    <div className={cn(badgeVariants({ variant, size }), className)} {...props}>
+      {icon && <span className="mr-1.5 flex items-center">{icon}</span>}
+      {children}
+    </div>
   )
 }
 
