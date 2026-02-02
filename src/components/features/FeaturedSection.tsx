@@ -60,15 +60,17 @@ export default function FeaturedSection({ games, onGameClick }: FeaturedSectionP
               {/* RIGHT SIDE: CONTENT BOX */}
               <div className="w-full h-1/2 md:h-full md:w-1/3 bg-gradient-to-br from-game-card-dark to-game-bg p-6 md:p-10 flex flex-col justify-center relative z-20 border-t md:border-t-0 md:border-l border-white/10">
                 
-                {/* Badges & Rating */}
-                <div className="flex items-center space-x-2 mb-4">
-                  <Badge variant="accent" size="md">Featured</Badge>
-                  {game.rating > 4.5 && (
-                    <Badge variant="success" size="md" icon={<FaStar className="text-yellow-400" />}>
-                      Top Rated
-                    </Badge>
-                  )}
-                </div>
+             {/* Badges & Rating */}
+<div className="flex items-center space-x-2 mb-4">
+  {/* <Badge variant="accent" size="md">Featured</Badge> */}
+  
+  {/* {game.rating > 4.5 && (
+    <Badge variant="success" size="md" icon={<FaStar className="text-yellow-400" />}>
+      Top Rated
+    </Badge>
+  )} 
+  */}
+</div>
 
                 {/* Title */}
                 <h2 className="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">
