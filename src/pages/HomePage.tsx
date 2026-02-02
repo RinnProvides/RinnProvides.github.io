@@ -145,7 +145,7 @@ export default function HomePage() {
         </div>
 
         {/* Featured Games Section (only on 'all' category and not searching) */}
-        {showAllSections && (
+        { /* showAllSections && (
           <FeaturedSection games={featuredGames} onGameClick={handleGameClick} />
         )}
 
