@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Autoplay from 'embla-carousel-autoplay';
 import { Game } from '@/data/games';
+import { FaPlay, FaStar } from 'react-icons/fa';
 import { Badge } from '@/components/ui/badge';
-
-// --- COMMENTED OUT THE BROKEN CAROUSEL IMPORTS ---
-// import SwipeableViews from 'react-swipeable-views';
-// import { autoPlay } from 'react-swipeable-views-utils';
-// import { FaPlay, FaStar } from 'react-icons/fa';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 interface FeaturedSectionProps {
   games: Game[];
@@ -15,30 +19,95 @@ interface FeaturedSectionProps {
 
 export default function FeaturedSection({ games, onGameClick }: FeaturedSectionProps) {
   const navigate = useNavigate();
+  
+  // Setup Autoplay plugin (slides every 5 seconds)
+  const plugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
 
-  // 1. Check if data exists
-  if (!games || games.length === 0) {
-    return <div className="p-10 text-center text-red-500">No Games Found</div>;
-  }
+  if (!games || games.length === 0) return null;
 
-  // 2. Render a SIMPLE list instead of the Carousel
+  const handlePlayClick = (gameId: string) => {
+    if (onGameClick) {
+      onGameClick(gameId);
+    } else {
+      navigate(`/play/${gameId}`);
+    }
+  };
+
   return (
-    <section className="mb-16 p-8 bg-gray-900 rounded-3xl text-white">
-      <h1 className="text-3xl font-bold mb-4">DEBUG MODE: Featured Section</h1>
-      <p className="mb-4 text-green-400">If you can see this, the Carousel was the problem!</p>
-      
-      <div className="grid gap-4">
-        {games.map(game => (
-            <div key={game.id} className="p-4 border border-white/10 rounded-xl flex gap-4">
-                <img src={game.thumbnail} alt={game.title} className="w-32 h-20 object-cover rounded" />
-                <div>
-                    <h3 className="text-xl font-bold">{game.title}</h3>
-                    {/* Test the Badge here safely */}
-                    <Badge variant="accent">Test Badge</Badge>
+    <section className="mb-16 relative group">
+      <Carousel
+        plugins={[plugin.current]}
+        className="w-full h-[600px] md:h-[500px] bg-game-card-dark rounded-3xl overflow-hidden shadow-2xl"
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+      >
+        <CarouselContent className="h-full ml-0"> {/* ml-0 fixes standard spacing issues */}
+          {games.map((game) => (
+            <CarouselItem key={game.id} className="pl-0 h-full">
+              <div className="flex flex-col md:flex-row h-full w-full">
+                
+                {/* LEFT SIDE: BIG IMAGE */}
+                <div className="w-full h-1/2 md:h-full md:w-2/3 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-game-accent/10 z-10"></div>
+                  <img 
+                    src={game.thumbnail} 
+                    alt={game.title}
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
                 </div>
-            </div>
-        ))}
-      </div>
+
+                {/* RIGHT SIDE: CONTENT BOX */}
+                <div className="w-full h-1/2 md:h-full md:w-1/3 bg-gradient-to-br from-game-card-dark to-game-bg p-6 md:p-10 flex flex-col justify-center relative z-20 border-t md:border-t-0 md:border-l border-white/10">
+                  
+                  {/* Badges & Rating */}
+                  <div className="flex items-center space-x-2 mb-4">
+                    <Badge variant="accent" size="md">Featured</Badge>
+                    {game.rating > 4.5 && (
+                      <Badge variant="success" size="md" icon={<FaStar className="text-yellow-400" />}>
+                        Top Rated
+                      </Badge>
+                    )}
+                  </div>
+
+                  {/* Title */}
+                  <h2 className="text-2xl md:text-4xl font-black text-white mb-4 leading-tight">
+                    {game.title}
+                  </h2>
+
+                  {/* Description */}
+                  <p className="text-game-text-muted text-sm md:text-base mb-6 line-clamp-2 md:line-clamp-4 font-medium">
+                    {game.description}
+                  </p>
+
+                  {/* Categories */}
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {game.categories.slice(0, 3).map(cat => (
+                      <span key={cat} className="text-xs px-3 py-1 rounded-full bg-white/10 text-game-text-light uppercase tracking-wider font-bold">
+                        {cat}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Play Button */}
+                  <button
+                    onClick={() => handlePlayClick(game.id)}
+                    className="btn-game-primary w-full md:w-auto text-lg py-3 md:py-4 flex items-center justify-center space-x-3 group/btn"
+                  >
+                    <FaPlay className="group-hover/btn:scale-110 transition-transform" />
+                    <span>Play Now</span>
+                  </button>
+                </div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        
+        {/* Navigation Arrows (Hidden on mobile, visible on hover desktop) */}
+        <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 border-none text-white hover:bg-black/70" />
+        <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 border-none text-white hover:bg-black/70" />
+      </Carousel>
     </section>
   );
 }
