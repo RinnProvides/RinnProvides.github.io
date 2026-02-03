@@ -1,3 +1,12 @@
+/**
+ * HOME PAGE - Unblocked Games Style
+ * * Redesigned to look like a classic unblocked games site:
+ * - Compact featured games banner
+ * - Dense game grid with quick access
+ * - Badge system (NEW, HOT, POPULAR)
+ * - Focus on game thumbnails and instant playability
+ */
+
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { games, getFeaturedGames, getGamesByCategory, getTwoPlayerGames, searchGames, getGameById } from '@/data/games';
@@ -14,19 +23,15 @@ import GameGrid from '@/components/features/GameGrid';
 import PanicButton from '@/components/features/PanicButton';
 import TopRatedSection from '@/components/features/TopRatedSection';
 import GameCollection from '@/components/features/GameCollection';
-// --- 1. NEW IMPORTS ---
+
+// --- 1. IMPORT SMART ADS LOGIC ---
 import { triggerSmartAd } from '@/lib/ads';
-import AdPreloader from '@/components/features/AdPreloader';
 
 export default function HomePage() {
   const navigate = useNavigate();
   const [currentCategory, setCurrentCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [recentGameIds, setRecentGameIds] = useState<string[]>([]);
-  
-  // --- 2. NEW STATE FOR ADS ---
-  const [isAdLoading, setIsAdLoading] = useState(false);
-  const [pendingGameId, setPendingGameId] = useState<string | null>(null);
 
   // Get game collections
   const collections = getAllCollections();
@@ -50,6 +55,7 @@ export default function HomePage() {
   const handleCategoryChange = (category: string) => {
     setCurrentCategory(category);
     
+    // Update URL query parameter without page reload
     const url = new URL(window.location.href);
     if (category === 'all') {
       url.searchParams.delete('category');
@@ -59,27 +65,13 @@ export default function HomePage() {
     window.history.pushState({}, '', url.toString());
   };
 
-  // --- 3. UPDATED GAME CLICK HANDLER ---
+  // --- 2. UPDATED CLICK HANDLER WITH SMART ADS ---
   const handleGameClick = (gameId: string) => {
-    // Try to trigger the ad
-    const adShown = triggerSmartAd();
+    // Run the ad logic (checks cooldowns, updates counters, etc.)
+    triggerSmartAd();
 
-    if (adShown) {
-      // If ad opened, show the "Video Player" Loading Screen
-      setPendingGameId(gameId);
-      setIsAdLoading(true);
-    } else {
-      // If cooldown active, go straight to game
-      navigate(`/play/${gameId}`);
-    }
-  };
-
-  // --- 4. CALLBACK WHEN AD TIMER FINISHES ---
-  const onAdComplete = () => {
-    setIsAdLoading(false);
-    if (pendingGameId) {
-      navigate(`/play/${pendingGameId}`);
-    }
+    // Navigate immediately to the game
+    navigate(`/play/${gameId}`);
   };
 
   // Handle search
@@ -97,6 +89,7 @@ export default function HomePage() {
   // Apply search or category filter or favorites
   let filteredGames;
   if (currentCategory === 'favorites') {
+    // Show favorites
     const favoriteIds = getFavoriteIds();
     filteredGames = favoriteIds
       .map(id => getGameById(id))
@@ -109,10 +102,12 @@ export default function HomePage() {
   
   const recentGames = games.filter(game => recentGameIds.includes(game.id));
   
+  // Determine if we're in search mode or favorites mode
   const isSearching = searchQuery.length > 0;
   const isFavoritesMode = currentCategory === 'favorites';
   const showAllSections = currentCategory === 'all' && !isSearching;
 
+  // Get category label for display
   const getCategoryLabel = () => {
     if (isSearching) {
       return `Search Results for "${searchQuery}" (${filteredGames.length} games)`;
@@ -126,12 +121,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-game-bg flex flex-col">
-      {/* --- 5. ADD THE PRELOADER COMPONENT HERE --- */}
-      <AdPreloader 
-        isOpen={isAdLoading} 
-        onComplete={onAdComplete} 
-      />
-
       {/* Sticky Navigation */}
       <Navbar 
         currentCategory={currentCategory} 
@@ -156,15 +145,15 @@ export default function HomePage() {
           </div>
         )}
 
-        {/* My Favorites Section */}
+        {/* My Favorites Section (only on 'all' category and not searching) */}
         {showAllSections && <FavoritesSection />}
 
-        {/* Top Rated Section */}
+        {/* Top Rated Section (only on 'all' category and not searching) */}
         {showAllSections && (
           <TopRatedSection onGameClick={handleGameClick} />
         )}
 
-        {/* Game Collections */}
+        {/* Game Collections - Curated Carousels (only on 'all' category and not searching) */}
         {showAllSections && (
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-game-text mb-6">🎯 Curated Collections</h2>
@@ -178,17 +167,17 @@ export default function HomePage() {
           </div>
         )}
 
-        {/* 2-Player Games Section */}
+        {/* 2-Player Games Section (only on 'all' category and not searching) */}
         {showAllSections && (
           <TwoPlayerSection games={twoPlayerGames} onGameClick={handleGameClick} />
         )}
 
-        {/* Recently Played Section */}
+        {/* Recently Played Section (only on 'all' category and not searching) */}
         {showAllSections && recentGames.length > 0 && (
           <RecentlyPlayed games={recentGames} onGameClick={handleGameClick} />
         )}
 
-        {/* All Games Grid */}
+        {/* All Games Grid (filtered by category, favorites, or search) */}
         {filteredGames.length > 0 ? (
           <GameGrid
             games={filteredGames}
