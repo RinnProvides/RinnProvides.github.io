@@ -1,6 +1,4 @@
-import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Autoplay from 'embla-carousel-autoplay';
 import { Game } from '@/data/games';
 import { FaPlay, FaStar } from 'react-icons/fa';
 import { Badge } from '@/components/ui/badge';
@@ -20,10 +18,7 @@ interface FeaturedSectionProps {
 export default function FeaturedSection({ games, onGameClick }: FeaturedSectionProps) {
   const navigate = useNavigate();
   
-  // Setup Autoplay plugin (slides every 5 seconds)
-  const plugin = useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: true })
-  );
+  // NOTE: Autoplay removed temporarily for stability testing
 
   if (!games || games.length === 0) return null;
 
@@ -38,12 +33,9 @@ export default function FeaturedSection({ games, onGameClick }: FeaturedSectionP
   return (
     <section className="mb-16 relative group">
       <Carousel
-        plugins={[plugin.current]}
         className="w-full h-[600px] md:h-[500px] bg-game-card-dark rounded-3xl overflow-hidden shadow-2xl"
-        onMouseEnter={plugin.current.stop}
-        onMouseLeave={plugin.current.reset}
       >
-        <CarouselContent className="h-full ml-0"> {/* ml-0 fixes standard spacing issues */}
+        <CarouselContent className="h-full ml-0">
           {games.map((game) => (
             <CarouselItem key={game.id} className="pl-0 h-full">
               <div className="flex flex-col md:flex-row h-full w-full">
@@ -104,7 +96,7 @@ export default function FeaturedSection({ games, onGameClick }: FeaturedSectionP
           ))}
         </CarouselContent>
         
-        {/* Navigation Arrows (Hidden on mobile, visible on hover desktop) */}
+        {/* Navigation Arrows */}
         <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 border-none text-white hover:bg-black/70" />
         <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 border-none text-white hover:bg-black/70" />
       </Carousel>
