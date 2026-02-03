@@ -30,21 +30,22 @@ export const games: Game[] = [
   // ========================================
   // FEATURED GAMES - The Big 3 Hero Games
   // ========================================
-  {
-    id: 'slope',
-    title: 'Slope',
-    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2HXY67NSbyMMpzlnSbBWUpcSmNMDM3CPoEA&s',
-    embedUrl: 'https://bigfoot9999.github.io/Slope-Game/',
-    category: 'racing',
+  
+   {
+    id: 'duck-life',
+    title: 'Duck Life',
+    thumbnail: 'https://www.coolmathgames.com/sites/default/files/styles/mobile_game_image/public/DuckLife_OG-logo.jpg.webp?itok=YPMNTKNM',
+    embedUrl: 'https://ducklifegame.github.io/',
+    category: 'puzzle',
     featured: true,
     isHot: true,
-    description: 'Slope is an adrenaline-pumping 3D endless runner game that will test your reflexes and reaction time to the absolute limit. In this fast-paced game, you control a ball rolling down a neon-lit slope filled with dangerous obstacles, sharp turns, and treacherous gaps. The game starts off manageable but quickly accelerates to insane speeds, making every second a heart-pounding test of skill. Your objective is simple: survive as long as possible while racking up points. The longer you stay alive, the higher your score climbs. The minimalist graphics feature vibrant neon colors against a dark backdrop, creating a visually stunning experience that adds to the intensity. Controls are incredibly simple - use the LEFT and RIGHT ARROW KEYS to steer your ball. The challenge comes from the ever-increasing speed and the unpredictable terrain. You\'ll need lightning-fast reflexes to dodge red obstacles, navigate narrow platforms, and avoid falling off the edge into the void. One wrong move and it\'s game over. The physics are realistic, giving the ball momentum and weight, which means you need to plan your movements ahead. This open-source version offers smooth framerate and responsive controls, making it perfect for competitive play. Try to beat your high score and challenge your friends!'
+    description: 'Duck Life is an endearing adventure racing game where you train a duck from a humble farm duckling into a champion racer capable of winning the world tournament. The game combines training mini-games, racing competitions, and progression mechanics into an addictive package that appeals to all ages. Your story begins on a farm devastated by a tornado, leaving you with one egg and a dream of rebuilding. When the duckling hatches, it\'s up to you to train it across three disciplines: running, flying, and swimming. Each discipline has dedicated training mini-games that improve your duck\'s stats while testing your skills. Running training involves jumping over obstacles in an endless runner format - use SPACEBAR or UP ARROW to jump, timing your leaps to avoid logs and barriers. Flying training requires navigating through caves while collecting coins and avoiding stalactites - use ARROW KEYS or drag your mouse to control height. Swimming training challenges you to dive and surface at optimal moments to maintain speed while dodging obstacles - press DOWN ARROW to dive and UP ARROW to surface. The more you train, the higher your duck\'s stats climb, directly affecting race performance. When ready, enter races where your duck competes against others in multi-discipline events. Races combine all three skills - you must switch between running, flying, and swimming sections, with your trained stats determining maximum speed in each segment. Winning races earns prize money used to purchase energy seeds that restore your duck\'s stamina for more training, cosmetic accessories like hats and hair styles to personalize your champion, and paint colors to customize your duck\'s appearance. The progression system keeps players engaged: early races are manageable, but tournament difficulty scales quickly, forcing you to return to training to improve stats. Finding the optimal balance between training different skills versus pushing into tougher races creates strategic depth. The game includes multiple tournament levels with increasing difficulty and better prize rewards. Bonus items hidden in training mini-games provide temporary stat boosts or extra coins. The charming pixel art style, upbeat soundtrack, and satisfying progression loop make Duck Life a timeless classic that has spawned several successful sequels. The simple controls and accessible gameplay make it perfect for quick sessions, while the addictive training-racing cycle keeps players coming back to improve their champion duck.'
   },
   {
     id: 'cookie-clicker',
     title: 'Cookie Clicker',
     thumbnail: 'https://play-lh.googleusercontent.com/Z1MOuuiD05ZN5LkVmMEvKF0mqAc-FknaQ2j8s4dZiO-LSPQX4EEA3RVJdlQEtxe96ok',
-    embedUrl: 'https://cookieclicker-unblocked.online/',
+    embedUrl: 'https://g8hh.github.io/cookieclicker/',
     category: 'puzzle',
     featured: true,
     isNew: true,
@@ -114,6 +115,16 @@ export const games: Game[] = [
     description: 'Zombs Royale is a massive 2D battle royale game that brings the complete Fortnite/PUBG experience to your browser in a top-down perspective. You and 99 other players are dropped onto a large map via parachute, and you must scramble to find weapons, shields, and supplies to survive. A deadly gas storm continuously shrinks the playable area, forcing players into tighter combat zones until only one survivor remains. The game features a vast arsenal of weapons with different rarities (Common, Uncommon, Rare, Epic, Legendary, Mythic), ranging from assault rifles and shotguns to sniper rifles and RPGs. You can also find utility items like healing potions, shield hybrid potions, and impulse grenades to outplay opponents. The map is diverse, featuring locations like "Lucky Lake," "Tinker Town," and various bases that encourage close-quarters or long-range combat. Controls are standard WASD movement with E to interact and Left Click to shoot. The game shines with its seasonal updates, adding new modes like 50v50, Superpowers, and Weapons Race. You can customize your character with hundreds of skins, sprays, and parachute designs. The fast matches (usually 5-7 minutes) and high skill ceiling make it one of the most replayable and competitive browser games available.'
   },
 
+    {
+    id: 'slope',
+    title: 'Slope',
+    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2HXY67NSbyMMpzlnSbBWUpcSmNMDM3CPoEA&s',
+    embedUrl: 'https://bigfoot9999.github.io/Slope-Game/',
+    category: 'racing',
+    isHot: true,
+    description: 'Slope is an adrenaline-pumping 3D endless runner game that will test your reflexes and reaction time to the absolute limit. In this fast-paced game, you control a ball rolling down a neon-lit slope filled with dangerous obstacles, sharp turns, and treacherous gaps. The game starts off manageable but quickly accelerates to insane speeds, making every second a heart-pounding test of skill. Your objective is simple: survive as long as possible while racking up points. The longer you stay alive, the higher your score climbs. The minimalist graphics feature vibrant neon colors against a dark backdrop, creating a visually stunning experience that adds to the intensity. Controls are incredibly simple - use the LEFT and RIGHT ARROW KEYS to steer your ball. The challenge comes from the ever-increasing speed and the unpredictable terrain. You\'ll need lightning-fast reflexes to dodge red obstacles, navigate narrow platforms, and avoid falling off the edge into the void. One wrong move and it\'s game over. The physics are realistic, giving the ball momentum and weight, which means you need to plan your movements ahead. This open-source version offers smooth framerate and responsive controls, making it perfect for competitive play. Try to beat your high score and challenge your friends!'
+  },
+
   {
     id: 'retro-bowl',
     title: 'Retro Bowl',
@@ -123,15 +134,6 @@ export const games: Game[] = [
     isNew: true,
     isHot: true,
     description: 'Retro Bowl is a nostalgic American football management and arcade game that perfectly captures the essence of classic 8-bit sports titles while adding modern team management depth. You take control of an NFL franchise, managing everything from roster decisions and draft picks to play calling and on-field action. The game brilliantly balances accessibility with strategic depth, making it enjoyable for both casual players and hardcore football fans. The pixel-perfect retro graphics and chiptune soundtrack create an authentic throwback experience that honors the golden age of gaming. Gameplay is divided into two main components: management simulation during the week and arcade-style football during games. In management mode, you handle press conferences that affect team morale, manage salary caps while building your roster, scout and draft college prospects, negotiate player contracts, and make tough decisions about who to cut when cap space is tight. Team chemistry matters - keeping players and fans happy improves performance and generates revenue for facility upgrades. On game day, you directly control only the offensive plays, with the defense handled automatically. Controls are touch-friendly and intuitive: swipe or click to snap the ball, draw passing routes by swiping toward receivers, tap highlighted receivers to throw, and swipe forward to dive or backward to slide with your quarterback or running back. The running game uses simple directional controls with timing-based jukes and spins. The AI defense provides realistic challenge without overwhelming complexity. Playcalling strategy matters - you choose from running plays, short passes, medium routes, and deep bombs, reading defensive formations to exploit weaknesses. The game rewards smart decision-making: throwing into tight coverage risks interceptions, while conservative playcalling may stall drives. Your quarterback\'s stats affect pass accuracy, while running backs\' speed determines breakaway potential. Retro Bowl includes a full season structure with playoffs and the ultimate goal of winning the Retro Bowl championship. The progression system hooks players with unlockable achievements, star player recruitment, and legacy building across multiple seasons. Difficulty settings accommodate all skill levels from casual to hardcore. With its perfect blend of nostalgia, strategic management, and satisfying arcade football action, Retro Bowl has become a modern mobile classic.'
-  },
-  {
-    id: 'duck-life',
-    title: 'Duck Life',
-    thumbnail: 'https://www.coolmathgames.com/sites/default/files/styles/mobile_game_image/public/DuckLife_OG-logo.jpg.webp?itok=YPMNTKNM',
-    embedUrl: 'https://ducklifegame.github.io/',
-    category: 'puzzle',
-    isNew: true,
-    description: 'Duck Life is an endearing adventure racing game where you train a duck from a humble farm duckling into a champion racer capable of winning the world tournament. The game combines training mini-games, racing competitions, and progression mechanics into an addictive package that appeals to all ages. Your story begins on a farm devastated by a tornado, leaving you with one egg and a dream of rebuilding. When the duckling hatches, it\'s up to you to train it across three disciplines: running, flying, and swimming. Each discipline has dedicated training mini-games that improve your duck\'s stats while testing your skills. Running training involves jumping over obstacles in an endless runner format - use SPACEBAR or UP ARROW to jump, timing your leaps to avoid logs and barriers. Flying training requires navigating through caves while collecting coins and avoiding stalactites - use ARROW KEYS or drag your mouse to control height. Swimming training challenges you to dive and surface at optimal moments to maintain speed while dodging obstacles - press DOWN ARROW to dive and UP ARROW to surface. The more you train, the higher your duck\'s stats climb, directly affecting race performance. When ready, enter races where your duck competes against others in multi-discipline events. Races combine all three skills - you must switch between running, flying, and swimming sections, with your trained stats determining maximum speed in each segment. Winning races earns prize money used to purchase energy seeds that restore your duck\'s stamina for more training, cosmetic accessories like hats and hair styles to personalize your champion, and paint colors to customize your duck\'s appearance. The progression system keeps players engaged: early races are manageable, but tournament difficulty scales quickly, forcing you to return to training to improve stats. Finding the optimal balance between training different skills versus pushing into tougher races creates strategic depth. The game includes multiple tournament levels with increasing difficulty and better prize rewards. Bonus items hidden in training mini-games provide temporary stat boosts or extra coins. The charming pixel art style, upbeat soundtrack, and satisfying progression loop make Duck Life a timeless classic that has spawned several successful sequels. The simple controls and accessible gameplay make it perfect for quick sessions, while the addictive training-racing cycle keeps players coming back to improve their champion duck.'
   },
 
   {
@@ -161,13 +163,22 @@ export const games: Game[] = [
     description: 'Vex 5 represents the current evolution of the stickman platforming series, introducing polished mechanics and the most challenging level designs yet. This entry refines everything that made previous Vex games great while adding quality-of-life improvements and new gameplay elements. The stickman protagonist returns for ten brutal acts plus bonus challenge stages, each packed with deadly traps, precise platforming sequences, and secrets to discover. New mechanics include the ability to grab and hang from ledges, giving you more control during difficult jumps, regenerating checkpoints that slowly reappear if destroyed, and intelligent camera work that zooms to show upcoming hazards. The physics feel tighter than ever, with perfectly tuned jump arcs and momentum that reward skillful play while remaining accessible to newcomers willing to learn. Controls remain intuitive: ARROW KEYS or WASD for directional movement, with improved wall mechanics that automatically grab nearby walls when jumping toward walls at speed. The game introduces "Acts" as major challenges broken into smaller checkpoint-separated sections, making progress feel more achievable even in difficult stages. New hazard types include laser grids with narrow safe windows, ice physics that reduce traction, bounce pads that launch you in specific directions, and moving platforms with complex patterns requiring prediction and timing. Environmental variety increases dramatically - levels take place across different themes including industrial facilities, alien laboratories, and high-tech installations, each with unique visual aesthetics and hazard types. Vex 5 features robust achievement and completion tracking, encouraging speedruns with visible timers and leaderboards. Trophy system rewards specific accomplishments like completing acts under target times, finding all collectible stars, and completing hitless runs. The visual presentation is the most polished yet, with smooth 60fps animations, particle effects, and background details that add personality without cluttering the screen. Quality-of-life features include instant restarts via hotkey, practice mode that lets you attempt specific sections repeatedly, and ghost replays showing your previous attempts.'
   },
   {
-    id: 'blumgi-rocket',
+    id: 'merge-round-racers',
+    title: 'Merge Round Racers',
+    thumbnail: 'https://i.ytimg.com/vi/YFATNYTD0Ic/maxresdefault.jpg',
+    embedUrl: 'https://77pen.github.io/p7/merge-round-racers/',
+    category: 'racing',
+    isNew: true,
+    description: 'Blumgi Rocket is an innovative physics-based racing game where you control a car equipped with a rocket booster, using controlled explosions to launch, flip, and navigate through obstacle courses. The twist is that you don\'t have traditional steering - instead, you aim your rocket and fire it to propel your car in the opposite direction through physics. This creates unique puzzle-platforming gameplay where understanding angles, momentum, and trajectory is essential for success. Each level presents a goal: reach the finish line, collect stars, or land in target zones, all while managing your car\'s orientation and momentum. Controls are unconventional: use MOUSE to aim the rocket direction, and LEFT MOUSE BUTTON to fire. The rocket provides thrust in the opposite direction you\'re aiming, following Newton\'s third law. This means if you want to go right, aim left and fire; if you need to flip, aim down and fire while airborne. The physics are realistic and satisfying - your car has weight and rotational momentum that must be managed carefully. Firing too much thrust can send you tumbling out of control, while insufficient power leaves you short of your target. Each level is a physics puzzle requiring you to analyze the layout, plan your rocket bursts, and execute precise sequences. Obstacles include gaps you must launch across, walls requiring careful navigation, moving platforms you must time correctly, and zones that trigger instant failure if touched. The game features multiple vehicles with different stats affecting weight, rocket power, and handling. Heavier vehicles are more stable but require more thrust to move; lighter vehicles respond quickly but can easily flip out of control. Unlocking new vehicles provides fresh challenges as you adapt to their unique physics. The visual design is bright and colorful with clean geometric shapes that keep focus on physics challenges rather than overwhelming detail. The ragdoll car physics create hilarious failures when things go wrong - your vehicle cartwheel across levels in comical fashion after miscalculated rocket blasts.'
+  },
+    {
+    id: 'blumgi-Rcoekt',
     title: 'Blumgi Rocket',
     thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/672fb98802b00740e3c885cb2b31fc51/blumgi-rocket.png',
     embedUrl: 'https://majesticwafer.github.io/BlumgiRocket',
     category: 'racing',
     isNew: true,
-    description: 'Blumgi Rocket is an innovative physics-based racing game where you control a car equipped with a rocket booster, using controlled explosions to launch, flip, and navigate through obstacle courses. The twist is that you don\'t have traditional steering - instead, you aim your rocket and fire it to propel your car in the opposite direction through physics. This creates unique puzzle-platforming gameplay where understanding angles, momentum, and trajectory is essential for success. Each level presents a goal: reach the finish line, collect stars, or land in target zones, all while managing your car\'s orientation and momentum. Controls are unconventional: use MOUSE to aim the rocket direction, and LEFT MOUSE BUTTON to fire. The rocket provides thrust in the opposite direction you\'re aiming, following Newton\'s third law. This means if you want to go right, aim left and fire; if you need to flip, aim down and fire while airborne. The physics are realistic and satisfying - your car has weight and rotational momentum that must be managed carefully. Firing too much thrust can send you tumbling out of control, while insufficient power leaves you short of your target. Each level is a physics puzzle requiring you to analyze the layout, plan your rocket bursts, and execute precise sequences. Obstacles include gaps you must launch across, walls requiring careful navigation, moving platforms you must time correctly, and zones that trigger instant failure if touched. The game features multiple vehicles with different stats affecting weight, rocket power, and handling. Heavier vehicles are more stable but require more thrust to move; lighter vehicles respond quickly but can easily flip out of control. Unlocking new vehicles provides fresh challenges as you adapt to their unique physics. The visual design is bright and colorful with clean geometric shapes that keep focus on physics challenges rather than overwhelming detail. The ragdoll car physics create hilarious failures when things go wrong - your vehicle cartwheel across levels in comical fashion after miscalculated rocket blasts.'
+    description: 'Blumgi Rocket is an innovative physics-based racing game where you control a Car equipped with a rocket, using controlled explosions to launch, flip, and navigate through obstacle courses. The twist is that you don\'t have traditional steering - instead, you aim your rocket and fire it to propel your car in the opposite direction through physics. This creates unique puzzle-platforming gameplay where understanding angles, momentum, and trajectory is essential for success. Each level presents a goal: reach the finish line, collect stars, or land in target zones, all while managing your car\'s orientation and momentum. Controls are unconventional: use MOUSE to aim the rocket direction, and LEFT MOUSE BUTTON to fire. The rocket provides thrust in the opposite direction you\'re aiming, following Newton\'s third law. This means if you want to go right, aim left and fire; if you need to flip, aim down and fire while airborne. The physics are realistic and satisfying - your car has weight and rotational momentum that must be managed carefully. Firing too much thrust can send you tumbling out of control, while insufficient power leaves you short of your target. Each level is a physics puzzle requiring you to analyze the layout, plan your rocket bursts, and execute precise sequences. Obstacles include gaps you must launch across, walls requiring careful navigation, moving platforms you must time correctly, and zones that trigger instant failure if touched. The game features multiple vehicles with different stats affecting weight, rocket power, and handling. Heavier vehicles are more stable but require more thrust to move; lighter vehicles respond quickly but can easily flip out of control. Unlocking new vehicles provides fresh challenges as you adapt to their unique physics. The visual design is bright and colorful with clean geometric shapes that keep focus on physics challenges rather than overwhelming detail. The ragdoll car physics create hilarious failures when things go wrong - your vehicle cartwheel across levels in comical fashion after miscalculated rocket blasts.'
   },
   {
     id: 'among-us-single',
@@ -177,6 +188,62 @@ export const games: Game[] = [
     category: 'action',
     isHot: true,
     description: 'Among Us Single Player is a fan-made recreation of the viral social deduction hit, designed specifically for browsers without the need for server connections. In this version, you play as the Imposter every time, tasked with eliminating the computer-controlled Crewmates before they complete their tasks. This creates a stealth-action puzzle experience where you must isolate victims, utilize vents, and sabotage ship systems to win. The game perfectly captures the tension and mechanics of the original but focuses entirely on the Imposter gameplay loop. Your objective is to kill everyone on the ship without being caught. Controls mimic the original: use WASD or ARROW KEYS to move, and click on-screen buttons to Kill, Sabotage, or Vent. As you roam the Skeld (the classic spaceship map), you must watch the movement patterns of the AI bots. They move between rooms completing tasks just like real players. If a bot sees you kill someone or sees you pop out of a vent, they will run to the emergency button to call a meeting. During meetings, you must vote to try and blend in, though in this single-player version, the focus is more on the stealth mechanics than the social debate. You can trigger sabotages like Reactor Meltdowns or O2 Depletion to force the AI bots to move to specific locations, creating opportunities for isolated kills or separating groups. You can also lock doors to trap victims in rooms with you. The visual style is identical to the original game, featuring the iconic colorful bean astronauts and familiar ship layout. This version is perfect for practicing Imposter routes, learning vent connections, and understanding sabotage timing without the pressure of online ranked play. It runs smoothly in any browser and requires no download, making it the perfect way to experience the thrill of being the Imposter in a quick, accessible format.'
+  },
+
+  // ========================================
+  // CASUAL & IDLE GAMES
+  // ========================================
+  {
+    id: 'tiny-fishing',
+    title: 'Tiny Fishing',
+    thumbnail: 'https://www.coolmathgames.com/sites/default/files/TinyFishing_OG-logo.jpg',
+    embedUrl: 'https://tinyfishing.github.io/',
+    category: 'casual',
+    isHot: true,
+    description: 'Tiny Fishing is one of the most popular idle games on the web, combining the thrill of fishing with addictive upgrade mechanics. You play as a fisherman casting a line into a deep aquarium filled with exotic and valuable fish. The gameplay loop is simple yet satisfying: click and drag to cast your line, then carefully drag your mouse to hook as many fish as possible while reeling it back in. Each fish you catch has a monetary value, which you use to purchase essential upgrades. You can increase your max fish count (allowing you to hook more fish per cast), extend your line depth (to reach deeper, more valuable species), and improve your offline earnings. The "idle" aspect is crucial—even when you are not playing, your aquarium generates money for you, allowing you to return to a mountain of cash for big upgrades. As you go deeper, you unlock legendary fish and rare species that sparkle with gold. The art style is cute and colorful, and the sound of the reel and the splash of the water make for a relaxing ASMR-like experience. It is the ultimate "play for 5 minutes or 5 hours" game.'
+  },
+  {
+    id: 'monkey-mart',
+    title: 'Monkey Mart',
+    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkeOcqPpp9QQqO55o-XO79PKDLxMym34K2Wg&s',
+    embedUrl: 'https://classroom-6x.org/games/monkey-mart-unblocked/',
+    category: 'casual',
+    isNew: true,
+    description: 'Monkey Mart is an adorable and bustling management simulation game where you control a hard-working monkey running a grocery store. You start with a humble banana stand, planting trees, harvesting the fruit, and placing it on shelves for customers. As you earn money, you expand your empire to include corn, eggs, milk, popcorn, and more. The game is highly active—you must physically run your character around the store to manage stock, collect cash from the register, and clean up messes. However, the game introduces automation features that turn it into a management sim: you can hire assistants to restock shelves, farmers to harvest crops, and cashiers to handle the money. Your job then shifts to managing your staff and upgrading their speed and capacity. You can upgrade your character\'s movement speed and carrying capacity to be more efficient. The graphics are vibrant and 3D, with hilarious animations for the monkeys. There are multiple aisles and even different store levels to unlock. It is satisfying to watch your store go from a quiet stand to a chaotic, money-making supermarket.'
+  },
+  {
+    id: 'eggy-car',
+    title: 'Eggy Car',
+    thumbnail: 'https://i.ytimg.com/vi/U2SgrOeRrrs/maxresdefault.jpg',
+    embedUrl: 'https://eggycar-game.io/game/eggy-car/',
+    category: 'casual',
+    isHot: true,
+    description: 'Eggy Car is a physics-based driving game that is equal parts cute and infuriating. Your mission is simple: drive a car as far as possible. The catch? There is a giant, fragile egg loosely balanced on top of your car. The terrain is filled with steep hills, sudden drops, and bumpy roads that threaten to launch your egg into the air. If the egg falls off and cracks, it is game over. The controls require extreme finesse—you cannot just hold the gas pedal down. You must feather the throttle (using the Arrow Keys or A/D) to gently climb hills without tipping the egg backward, and brake carefully on descents to keep the egg from flying forward. As you collect coins scattered on the road, you can unlock new vehicles with different shapes and physics profiles, such as trucks, buses, or sports cars. Some cars have deeper "pockets" to hold the egg more securely, while others are faster but riskier. The game also features power-ups like the "Freeze" which turns your egg into a solid block of ice, preventing it from cracking for a few seconds. It is a fantastic casual game because runs are short, but the desire to beat your high score is addictive.'
+  },
+  {
+    id: 'idle-lumber-inc',
+    title: 'Idle lumber inc',
+    thumbnail: 'https://play-lh.googleusercontent.com/oZbEiSliZD0Qi8BnDgVki6covTBPIg0a_jgpJ_0tp3cE5Zu6bEqxqh8CjF0Z0_9xRw',
+    embedUrl: 'https://77pen.github.io/p5/idle-lumber-inc/',
+    category: 'casual',
+    description: 'Cut the Rope is a legendary physics-based puzzle game that has charmed millions of players. You are tasked with feeding candy to a cute little green monster named Om Nom. The candy hangs by ropes, and you must swipe your mouse (or finger) to cut the ropes at the precise moment to let gravity swing or drop the candy into Om Nom\'s mouth. However, it is never that simple. You must also try to collect three gold stars placed in difficult spots on the screen to get a perfect score. The levels introduce creative mechanics like bubbles that float the candy upward, air cushions that blow the candy sideways, sliding connecters, and spiders that try to steal the candy. The physics are incredibly smooth—the ropes swing realistically, and momentum is key to solving later puzzles. You often need to cut ropes in a specific order or with split-second timing to navigate obstacles like spikes or electricity. The animations for Om Nom are full of personality; he reacts with excitement when the candy gets close and looks sad if you lose it. With hundreds of levels and a gentle difficulty curve, it is the perfect brain-teasing casual game for all ages.'
+  },
+  {
+    id: 'little-alchemy-2',
+    title: 'Little Alchemy 2',
+    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvoWlgkI-DBkpEZN6Jn_zMpbPnmdnJWDWFng&s',
+    embedUrl: 'https://littlealchemy2.com/', 
+    // Note: If the official site blocks embeds, try: https://littlealchemy-2.github.io/
+    category: 'casual',
+    description: 'Little Alchemy 2 is a relaxing crafting game about discovery and combination. You start with just four basic elements: Air, Earth, Fire, and Water. By dragging and dropping one element on top of another, you create new items. For example, combining Earth and Water makes Mud. Combining Fire and Mud might make a Brick. Your goal is to discover all hundreds of possible items, ranging from simple things like "Rain" or "Plant" to complex concepts like "Life," "Time," "Internet," or "Cyborg." The game encourages lateral thinking and experimentation. There is no time limit, no way to lose, and no pressure. It is purely about the joy of figuring out the logic behind the combinations. The visual style is clean and modern, with satisfying icons for every new discovery. The game also features an encyclopedia that gives you funny or interesting descriptions for every item you craft. It is a fantastic game to play in the background while listening to music or podcasts, as it engages your brain without requiring fast reflexes.'
+  },
+   {
+    id: 'grow-a-garden',
+    title: 'Grow A Garden',
+    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROd5taXLOo-oUF4ThK6qFN1zfgW0UDzsggdQ&s',
+    embedUrl: '  https://growden.io/', 
+    category: 'casual',
+    description: 'buy plants, grow the plants, sell the plants, repeat.'
   },
 
   // ========================================
@@ -277,7 +344,7 @@ export const games: Game[] = [
     id: '2048',
     title: '2048',
     thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/1200px-2048_logo.svg.png',
-    embedUrl: 'https://gabrielecirulli.github.io/2048/',
+    embedUrl: 'https://www.2048.org/',
     category: 'puzzle',
     isHot: true,
     description: '2048 is a deceptively simple yet incredibly addictive sliding tile puzzle game that has captivated millions of players worldwide. The game takes place on a 4×4 grid where numbered tiles slide when you swipe. Your objective is to combine matching numbered tiles to create higher values, ultimately reaching the elusive 2048 tile. The game starts with two tiles on the board, each showing either a 2 or 4. When you make a move, all tiles slide in that direction, and if two tiles with the same number collide, they merge into one tile with their sum. For example, two tiles showing "2" will combine into a single "4" tile. After each move, a new tile (2 or 4) appears in a random empty spot. The challenge intensifies as the board fills up - you must think strategically about each move to prevent the grid from filling completely. If the board fills and no more moves are possible, the game ends. The numbers follow a power of two progression: 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, and beyond. Controls are incredibly intuitive - use the ARROW KEYS (UP, DOWN, LEFT, RIGHT) to slide all tiles in that direction, or SWIPE in any direction on touch devices. The key to success lies in developing a strategy: many expert players recommend keeping your highest tile in one corner and building toward it. Try to create chains of tiles in descending order, allowing for multiple merges with a single move. The game saves your progress automatically, so you can resume your session anytime. With its elegant design, simple mechanics, and deep strategic gameplay, 2048 remains one of the most popular puzzle games of all time.'
@@ -401,7 +468,7 @@ export const games: Game[] = [
     id: 'geometry-dash',
     title: 'Geometry Dash',
     thumbnail: 'https://cdn.iconscout.com/icon/free/png-256/free-geometry-dash-icon-svg-download-png-10673458.png?f=webp',
-    embedUrl: 'https://geometry-dash.io/',
+    embedUrl: 'https://ozgames.io/geometry-dash.embed',
     category: 'action',
     isHot: true,
     description: 'Geometry Dash is a rhythm-based platformer that has become a cultural phenomenon, challenging players with its perfect synchronization of music and gameplay. You control a geometric icon (usually a cube) that moves forward automatically while you navigate through obstacle-filled levels. The challenge comes from the game\'s unforgiving difficulty: one mistake sends you back to the start of the level. Despite this, the game is incredibly addictive because each attempt helps you learn the pattern and get further. The game\'s brilliance lies in how the obstacles sync perfectly with the background music - every spike, jump, and gravity flip aligns with the beat, creating a hypnotic experience. Controls are remarkably simple: press SPACEBAR, UP ARROW, LEFT MOUSE BUTTON, or tap your screen to make your icon jump. Hold the button for consecutive jumps when needed. However, different segments transform your icon: the cube jumps on solid ground, the ship flies up and down smoothly, the ball bounces with reversed gravity, the UFO has bouncy gravity, and the wave weaves through narrow passages. Each transformation requires different timing and rhythm, keeping gameplay varied within a single level. The game features multiple official levels of increasing difficulty, from easy introductory stages to nightmare-difficulty levels that take thousands of attempts to complete. The level editor allows players to create and share custom levels, resulting in millions of user-created challenges ranging from artistic showcases to brutally difficult tests of skill. Practice mode lets you place checkpoints to learn difficult sections without restarting constantly. The visuals are simple but striking, featuring neon colors, geometric shapes, and pulsing backgrounds that react to the music. Each level has a unique aesthetic and soundtrack, featuring dubstep, electronic, and other high-energy genres. The satisfaction of finally completing a difficult level after dozens or hundreds of attempts is unmatched, making Geometry Dash one of the most rewarding platformers ever created.'
@@ -465,6 +532,71 @@ export const games: Game[] = [
     category: 'puzzle',
     isNew: true,
     description: 'BitLife is a text-based life simulation game where you live an entire life from birth to death through a series of decisions and random events. This addictive game puts you in control of a character\'s entire existence, letting you make choices that shape their life story. You\'ll experience everything from childhood through old age, making decisions about education, relationships, career, finances, and more. The game starts by generating a random character with specific attributes including appearance, country of birth, initial family situation, and starting stats like Health, Happiness, Smarts, and Looks. From there, every year of your character\'s life presents new situations and choices. Controls are entirely MOUSE-based, with a simple interface presenting text descriptions and button options for each decision. Click "Age Up" to advance one year, triggering events and aging your character. Each year brings random events drawn from hundreds of possibilities: you might get invited to a party, encounter bullies at school, find money on the street, or experience family drama. Your responses to these events affect your character\'s stats and future opportunities. The game simulates realistic life progression: during childhood, focus on education and extracurriculars; as a teen, maintain grades, work part-time jobs, and navigate social situations; in adulthood, pursue higher education or careers, find romantic partners, buy houses and cars, and raise children. The career system is extensive, featuring dozens of jobs from regular positions to special careers like actor, musician, athlete, or even criminal. Each career path has unique events and progression mechanics. Relationships are complex: you can date, get married, have children, divorce, and maintain connections with family and friends. Each relationship requires maintenance through interactions like spending time together, giving gifts, or having conversations. The game includes random challenges and scenarios keeping gameplay unpredictable: you might inherit money, face lawsuits, win the lottery, or get diagnosed with illnesses. Financial management matters - buy houses and cars, invest in businesses, gamble at casinos, or go bankrupt. The ultimate goal is to create interesting life stories, whether that means living virtuously, becoming a criminal, accumulating wealth, or exploring different life paths. Death is inevitable, concluding your character\'s story with a summary of their life achievements, relationships, and legacy. The game encourages replayability through its randomness and vast number of possible life outcomes.'
+  },
+  // ========================================
+  // NEW RECOMMENDED ADDITIONS
+  // ========================================
+  {
+    id: 'poly-track',
+    title: 'PolyTrack',
+    thumbnail: 'https://i.ytimg.com/vi/wXsG1d9TzdI/maxresdefault.jpg',
+    embedUrl: 'https://www.kodub.com/apps/polytrack',
+    category: 'racing',
+    isNew: true,
+    isHot: true,
+    description: 'PolyTrack is a low-poly racing game that combines the precision of TrackMania with the clean aesthetic of modern web games. It is rapidly becoming a favorite for speedrunners due to its tight physics and built-in level editor. You race against the clock on tracks featuring loops, jumps, and sharp turns, trying to beat target times for Gold, Silver, and Bronze medals. The car physics are arcade-style but predictable, allowing for satisfying drifts and air control. The standout feature is the Level Editor, which lets you build your own tracks using a simple grid system and share them via codes. The community has created thousands of custom tracks, offering endless replayability. Controls are standard: WASD or Arrow Keys to drive, and R to restart instantly (which you will do often). The game runs incredibly smoothly on almost any device due to its optimized 3D engine.'
+  },
+  {
+    id: 'stack',
+    title: 'Stack',
+    thumbnail: 'https://www.ketchappgames.com/images/games/Big/Stack.webp',
+    embedUrl: 'https://stackgame.github.io/',
+    category: 'puzzle',
+    description: 'Stack is a minimalist arcade puzzle game where your goal is to build the highest tower possible by stacking moving blocks on top of each other. A block slides back and forth across the screen, and you must click or tap to place it on top of the previous one. If you mistime it and the block hangs over the edge, the overhanging part is sliced off, making your platform smaller for the next turn. As the tower gets higher, the blocks move faster, requiring intense concentration and rhythm. It is visually stunning with a color palette that shifts smoothly as you progress. The satisfaction of hitting "perfect" stacks (where the block aligns perfectly and makes a satisfying chime sound) makes it incredibly addictive. It is the perfect "just one more try" game.'
+  },
+  {
+    id: 'crossy-road',
+    title: 'Crossy Road',
+    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo1ahBbcHTmbJp7ymTw8LABGF949PSHgBN1g&s',
+    embedUrl: 'https://crossy-road-unblock.github.io/crossy-road/', 
+    // Note: Poki links sometimes block iframes. If this fails, use: https://nguyenthanh1995.github.io/CrossyRoad/
+    category: 'action',
+    description: 'Crossy Road is the endless arcade hopper that famously answered the question "Why did the chicken cross the road?" You control a blocky character (starting with a chicken) navigating through an endless stream of traffic, rivers, and train tracks. The gameplay is simple: tap to hop forward, swipe to move sideways. The goal is to get as far as possible without getting flattened by cars, eaten by eagles, or drowning in the river. The game features a unique voxel art style and dozens of unlockable characters, each with their own funny sound effects and visual themes. It is endless, procedurally generated, and increasingly difficult as traffic speeds up. A modern classic that works perfectly in browsers.'
+  },
+   {
+    id: 'raft-wars-2',
+    title: 'Raft Wars 2',
+    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/8ce3d09339bcb18c63bf9f1780795944/raft-wars-2.png',
+    embedUrl: '  https://77pen.github.io/p6/raft-wars-2', 
+    // Note: Poki links sometimes block iframes. If this fails, use: https://nguyenthanh1995.github.io/CrossyRoad/
+    category: 'action',
+    description: 'Crossy Road is the endless arcade hopper that famously answered the question "Why did the chicken cross the road?" You control a blocky character (starting with a chicken) navigating through an endless stream of traffic, rivers, and train tracks. The gameplay is simple: tap to hop forward, swipe to move sideways. The goal is to get as far as possible without getting flattened by cars, eaten by eagles, or drowning in the river. The game features a unique voxel art style and dozens of unlockable characters, each with their own funny sound effects and visual themes. It is endless, procedurally generated, and increasingly difficult as traffic speeds up. A modern classic that works perfectly in browsers.'
+  },
+  {
+    id: 'tanuki-sunset',
+    title: 'Tanuki Sunset',
+    thumbnail: 'https://i.ytimg.com/vi/et0YhBBihNk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCAaq7w2UYWEIOIkTmbBwLocL358w',
+    embedUrl: 'https://maxwellstevenson.com/Vafor_IT/tanuki-sunset/', 
+    category: 'racing',
+    isNew: true,
+    description: 'Tanuki Sunset is a synthwave-soaked longboard racing game where you play as a skateboarding raccoon. Yes, really. You speed down procedurally generated seaside roads, drifting around corners and collecting bits while avoiding cars and obstacles. The game is oozing with style, featuring a vibrant retro color palette and a chill lo-fi soundtrack. Controls involve using the analog stick (or keys) to drift: holding a direction charges a drift meter, allowing you to take tight corners at high speeds. Doing tricks and collecting points fills a meter that eventually lets you spin a roulette for bonus points. It is less about high-stress racing and more about "flow state" and enjoying the vibes, though the later levels do get challenging.'
+  },
+  {
+    id: 'bloons-td-4',
+    title: 'Bloons TD 4',
+    thumbnail: 'https://static.wikia.nocookie.net/b__/images/4/4b/BTD4-PromoArt.png/revision/latest/thumbnail/width/360/height/360?cb=20200711194940&path-prefix=bloons', // Generic BTD placeholder
+    embedUrl: 'https://bagelcomics.com/games/html/bloonstd4.html',
+    category: 'puzzle',
+    isHot: true,
+    description: 'Bloons Tower Defense 4 is a classic strategy game where you must stop waves of colorful balloons (bloons) from reaching the end of the track. You do this by placing monkeys equipped with darts, boomerangs, cannons, and magic spells along the path. As you pop bloons, you earn money to upgrade your towers or buy new ones. This version introduces the "Sun God" temple and other iconic high-tier upgrades. It features multiple tracks with varying difficulty levels (Beginner, Intermediate, Advanced, Expert). The strategy comes from balancing your economy (building Banana Farms) with your defense. Different bloon types require different counters: Lead bloons can only be popped by explosives or fire, while Camo bloons need towers with special detection. It is arguably the peak of the classic Flash-era tower defense games.'
+  },
+  {
+    id: 'bad-time-simulator',
+    title: 'Bad Time Simulator (Sans)',
+    thumbnail: 'https://lgames.littlegames.io/bgames/game_image/1745767774bad-time-simulator.webp',
+    embedUrl: 'https://jcw87.github.io/c2-sans-fight/',
+    category: 'action',
+    description: 'Bad Time Simulator is a browser-based recreation of the famous "Sans Fight" from the game Undertale. It isolates the most difficult boss battle of the game, allowing players to practice against Sans without playing through the entire RPG. You control a small red heart (your soul) inside a box, dodging an onslaught of bone attacks and laser blasts (Gaster Blasters). It is a "bullet hell" game that requires pixel-perfect movement and memorization of attack patterns. You can heal using items, but Sans dodges your attacks, making it a test of endurance. This web version is incredibly accurate to the original and includes an endless mode for hardcore players who want to see how long they can survive.'
   }
 ];
 

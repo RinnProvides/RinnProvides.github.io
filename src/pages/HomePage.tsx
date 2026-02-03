@@ -31,6 +31,7 @@ import PanicButton from '@/components/features/PanicButton';
 import AdBlockerDetector from '@/components/features/AdBlockerDetector';
 import TopRatedSection from '@/components/features/TopRatedSection';
 import GameCollection from '@/components/features/GameCollection';
+import { triggerSmartAd } from '@/lib/ads'; 
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -72,6 +73,9 @@ export default function HomePage() {
 
   // Handle game click - navigate to theater mode
   const handleGameClick = (gameId: string) => {
+   // smart ad
+    triggerSmartAd();
+    // actual game
     navigate(`/play/${gameId}`);
   };
 
@@ -141,7 +145,7 @@ export default function HomePage() {
         </div>
 
         {/* Featured Games Section (only on 'all' category and not searching) */}
-        {showAllSections && (
+        {  showAllSections && (
           <FeaturedSection games={featuredGames} onGameClick={handleGameClick} />
         )}
 

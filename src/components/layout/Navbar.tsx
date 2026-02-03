@@ -13,7 +13,7 @@
  */
 
 import { useState, useEffect } from 'react';
-import { Gamepad2, Search, X, Zap, Brain, Globe, Car, Trophy, Users, Heart, Sun, Moon } from 'lucide-react';
+import { Gamepad2, Search, X, Zap, Brain, Coffee, Globe, Car, Trophy, Users, Heart, Sun, Moon } from 'lucide-react';
 import { useTheme } from '@/hooks/useTheme';
 import { getFavoritesCount } from '@/lib/favorites';
 
@@ -27,6 +27,7 @@ interface NavbarProps {
 const categories = [
   { id: 'all', label: 'Home', icon: Gamepad2 },
   { id: 'favorites', label: 'Favorites', icon: Heart },
+  { id: 'casual', label: 'Casual', icon: Coffee },
   { id: 'action', label: 'Action', icon: Zap },
   { id: 'puzzle', label: 'Puzzle', icon: Brain },
   { id: 'io', label: 'IO', icon: Globe },
