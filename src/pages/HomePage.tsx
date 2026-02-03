@@ -1,18 +1,3 @@
-/**
- * HOME PAGE - Updated with Favorites Support
- * 
- * Main landing page with:
- * - Ad blocker detection (MUST disable ad blocker to play!)
- * - My Favorites section
- * - Featured games section (hero)
- * - Top Rated section (user ratings)
- * - Game Collections (curated carousels)
- * - Recently played section
- * - All games grid (filtered by category)
- * - Ad banners (leaderboard at top, rectangles between sections)
- * - Footer
- */
-
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { games, getFeaturedGames, getGamesByCategory, getTwoPlayerGames, searchGames, getGameById } from '@/data/games';
@@ -26,18 +11,22 @@ import RecentlyPlayed from '@/components/features/RecentlyPlayed';
 import TwoPlayerSection from '@/components/features/TwoPlayerSection';
 import FavoritesSection from '@/components/features/FavoritesSection';
 import GameGrid from '@/components/features/GameGrid';
-import AdBanner from '@/components/features/AdBanner';
 import PanicButton from '@/components/features/PanicButton';
-import AdBlockerDetector from '@/components/features/AdBlockerDetector';
 import TopRatedSection from '@/components/features/TopRatedSection';
 import GameCollection from '@/components/features/GameCollection';
-import { triggerSmartAd } from '@/lib/ads'; 
+// --- 1. NEW IMPORTS ---
+import { triggerSmartAd } from '@/lib/ads';
+import AdPreloader from '@/components/features/AdPreloader';
 
 export default function HomePage() {
   const navigate = useNavigate();
   const [currentCategory, setCurrentCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [recentGameIds, setRecentGameIds] = useState<string[]>([]);
+  
+  // --- 2. NEW STATE FOR ADS ---
+  const [isAdLoading, setIsAdLoading] = useState(false);
+  const [pendingGameId, setPendingGameId] = useState<string | null>(null);
 
   // Get game collections
   const collections = getAllCollections();
@@ -61,7 +50,6 @@ export default function HomePage() {
   const handleCategoryChange = (category: string) => {
     setCurrentCategory(category);
     
-    // Update URL query parameter without page reload
     const url = new URL(window.location.href);
     if (category === 'all') {
       url.searchParams.delete('category');
@@ -71,12 +59,27 @@ export default function HomePage() {
     window.history.pushState({}, '', url.toString());
   };
 
-  // Handle game click - navigate to theater mode
+  // --- 3. UPDATED GAME CLICK HANDLER ---
   const handleGameClick = (gameId: string) => {
-   // smart ad
-    triggerSmartAd();
-    // actual game
-    navigate(`/play/${gameId}`);
+    // Try to trigger the ad
+    const adShown = triggerSmartAd();
+
+    if (adShown) {
+      // If ad opened, show the "Video Player" Loading Screen
+      setPendingGameId(gameId);
+      setIsAdLoading(true);
+    } else {
+      // If cooldown active, go straight to game
+      navigate(`/play/${gameId}`);
+    }
+  };
+
+  // --- 4. CALLBACK WHEN AD TIMER FINISHES ---
+  const onAdComplete = () => {
+    setIsAdLoading(false);
+    if (pendingGameId) {
+      navigate(`/play/${pendingGameId}`);
+    }
   };
 
   // Handle search
@@ -94,7 +97,6 @@ export default function HomePage() {
   // Apply search or category filter or favorites
   let filteredGames;
   if (currentCategory === 'favorites') {
-    // Show favorites
     const favoriteIds = getFavoriteIds();
     filteredGames = favoriteIds
       .map(id => getGameById(id))
@@ -107,12 +109,10 @@ export default function HomePage() {
   
   const recentGames = games.filter(game => recentGameIds.includes(game.id));
   
-  // Determine if we're in search mode or favorites mode
   const isSearching = searchQuery.length > 0;
   const isFavoritesMode = currentCategory === 'favorites';
   const showAllSections = currentCategory === 'all' && !isSearching;
 
-  // Get category label for display
   const getCategoryLabel = () => {
     if (isSearching) {
       return `Search Results for "${searchQuery}" (${filteredGames.length} games)`;
@@ -126,8 +126,11 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-game-bg flex flex-col">
-      {/* Ad Blocker Detection */}
-      <AdBlockerDetector />
+      {/* --- 5. ADD THE PRELOADER COMPONENT HERE --- */}
+      <AdPreloader 
+        isOpen={isAdLoading} 
+        onComplete={onAdComplete} 
+      />
 
       {/* Sticky Navigation */}
       <Navbar 
@@ -138,33 +141,30 @@ export default function HomePage() {
       />
 
       {/* Main Content */}
-      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Top Leaderboard Ad */}
-        <div className="flex justify-center mb-8">
-          <AdBanner size="leaderboard" />
-        </div>
-
-        {/* Featured Games Section (only on 'all' category and not searching) */}
-        {  showAllSections && (
-          <FeaturedSection games={featuredGames} onGameClick={handleGameClick} />
+      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        {/* Featured Games Banner - Compact horizontal carousel */}
+        {showAllSections && (
+          <div className="mb-8">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-2xl font-bold text-game-text flex items-center gap-2">
+                <span className="text-yellow-400">⭐</span>
+                Featured Games
+              </h2>
+              <span className="text-sm text-game-text-muted">Play the best games instantly!</span>
+            </div>
+            <FeaturedSection games={featuredGames} onGameClick={handleGameClick} />
+          </div>
         )}
 
-        {/* My Favorites Section (only on 'all' category and not searching) */}
+        {/* My Favorites Section */}
         {showAllSections && <FavoritesSection />}
 
-        {/* Top Rated Section (only on 'all' category and not searching) */}
+        {/* Top Rated Section */}
         {showAllSections && (
-          <>
-            <TopRatedSection onGameClick={handleGameClick} />
-            
-            {/* Ad between sections */}
-            <div className="flex justify-center my-8">
-              <AdBanner size="rectangle" />
-            </div>
-          </>
+          <TopRatedSection onGameClick={handleGameClick} />
         )}
 
-        {/* Game Collections - Curated Carousels (only on 'all' category and not searching) */}
+        {/* Game Collections */}
         {showAllSections && (
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-game-text mb-6">🎯 Curated Collections</h2>
@@ -175,39 +175,20 @@ export default function HomePage() {
                 onGameClick={handleGameClick}
               />
             ))}
-            
-            {/* Ad between sections */}
-            <div className="flex justify-center my-8">
-              <AdBanner size="rectangle" />
-            </div>
           </div>
         )}
 
-        {/* 2-Player Games Section (only on 'all' category and not searching) */}
+        {/* 2-Player Games Section */}
         {showAllSections && (
-          <>
-            <TwoPlayerSection games={twoPlayerGames} onGameClick={handleGameClick} />
-            
-            {/* Ad between sections */}
-            <div className="flex justify-center my-8">
-              <AdBanner size="rectangle" />
-            </div>
-          </>
+          <TwoPlayerSection games={twoPlayerGames} onGameClick={handleGameClick} />
         )}
 
-        {/* Recently Played Section (only on 'all' category and not searching) */}
+        {/* Recently Played Section */}
         {showAllSections && recentGames.length > 0 && (
-          <>
-            <RecentlyPlayed games={recentGames} onGameClick={handleGameClick} />
-            
-            {/* Ad between sections */}
-            <div className="flex justify-center my-8">
-              <AdBanner size="rectangle" />
-            </div>
-          </>
+          <RecentlyPlayed games={recentGames} onGameClick={handleGameClick} />
         )}
 
-        {/* All Games Grid (filtered by category, favorites, or search) */}
+        {/* All Games Grid */}
         {filteredGames.length > 0 ? (
           <GameGrid
             games={filteredGames}
