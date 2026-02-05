@@ -6,8 +6,8 @@
 // Your specific Monetag Direct Link
 const DIRECT_LINK_URL = "https://otieu.com/4/10551637"; 
 
-// CONFIGURATION: Cooldown time (3 minutes = 180000ms)
-const AD_COOLDOWN = 3 * 60 * 1000; 
+// CONFIGURATION: Cooldown time (30 seconds = 30000ms)
+const AD_COOLDOWN = 30 * 1000; 
 
 export const triggerSmartAd = () => {
   try {
@@ -20,7 +20,7 @@ export const triggerSmartAd = () => {
       // Open your Monetag link in a new tab
       window.open(DIRECT_LINK_URL, '_blank');
       
-      // Reset the timer so it doesn't happen again for 3 mins
+      // Reset the timer so it doesn't happen again for 30 seconds
       localStorage.setItem('lastAdShown', now.toString());
       console.log('$$$ Smart Ad Triggered');
       
