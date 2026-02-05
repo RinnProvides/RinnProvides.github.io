@@ -13,7 +13,7 @@
  */
 
 import { useState, useEffect } from 'react';
-import { Game } from '@/data/games';
+import { Game, isGameNew } from '@/data/games';
 import { Play, Heart } from 'lucide-react';
 import LazyImage from './LazyImage';
 import GameRating from './GameRating';
@@ -81,8 +81,8 @@ export default function GameCard({ game, onClick }: GameCardProps) {
 
         {/* Badges */}
         <div className="absolute top-2 right-2 flex flex-col gap-2">
-          {/* NEW Badge */}
-          {game.isNew && (
+          {/* NEW Badge - Automatically shown if game added within last 5 days */}
+          {isGameNew(game) && (
             <div className="bg-red-600 px-3 py-1 rounded-full text-xs font-bold text-white uppercase shadow-lg animate-pulse flex items-center gap-1">
               <span className="text-yellow-300">✨</span>
               NEW
@@ -96,10 +96,12 @@ export default function GameCard({ game, onClick }: GameCardProps) {
             </div>
           )}
           
-          {/* Category badge */}
-          <div className="bg-game-primary/90 px-3 py-1 rounded-full text-xs font-semibold text-white uppercase">
-            {game.category}
-          </div>
+          {/* Categories badges */}
+          {game.categories.slice(0, 2).map((cat, index) => (
+            <div key={index} className="bg-game-primary/90 px-3 py-1 rounded-full text-xs font-semibold text-white uppercase">
+              {cat}
+            </div>
+          ))}
         </div>
       </div>
 
