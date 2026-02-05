@@ -208,7 +208,7 @@ export const games: Game[] = [
     title: 'Monkey Mart',
     thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkeOcqPpp9QQqO55o-XO79PKDLxMym34K2Wg&s',
     embedUrl: 'https://classroom-6x.org/games/monkey-mart-unblocked/',
-    categories: ['casual', 'puzzle'], // Management sim fits best under puzzle in this schema
+    categories: ['puzzle'], // Management sim fits best under puzzle in this schema
     isNew: true,
     addedAt: '2026-01-23',
     description: 'Monkey Mart is a bustling management simulation game where you control a monkey running a grocery store. You start with a banana stand, planting trees and harvesting fruit. As you earn money, you expand to include corn, eggs, milk, and popcorn. You must physically run your character around to manage stock and collect cash. You can hire assistants to restock shelves and farmers to harvest crops. Your job shifts to managing staff and upgrading their speed. The graphics are vibrant and 3D with hilarious animations. It is satisfying to watch your store go from a quiet stand to a chaotic supermarket.'
@@ -228,7 +228,7 @@ export const games: Game[] = [
     title: 'Idle Lumber Inc',
     thumbnail: 'https://play-lh.googleusercontent.com/oZbEiSliZD0Qi8BnDgVki6covTBPIg0a_jgpJ_0tp3cE5Zu6bEqxqh8CjF0Z0_9xRw',
     embedUrl: 'https://77pen.github.io/p5/idle-lumber-inc/',
-    categories: ['casual', 'puzzle'],
+    categories: ['puzzle'],
     addedAt: '2026-01-22',
     description: 'Idle Lumber Inc is a management simulation game where you build and run your own timber empire. You start with a small sawmill and a few workers, but your goal is to expand into a massive factory. You manage the entire process: planting trees, harvesting timber, milling the wood, and shipping orders. As you earn money, you can upgrade your machines for speed, hire more efficient lumberjacks, and train managers to automate the workflow. The game features an addictive loop of earning cash to buy upgrades that earn even more cash. You also handle special orders and factory expansions to unlock new wood types.'
   },
@@ -348,7 +348,7 @@ export const games: Game[] = [
     id: '2048',
     title: '2048',
     thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/1200px-2048_logo.svg.png',
-    embedUrl: 'https://www.mathsisfun.com/games/a/2048/index.html',
+    embedUrl: 'https://www.2048.org/',
     categories: ['puzzle'],
     isHot: true,
     addedAt: '2026-01-25',
