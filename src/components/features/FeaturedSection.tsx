@@ -8,7 +8,7 @@
  * - Instant click to play
  */
 
-import { Game } from '@/data/games';
+import { Game, isGameNew } from '@/data/games';
 import { Flame, Sparkles, Play } from 'lucide-react';
 
 interface FeaturedSectionProps {
@@ -52,7 +52,7 @@ export default function FeaturedSection({ games, onGameClick }: FeaturedSectionP
                       Hot
                     </span>
                   )}
-                  {game.isNew && (
+                  {isGameNew(game) && (
                     <span className="bg-gradient-to-r from-green-500 to-emerald-500 px-2 py-1 rounded text-xs font-bold text-white uppercase shadow-lg">
                       New
                     </span>
@@ -77,7 +77,7 @@ export default function FeaturedSection({ games, onGameClick }: FeaturedSectionP
                 </h3>
                 <div className="flex items-center justify-between mt-2">
                   <span className="text-xs text-game-text-muted uppercase font-semibold">
-                    {game.category}
+                    {game.categories.join(', ')}
                   </span>
                   <span className="text-xs bg-game-primary/20 text-game-primary px-2 py-1 rounded font-semibold">
                     Play Now →
