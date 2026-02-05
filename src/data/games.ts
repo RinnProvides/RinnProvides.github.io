@@ -50,7 +50,7 @@ export const games: Game[] = [
     id: 'cookie-clicker',
     title: 'Cookie Clicker',
     thumbnail: 'https://play-lh.googleusercontent.com/Z1MOuuiD05ZN5LkVmMEvKF0mqAc-FknaQ2j8s4dZiO-LSPQX4EEA3RVJdlQEtxe96ok',
-    embedUrl: 'https://g8hh.github.io/cookieclicker/',
+    embedUrl: 'https://unblocked-cookie-clicker.pages.dev/unblocked/',
     categories: ['puzzle', 'casual'],
     featured: true,
     addedAt: '2026-02-05',
@@ -67,6 +67,40 @@ export const games: Game[] = [
     addedAt: '2026-02-03',
     description: 'Moto X3M is an exhilarating motorcycle stunt racing game that combines high-speed action with physics-based challenges. Race through 22 unique levels filled with explosive obstacles, deadly traps, and jaw-dropping stunts. Each level is a carefully designed obstacle course featuring loop-de-loops, explosive barrels, moving platforms, spikes, and massive jumps. Your goal is to reach the finish line as quickly as possible while performing sick flips to reduce your time. The game rewards both speed and style - every front flip or backflip you complete in mid-air shaves precious seconds off your final time. Controls are simple but require precision - use the UP ARROW KEY to accelerate, DOWN ARROW KEY to brake, and LEFT/RIGHT ARROW KEYS to lean. Mastering the lean controls is crucial for landing jumps safely.'
   },
+    {
+    id: 'fireboy-watergirl',
+    title: 'Fireboy and Watergirl',
+    thumbnail: 'https://amhooman.github.io/fireboywatergirl/img.gamedistribution.com/gamedistributionid-512x512.jpeg',
+    embedUrl: 'https://amhooman.github.io/fireboywatergirl/game.html',
+    categories: ['puzzle', 'multiplayer'],
+    featured: true,
+    isTwoPlayer: true,
+    addedAt: '2026-01-28',
+    description: 'Fireboy and Watergirl is the beloved puzzle-platformer series that challenges players to control two characters simultaneously through elaborate temple mazes. Fireboy is immune to lava but dies in water, while Watergirl is immune to water but perishes in lava. This elemental dynamic creates unique puzzle scenarios where players must carefully navigate each character through their respective safe zones. The game can be played solo controlling both characters, or cooperatively with a friend. Controls for solo play: use ARROW KEYS to move Fireboy and WASD KEYS to move Watergirl. The challenge comes from coordinating both characters\' movements to activate switches, push buttons, and unlock doors together.'
+  },
+    {
+    id: 'drift-hunters',
+    title: 'Drift Hunters',
+    thumbnail: 'https://drift-hunters.io/data/image/drift-hunters.png',
+    embedUrl: 'https://classroom2111.github.io/g5/class-447',
+    categories: ['racing', 'action'],
+    featured: true,
+    isHot: true,
+    addedAt: '2026-01-24',
+    description: 'Drift Hunters is a 3D car drifting simulator featuring realistic physics and car customization. Your objective is to master drifting - sliding sideways through corners while maintaining control. Points are earned for long, controlled drifts. Controls: WASD or ARROWS to steer, SPACEBAR for handbrake, SHIFT for nitrous. The handbrake is key to initiating drifts. You can buy over 25 cars including JDM legends and tune them (engine, turbo, suspension). Visual customization includes paint and rims. Tracks range from mountain touges to race circuits. It offers deep mechanics for drifting enthusiasts.'
+  },
+
+    {
+    id: 'football-bros',
+    title: 'Football Bros',
+    thumbnail: 'https://footballbros.io/splash.jpg',
+    embedUrl: 'https://footballbros.io/',
+    categories: ['sports', 'multiplayer'],
+    featured: true,
+    isTwoPlayer: true,
+    addedAt: '2026-02-04',
+    description: 'Football Bros is a fast-paced physics soccer game. Matches are 2v2 or 1v1. Controls: WASD or ARROWS. The kick button automatically aims. The physics engine creates unpredictable bounces and tackles. You can tackle opponents to steal the ball. Characters are customizable. Modes include Quick Match and Tournament. Power-ups like speed boosts and mega kicks appear randomly. It creates hilarious moments in local multiplayer when players collide and the ball goes flying.'
+  },
 
   // ========================================
   // ALL GAMES
@@ -82,16 +116,7 @@ export const games: Game[] = [
     addedAt: '2026-02-04',
     description: '1v1.LOL is a competitive online third-person shooter that combines fast-paced combat with building mechanics inspired by Fortnite. This game puts you in direct 1v1 battles against other players where quick reflexes, sharp aim, and strategic building skills determine victory. The core gameplay involves shooting opponents while simultaneously constructing defensive structures. You can create walls, ramps, floors, and roofs to protect yourself. Controls are comprehensive: use WASD for movement, MOUSE to aim/shoot, keys 1-5 for weapons/building, and G to edit. The building system requires practice - Q builds walls, E builds floors, R builds ramps, and F builds pyramids. The game offers multiple modes including Box Fight and Build Fight.'
   },
-  {
-    id: 'fireboy-watergirl',
-    title: 'Fireboy and Watergirl',
-    thumbnail: 'https://amhooman.github.io/fireboywatergirl/img.gamedistribution.com/gamedistributionid-512x512.jpeg',
-    embedUrl: 'https://amhooman.github.io/fireboywatergirl/game.html',
-    categories: ['puzzle', 'multiplayer'],
-    isTwoPlayer: true,
-    addedAt: '2026-01-28',
-    description: 'Fireboy and Watergirl is the beloved puzzle-platformer series that challenges players to control two characters simultaneously through elaborate temple mazes. Fireboy is immune to lava but dies in water, while Watergirl is immune to water but perishes in lava. This elemental dynamic creates unique puzzle scenarios where players must carefully navigate each character through their respective safe zones. The game can be played solo controlling both characters, or cooperatively with a friend. Controls for solo play: use ARROW KEYS to move Fireboy and WASD KEYS to move Watergirl. The challenge comes from coordinating both characters\' movements to activate switches, push buttons, and unlock doors together.'
-  },
+
   {
     id: 'wings-io',
     title: 'Wings.io',
@@ -389,16 +414,7 @@ export const games: Game[] = [
     addedAt: '2026-01-25',
     description: 'Wordle is the viral word-guessing game. Each day, a new five-letter word is selected. You have six tries to guess it. Feedback is color-coded: green means correct letter/position, yellow means correct letter/wrong position, gray means wrong letter. Controls: KEYBOARD to type. The game requires vocabulary and deduction. Strategic players start with vowel-heavy words like "ADIEU." The daily limit creates anticipation and community sharing. It tracks your win streak and statistics. The satisfaction of solving the puzzle in few guesses makes it an addictive daily ritual.'
   },
-  {
-    id: 'drift-hunters',
-    title: 'Drift Hunters',
-    thumbnail: 'https://drift-hunters.io/data/image/drift-hunters.png',
-    embedUrl: 'https://classroom2111.github.io/g5/class-447',
-    categories: ['racing', 'action'],
-    isHot: true,
-    addedAt: '2026-01-24',
-    description: 'Drift Hunters is a 3D car drifting simulator featuring realistic physics and car customization. Your objective is to master drifting - sliding sideways through corners while maintaining control. Points are earned for long, controlled drifts. Controls: WASD or ARROWS to steer, SPACEBAR for handbrake, SHIFT for nitrous. The handbrake is key to initiating drifts. You can buy over 25 cars including JDM legends and tune them (engine, turbo, suspension). Visual customization includes paint and rims. Tracks range from mountain touges to race circuits. It offers deep mechanics for drifting enthusiasts.'
-  },
+
   {
     id: 'drive-mad',
     title: 'Drive Mad',
@@ -422,7 +438,7 @@ export const games: Game[] = [
     id: 'subway-surfers',
     title: 'Subway Surfers',
     thumbnail: 'https://subwaysurfers76.github.io/rs/imgs/subway-surfers.jpg',
-    embedUrl: 'https://subwaysurfers76.github.io/',
+    embedUrl: 'https://subwaysurfers-unblocked.gitlab.io/embed/subway-surfers.html',
     categories: ['action', 'racing'],
     isHot: true,
     addedAt: '2026-01-24',
@@ -439,16 +455,7 @@ export const games: Game[] = [
     addedAt: '2026-02-05',
     description: 'Basket Bros is an arcade basketball game where fouls are encouraged. It is 1v1 basketball meets fighting. You can elbow and punch opponents to steal the ball. Controls: WASD/G/F for Player 1, Arrows/L/O for Player 2. Characters have unique stats for speed and dunking. The game features power-ups and "super dunks" that send opponents flying. It includes a tournament mode against AI and a chaotic local multiplayer mode. The physics are exaggerated and fun.'
   },
-  {
-    id: 'football-bros',
-    title: 'Football Bros',
-    thumbnail: 'https://footballbros.io/splash.jpg',
-    embedUrl: 'https://footballbros.io/',
-    categories: ['sports', 'multiplayer'],
-    isTwoPlayer: true,
-    addedAt: '2026-02-04',
-    description: 'Football Bros is a fast-paced physics soccer game. Matches are 2v2 or 1v1. Controls: WASD or ARROWS. The kick button automatically aims. The physics engine creates unpredictable bounces and tackles. You can tackle opponents to steal the ball. Characters are customizable. Modes include Quick Match and Tournament. Power-ups like speed boosts and mega kicks appear randomly. It creates hilarious moments in local multiplayer when players collide and the ball goes flying.'
-  },
+
   {
     id: 'basketball-stars',
     title: 'Basketball Stars',
