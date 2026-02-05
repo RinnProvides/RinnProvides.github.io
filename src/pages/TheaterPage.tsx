@@ -12,7 +12,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getGameById } from '@/data/games';
+import { getGameById, isGameNew } from '@/data/games';
 import { addRecentlyPlayed } from '@/lib/localStorage';
 import { ArrowLeft, Maximize, Minimize, Loader2 } from 'lucide-react';
 import AdBanner from '@/components/features/AdBanner';
@@ -242,11 +242,13 @@ export default function TheaterPage() {
                     {loadingStage}
                   </p>
                   
-                  {/* Category badge */}
-                  <div className="mb-8 flex items-center justify-center gap-2">
-                    <span className="bg-game-primary/20 border border-game-primary/40 px-4 py-1.5 rounded-full text-xs font-bold text-game-primary uppercase tracking-wider">
-                      {game.category}
-                    </span>
+                  {/* Category badges */}
+                  <div className="mb-8 flex items-center justify-center gap-2 flex-wrap">
+                    {game.categories.map((cat, index) => (
+                      <span key={index} className="bg-game-primary/20 border border-game-primary/40 px-4 py-1.5 rounded-full text-xs font-bold text-game-primary uppercase tracking-wider">
+                        {cat}
+                      </span>
+                    ))}
                   </div>
                   
                   {/* Enhanced Progress bar */}
@@ -312,11 +314,13 @@ export default function TheaterPage() {
           <div className="mt-6 bg-game-surface rounded-xl p-6 shadow-lg">
             <div className="flex items-start justify-between">
               <div className="flex-1">
-                <div className="flex items-center space-x-3 mb-2">
+                <div className="flex items-center space-x-3 mb-2 flex-wrap">
                   <h1 className="text-3xl font-bold text-game-text">{game.title}</h1>
-                  <span className="bg-game-primary px-3 py-1 rounded-full text-xs font-bold text-white uppercase">
-                    {game.category}
-                  </span>
+                  {game.categories.map((cat, index) => (
+                    <span key={index} className="bg-game-primary px-3 py-1 rounded-full text-xs font-bold text-white uppercase">
+                      {cat}
+                    </span>
+                  ))}
                 </div>
                 {game.description && (
                   <p className="text-game-text-muted mb-4">{game.description}</p>
