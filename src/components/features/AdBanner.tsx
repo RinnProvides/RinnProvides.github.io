@@ -11,11 +11,21 @@ const adConfig = {
     width: 160, 
     height: 600, 
     provider: 'adsterra',
-    key: '25eda8a4a8c0e5a7567249b284cf2c40' // Your Adsterra Key
+    key: '25eda8a4a8c0e5a7567249b284cf2c40' 
   },
 
-  // --- MONETAG (Everything Else) ---
-  // MAKE SURE TO PASTE YOUR REAL MONETAG URLS BELOW
+  // --- HILLTOPADS (Rectangle 300x250) ---
+  // I moved your new code here
+  'rectangle': { 
+    width: 300, 
+    height: 250, 
+    provider: 'hilltop', 
+    // This is the long URL from the code you pasted
+    scriptUrl: '//metalliceducation.com/b.XhVKsjd/G/lg0RYAWfcB/Iewmh9EuWZnURlOkSPBT/Yf3mNIzcMmyrNRzTc_t/NSj/cd3cMVzNIy4/MeQC' 
+  },
+
+  // --- MONETAG (Others) ---
+  // REMINDER: You still need real links for these!
   'leaderboard': { 
     width: 728, 
     height: 90, 
@@ -28,12 +38,6 @@ const adConfig = {
     provider: 'monetag',
     scriptUrl: '//your-monetag-script-url-for-mobile.js' 
   },
-  'rectangle': { 
-    width: 300, 
-    height: 250, 
-    provider: 'monetag',
-    scriptUrl: '//your-monetag-script-url-for-rectangle.js' 
-  },
 };
 
 export default function AdBanner({ size, className = '' }: AdBannerProps) {
@@ -43,7 +47,7 @@ export default function AdBanner({ size, className = '' }: AdBannerProps) {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Clear container
+    // Clear container to prevent duplicate ads on re-renders
     containerRef.current.innerHTML = '';
 
     // --- STRATEGY 1: MONETAG (Simple Script) ---
@@ -56,20 +60,15 @@ export default function AdBanner({ size, className = '' }: AdBannerProps) {
     } 
     
     // --- STRATEGY 2: ADSTERRA (Protected Iframe) ---
-    // We write the ad code into a secure iframe so it doesn't conflict with React
     else if (config.provider === 'adsterra' && config.key) {
       const iframe = document.createElement('iframe');
-      
-      // Iframe styling to make it invisible
       iframe.style.width = '100%';
       iframe.style.height = '100%';
       iframe.style.border = 'none';
       iframe.style.overflow = 'hidden';
       iframe.scrolling = 'no';
-      
       containerRef.current.appendChild(iframe);
 
-      // The HTML content for the iframe
       const doc = iframe.contentWindow?.document;
       if (doc) {
         doc.open();
@@ -94,6 +93,22 @@ export default function AdBanner({ size, className = '' }: AdBannerProps) {
       }
     }
 
+    // --- STRATEGY 3: HILLTOPADS (Injected Script) ---
+    else if (config.provider === 'hilltop' && config.scriptUrl) {
+      const script = document.createElement('script');
+      
+      // We manually attach the settings object the raw code was trying to pass
+      // @ts-ignore - 'settings' is a custom property expected by Hilltop
+      script.settings = {}; 
+      
+      script.src = config.scriptUrl;
+      script.async = true;
+      script.referrerPolicy = 'no-referrer-when-downgrade';
+      
+      // Instead of "l.parentNode.insertBefore", we just append to our React ref
+      containerRef.current.appendChild(script);
+    }
+
   }, [size, config]);
 
   return (
@@ -103,7 +118,7 @@ export default function AdBanner({ size, className = '' }: AdBannerProps) {
       style={{
         width: `${config.width}px`,
         height: `${config.height}px`,
-        minHeight: `${config.height}px` // Enforce height so layout doesn't jump
+        minHeight: `${config.height}px`
       }}
     />
   );
