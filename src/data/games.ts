@@ -35,7 +35,7 @@ export const games: Game[] = [
     id: 'duck-life',
     title: 'Duck Life',
     thumbnail: 'https://www.coolmathgames.com/sites/default/files/styles/mobile_game_image/public/DuckLife_OG-logo.jpg.webp?itok=YPMNTKNM',
-    embedUrl: 'https://ducklifegame.github.io/',
+    embedUrl: 'https://dnrweqffuwjtx.cloudfront.net/games/2024/wix/duck-life-4/index.html',
     category: 'puzzle',
     featured: true,
     isHot: true,
