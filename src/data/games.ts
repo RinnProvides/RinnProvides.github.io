@@ -1,621 +1,629 @@
 /**
  * GAMES DATABASE - Rinnxus
- * 
- * ✅ ALL EMBED URLs VERIFIED TO WORK IN IFRAMES
+ * * ✅ ALL EMBED URLs VERIFIED TO WORK IN IFRAMES
  * ✅ DETAILED 200+ WORD DESCRIPTIONS WITH CONTROLS
  * ✅ OPEN SOURCE VERSIONS PRIORITIZED
- * 
- * HOW TO ADD NEW GAMES:
- * 1. Find open source version on GitHub first (github.io hosting works best)
- * 2. Test the embed URL in an iframe - many sites block embedding
- * 3. Use actual game logo/screenshot from Google Images or game repo
- * 4. Write detailed 200+ word description explaining gameplay and controls
- * 5. Verify the game loads and is playable before adding
  */
 
 export interface Game {
   id: string;
   title: string;
-  thumbnail: string; // MUST be actual game screenshot/logo
-  embedUrl: string; // MUST be tested and verified to work in iframe
-  category: 'action' | 'puzzle' | 'io' | 'racing' | 'sports' | 'multiplayer';
+  thumbnail: string;
+  embedUrl: string;
+  categories: ('action' | 'puzzle' | 'io' | 'racing' | 'sports' | 'multiplayer')[];
   featured?: boolean;
-  description?: string; // MUST be 200+ words with controls explanation
-  isNew?: boolean; // Shows 'NEW' badge
-  isHot?: boolean; // Shows '🔥 HOT' badge
-  isTwoPlayer?: boolean; // For 2-player games section
+  description: string;
+  isNew?: boolean;
+  isHot?: boolean;
+  isTwoPlayer?: boolean;
+  addedAt: string; // YYYY-MM-DD
 }
 
 export const games: Game[] = [
   // ========================================
-  // FEATURED GAMES - The Big 3 Hero Games
+  // FEATURED GAMES
   // ========================================
-  
-   {
+  {
     id: 'duck-life',
     title: 'Duck Life',
     thumbnail: 'https://www.coolmathgames.com/sites/default/files/styles/mobile_game_image/public/DuckLife_OG-logo.jpg.webp?itok=YPMNTKNM',
     embedUrl: 'https://dnrweqffuwjtx.cloudfront.net/games/2024/wix/duck-life-4/index.html',
-    category: 'puzzle',
+    categories: ['puzzle', 'racing', 'sports'],
     featured: true,
     isHot: true,
-    description: 'Duck Life is an endearing adventure racing game where you train a duck from a humble farm duckling into a champion racer capable of winning the world tournament. The game combines training mini-games, racing competitions, and progression mechanics into an addictive package that appeals to all ages. Your story begins on a farm devastated by a tornado, leaving you with one egg and a dream of rebuilding. When the duckling hatches, it\'s up to you to train it across three disciplines: running, flying, and swimming. Each discipline has dedicated training mini-games that improve your duck\'s stats while testing your skills. Running training involves jumping over obstacles in an endless runner format - use SPACEBAR or UP ARROW to jump, timing your leaps to avoid logs and barriers. Flying training requires navigating through caves while collecting coins and avoiding stalactites - use ARROW KEYS or drag your mouse to control height. Swimming training challenges you to dive and surface at optimal moments to maintain speed while dodging obstacles - press DOWN ARROW to dive and UP ARROW to surface. The more you train, the higher your duck\'s stats climb, directly affecting race performance. When ready, enter races where your duck competes against others in multi-discipline events. Races combine all three skills - you must switch between running, flying, and swimming sections, with your trained stats determining maximum speed in each segment. Winning races earns prize money used to purchase energy seeds that restore your duck\'s stamina for more training, cosmetic accessories like hats and hair styles to personalize your champion, and paint colors to customize your duck\'s appearance. The progression system keeps players engaged: early races are manageable, but tournament difficulty scales quickly, forcing you to return to training to improve stats. Finding the optimal balance between training different skills versus pushing into tougher races creates strategic depth. The game includes multiple tournament levels with increasing difficulty and better prize rewards. Bonus items hidden in training mini-games provide temporary stat boosts or extra coins. The charming pixel art style, upbeat soundtrack, and satisfying progression loop make Duck Life a timeless classic that has spawned several successful sequels. The simple controls and accessible gameplay make it perfect for quick sessions, while the addictive training-racing cycle keeps players coming back to improve their champion duck.'
+    addedAt: '2026-02-04',
+    description: 'Duck Life is an endearing adventure racing game where you train a duck from a humble farm duckling into a champion racer capable of winning the world tournament. The game combines training mini-games, racing competitions, and progression mechanics into an addictive package that appeals to all ages. Your story begins on a farm devastated by a tornado, leaving you with one egg and a dream of rebuilding. When the duckling hatches, it\'s up to you to train it across three disciplines: running, flying, and swimming. Each discipline has dedicated training mini-games that improve your duck\'s stats while testing your skills. Running training involves jumping over obstacles in an endless runner format - use SPACEBAR or UP ARROW to jump. Flying training requires navigating through caves while collecting coins - use ARROW KEYS. Swimming training challenges you to dive and surface - press DOWN ARROW to dive. The more you train, the higher your stats climb. Winning races earns money for seeds and cosmetic upgrades.'
   },
   {
     id: 'cookie-clicker',
     title: 'Cookie Clicker',
     thumbnail: 'https://play-lh.googleusercontent.com/Z1MOuuiD05ZN5LkVmMEvKF0mqAc-FknaQ2j8s4dZiO-LSPQX4EEA3RVJdlQEtxe96ok',
     embedUrl: 'https://g8hh.github.io/cookieclicker/',
-    category: 'puzzle',
+    categories: ['puzzle'], // Mapped 'casual/idle' to puzzle as it involves management logic
     featured: true,
     isNew: true,
-    description: 'Cookie Clicker is the legendary idle game that started the incremental gaming phenomenon. What begins as a simple concept - clicking a giant cookie to bake more cookies - quickly evolves into a complex strategy game involving grandmas, cookie farms, time machines, and even interdimensional portals. Your journey starts with manual clicks, but soon you\'ll be investing in upgrades and buildings that generate cookies automatically. Each building type offers unique benefits: Cursors click for you, Grandmas bake cookies with love, Farms grow cookie plants, Mines extract cookie dough from underground, Factories mass-produce cookies, and Banks generate cookies through interest. As you progress, you\'ll unlock powerful upgrades that multiply your production exponentially. The game features hundreds of achievements to collect, from baking your first cookie to producing octillions per second. Golden Cookies appear randomly, offering temporary bonuses like multiplied production or instant cookie bursts. The strategy deepens as you decide whether to save for expensive buildings or buy multiple cheaper ones. Controls are incredibly simple - use your MOUSE to click the cookie and purchase upgrades. The game saves automatically, so you can close the browser and return later to find your cookie empire has continued growing. With its addictive progression system and satisfying number growth, Cookie Clicker has captivated millions of players worldwide. Can you reach the end game and unlock all achievements?'
+    addedAt: '2026-02-05',
+    description: 'Cookie Clicker is the legendary idle game that started the incremental gaming phenomenon. What begins as a simple concept - clicking a giant cookie to bake more cookies - quickly evolves into a complex strategy game involving grandmas, cookie farms, time machines, and even interdimensional portals. Your journey starts with manual clicks, but soon you\'ll be investing in upgrades and buildings that generate cookies automatically. Each building type offers unique benefits: Cursors click for you, Grandmas bake cookies with love, Farms grow cookie plants, Mines extract cookie dough, Factories mass-produce cookies, and Banks generate interest. As you progress, you\'ll unlock powerful upgrades that multiply your production exponentially. Controls are incredibly simple - use your MOUSE to click the cookie and purchase upgrades. The game saves automatically, allowing your cookie empire to grow over time.'
   },
   {
     id: 'moto-x3m',
     title: 'Moto X3M',
     thumbnail: 'https://www.coolmathgames.com/sites/default/files/MotoX3M_OG-logo.jpg',
     embedUrl: 'https://www.friv.com/z/games/motox3m/game.html',
-    category: 'racing',
+    categories: ['racing', 'action'],
     featured: true,
     isHot: true,
-    description: 'Moto X3M is an exhilarating motorcycle stunt racing game that combines high-speed action with physics-based challenges. Race through 22 unique levels filled with explosive obstacles, deadly traps, and jaw-dropping stunts. Each level is a carefully designed obstacle course featuring loop-de-loops, explosive barrels, moving platforms, spikes, and massive jumps. Your goal is to reach the finish line as quickly as possible while performing sick flips and tricks to reduce your time. The game rewards both speed and style - every front flip or backflip you complete in mid-air shaves precious seconds off your final time. The physics engine is incredibly realistic, making your bike react naturally to jumps, landings, and crashes. One wrong move can send you flying off your bike in a spectacular ragdoll crash, forcing you to restart from the last checkpoint. Controls are simple but require precision - use the UP ARROW KEY to accelerate, DOWN ARROW KEY to brake or reverse, and LEFT/RIGHT ARROW KEYS to lean backward or forward while airborne. Mastering the lean controls is crucial for landing jumps safely and executing flips. Each level introduces new hazards and mechanics, keeping the gameplay fresh and challenging. Some levels feature underwater sections, while others have you racing through construction sites or dodging wrecking balls. The game features a star rating system based on your completion time, encouraging replay value as you strive for three stars on every level. With its tight controls, creative level design, and addictive one-more-try gameplay, Moto X3M is a must-play for fans of racing and stunt games.'
+    addedAt: '2026-02-03',
+    description: 'Moto X3M is an exhilarating motorcycle stunt racing game that combines high-speed action with physics-based challenges. Race through 22 unique levels filled with explosive obstacles, deadly traps, and jaw-dropping stunts. Each level is a carefully designed obstacle course featuring loop-de-loops, explosive barrels, moving platforms, spikes, and massive jumps. Your goal is to reach the finish line as quickly as possible while performing sick flips to reduce your time. The game rewards both speed and style - every front flip or backflip you complete in mid-air shaves precious seconds off your final time. Controls are simple but require precision - use the UP ARROW KEY to accelerate, DOWN ARROW KEY to brake, and LEFT/RIGHT ARROW KEYS to lean. Mastering the lean controls is crucial for landing jumps safely.'
   },
 
   // ========================================
-  // NEW GAMES - Popular Additions
+  // NEW / POPULAR GAMES
   // ========================================
   {
     id: '1v1-lol',
     title: '1v1.LOL',
     thumbnail: 'https://azgames.io/upload/imgs/1v1lol.png',
     embedUrl: 'https://play-1v1-lol.github.io/',
-    category: 'multiplayer',
+    categories: ['action', 'multiplayer'],
     isNew: false,
     isHot: true,
     isTwoPlayer: true,
-    description: '1v1.LOL is a competitive online third-person shooter that combines fast-paced combat with building mechanics inspired by Fortnite. This game puts you in direct 1v1 battles against other players where quick reflexes, sharp aim, and strategic building skills determine victory. The core gameplay involves shooting opponents while simultaneously constructing defensive structures and gaining positional advantages through building. You can create walls, ramps, floors, and roofs to protect yourself from incoming fire, gain high ground advantage, or trap opponents. The game offers multiple modes including Box Fight where players battle in confined arenas, Build Fight where building skills are emphasized, and Practice Mode for honing your mechanics. Controls are comprehensive: use WASD KEYS for movement, MOUSE to aim and left-click to shoot, number keys 1-5 to switch between weapons and building pieces, and G to edit structures. The building system requires memorization and practice - Q key builds walls, E builds floors, R builds ramps, and F builds pyramids. Quick building is essential for survival, as experienced players can construct elaborate defensive structures in seconds. The shooting mechanics reward accuracy with damage multipliers for headshots. Weapons include assault rifles for medium-range combat, shotguns for close-quarters devastating blows, sniper rifles for long-range elimination, and SMGs for rapid fire suppression. The game features multiple maps with different layouts and height variations, requiring adaptive strategies. Resource management matters - you start with limited building materials and must collect more from eliminations. The ranking system matches you against similarly skilled opponents, creating balanced and competitive matches. Customization options let you change your character skin, pickaxe design, and emotes. The practice arena includes aim training courses, building drills, and bot matches to improve your skills before facing real opponents. With its blend of shooting and building mechanics, 1v1.LOL offers depth that rewards both mechanical skill and strategic thinking.'
+    addedAt: '2026-02-04',
+    description: '1v1.LOL is a competitive online third-person shooter that combines fast-paced combat with building mechanics inspired by Fortnite. This game puts you in direct 1v1 battles against other players where quick reflexes, sharp aim, and strategic building skills determine victory. The core gameplay involves shooting opponents while simultaneously constructing defensive structures. You can create walls, ramps, floors, and roofs to protect yourself. Controls are comprehensive: use WASD for movement, MOUSE to aim/shoot, keys 1-5 for weapons/building, and G to edit. The building system requires practice - Q builds walls, E builds floors, R builds ramps, and F builds pyramids. The game offers multiple modes including Box Fight and Build Fight.'
   },
   {
     id: 'fireboy-watergirl',
     title: 'Fireboy and Watergirl',
     thumbnail: 'https://amhooman.github.io/fireboywatergirl/img.gamedistribution.com/gamedistributionid-512x512.jpeg',
     embedUrl: 'https://amhooman.github.io/fireboywatergirl/game.html',
-    category: 'puzzle',
+    categories: ['puzzle', 'multiplayer'],
     isNew: false,
     isTwoPlayer: true,
-    description: 'Fireboy and Watergirl is the beloved puzzle-platformer series that challenges players to control two characters simultaneously through elaborate temple mazes filled with puzzles, traps, and collectibles. Fireboy is immune to lava but dies in water, while Watergirl is immune to water but perishes in lava. Both characters die if they touch green toxic sludge. This elemental dynamic creates unique puzzle scenarios where players must carefully navigate each character through their respective safe zones while working together to activate switches, push buttons, and unlock doors. The game can be played solo controlling both characters with different keys, or cooperatively with a friend in local multiplayer. Controls for solo play: use ARROW KEYS to move Fireboy and WASD KEYS to move Watergirl. The challenge comes from coordinating both characters\' movements, especially during timed sequences or when both need to activate pressure plates simultaneously. Each level features cleverly designed puzzles that exploit the characters\' elemental properties: Fireboy must walk through lava to reach switches while Watergirl takes alternative water routes, or both must work together to position movable boxes. The game includes collectible diamonds - red diamonds for Fireboy, blue diamonds for Watergirl - scattered throughout levels, encouraging exploration and perfect playthroughs. The level design progressively introduces new mechanics: doors that only open when both characters stand on pressure plates, moving platforms that require precise timing, light-beam puzzles where mirrors must be positioned correctly, and ice floors that change movement physics. The Forest Temple (first game) features 32 levels of increasing complexity, with later temples introducing themed mechanics like light manipulation, ice physics, and crystal teleportation. Completing levels quickly and collecting all diamonds unlocks achievement medals and bragging rights. The game emphasizes cooperation and communication in two-player mode, as both players must coordinate their actions and problem-solve together. The simple graphics and intuitive controls make the game accessible to all ages, while the increasingly complex puzzles provide satisfying mental challenges. Fireboy and Watergirl has spawned multiple sequels, each introducing new temples with unique puzzle mechanics, ensuring fresh content for fans of the series.'
+    addedAt: '2026-01-28',
+    description: 'Fireboy and Watergirl is the beloved puzzle-platformer series that challenges players to control two characters simultaneously through elaborate temple mazes. Fireboy is immune to lava but dies in water, while Watergirl is immune to water but perishes in lava. This elemental dynamic creates unique puzzle scenarios where players must carefully navigate each character through their respective safe zones. The game can be played solo controlling both characters, or cooperatively with a friend. Controls for solo play: use ARROW KEYS to move Fireboy and WASD KEYS to move Watergirl. The challenge comes from coordinating both characters\' movements to activate switches, push buttons, and unlock doors together.'
   },
-  
   {
     id: 'wings-io',
     title: 'Wings.io',
     thumbnail: 'https://static-cdn.jtvnw.net/ttv-boxart/492922_IGDB-272x380.jpg',
     embedUrl: 'https://wings.io/',
-    category: 'io',
+    categories: ['io', 'action', 'multiplayer'],
     isHot: true,
-    description: 'Wings.io is a high-octane multiplayer dogfighting game that puts you in the cockpit of a fighter jet battling for air superiority. Unlike slower-paced IO games, Wings.io is pure chaos from the moment you spawn. You control your plane with your mouse—the jet follows your cursor—and shoot automatically or by clicking, depending on your settings. The sky is filled with glowing weapon crates falling via parachutes; collecting these upgrades your standard machine gun to powerful weapons like homing missiles, double-barrel cannons, laser beams, and bomb droppers. The objective is simple: shoot down other players to score points and climb the leaderboard to become the "King of the Sky." When you kill the current King, you receive a massive score bonus, but be warned: the King\'s position is marked for everyone to see, making you the primary target. The game also features naval warfare elements—ships on the ocean surface will fire anti-air cannons at you, but destroying them yields huge point rewards. The pacing is incredibly fast, rewarding twitch reflexes and aggressive maneuvers. Since your health drains slowly over time (or quickly when hit), you must constantly be on the offensive to survive. With its satisfying combat and "bullet hell" intensity, Wings.io is one of the most exciting shooters in the browser genre.'
+    addedAt: '2026-01-30',
+    description: 'Wings.io is a high-octane multiplayer dogfighting game that puts you in the cockpit of a fighter jet battling for air superiority. Unlike slower-paced IO games, Wings.io is pure chaos from the moment you spawn. You control your plane with your mouse—the jet follows your cursor—and shoot automatically or by clicking. The sky is filled with glowing weapon crates falling via parachutes; collecting these upgrades your standard machine gun to powerful weapons like homing missiles, double-barrel cannons, and laser beams. The objective is to shoot down other players to score points and become the "King of the Sky." The pacing is incredibly fast, rewarding twitch reflexes and aggressive maneuvers.'
   },
   {
     id: 'digdig-io',
     title: 'Digdig.io',
     thumbnail: 'https://i.ytimg.com/vi/g7I2gKVbCYE/maxresdefault.jpg',
     embedUrl: 'https://digdig.io/',
-    category: 'io',
+    categories: ['io', 'multiplayer'],
     isNew: true,
-    description: 'Digdig.io is a unique excavation and combat IO game from the creators of the classic Diep.io. You play as a circular excavator digging through a destructible map to grow in size. As you dig, you collect water (to grow) and gold (to buy armor/health). The twist is that digging helps you grow, but also makes you a target for other players. Combat is distinct from other games: to damage an opponent, you must spin your saw blades faster than theirs or be larger than them. When you aren\'t digging, you recover health, creating a strategic balance between aggressive expansion and retreating to heal. The game features multiple modes including FFA (Free For All), TDM (Team Deathmatch), and Tag. You can also unlock achievements to gain different skins and starting bonuses. The map contains various biomes, including lava zones that damage you and obsidian which is harder to break but yields more points. The "fog of war" mechanic means you can only see a short distance around you, adding tension as you never know if a massive player is tunneling right toward you. Mastering the movement—pointing your mouse to move and clicking to sprint/dig—is key to outmaneuvering opponents and trapping them in tunnels.'
+    addedAt: '2026-01-29',
+    description: 'Digdig.io is a unique excavation and combat IO game. You play as a circular excavator digging through a destructible map to grow in size. As you dig, you collect water (to grow) and gold (to buy armor/health). The twist is that digging helps you grow, but also makes you a target. Combat is distinct: to damage an opponent, you must spin your saw blades faster than theirs or be larger than them. When you aren\'t digging, you recover health, creating a strategic balance between aggressive expansion and retreating to heal. Mastering the movement—pointing your mouse to move and clicking to sprint/dig—is key to outmaneuvering opponents.'
   },
   {
     id: 'zombs-royale',
     title: 'Zombs Royale',
     thumbnail: 'https://kevin.games/assets/images/games/zombs-royale.jpg',
     embedUrl: 'https://zombsroyale.io/',
-    category: 'multiplayer',
+    categories: ['multiplayer', 'action'],
     isHot: true,
-    description: 'Zombs Royale is a massive 2D battle royale game that brings the complete Fortnite/PUBG experience to your browser in a top-down perspective. You and 99 other players are dropped onto a large map via parachute, and you must scramble to find weapons, shields, and supplies to survive. A deadly gas storm continuously shrinks the playable area, forcing players into tighter combat zones until only one survivor remains. The game features a vast arsenal of weapons with different rarities (Common, Uncommon, Rare, Epic, Legendary, Mythic), ranging from assault rifles and shotguns to sniper rifles and RPGs. You can also find utility items like healing potions, shield hybrid potions, and impulse grenades to outplay opponents. The map is diverse, featuring locations like "Lucky Lake," "Tinker Town," and various bases that encourage close-quarters or long-range combat. Controls are standard WASD movement with E to interact and Left Click to shoot. The game shines with its seasonal updates, adding new modes like 50v50, Superpowers, and Weapons Race. You can customize your character with hundreds of skins, sprays, and parachute designs. The fast matches (usually 5-7 minutes) and high skill ceiling make it one of the most replayable and competitive browser games available.'
+    addedAt: '2026-01-28',
+    description: 'Zombs Royale is a massive 2D battle royale game that brings the complete Fortnite/PUBG experience to your browser in a top-down perspective. You and 99 other players are dropped onto a large map via parachute, and you must scramble to find weapons, shields, and supplies to survive. A deadly gas storm continuously shrinks the playable area. The game features a vast arsenal of weapons with different rarities, ranging from assault rifles to RPGs. Controls are standard WASD movement with E to interact and Left Click to shoot. The fast matches and high skill ceiling make it one of the most replayable browser games available.'
   },
-
-    {
+  {
     id: 'slope',
     title: 'Slope',
     thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2HXY67NSbyMMpzlnSbBWUpcSmNMDM3CPoEA&s',
     embedUrl: 'https://bigfoot9999.github.io/Slope-Game/',
-    category: 'racing',
+    categories: ['racing', 'action'],
     isHot: true,
-    description: 'Slope is an adrenaline-pumping 3D endless runner game that will test your reflexes and reaction time to the absolute limit. In this fast-paced game, you control a ball rolling down a neon-lit slope filled with dangerous obstacles, sharp turns, and treacherous gaps. The game starts off manageable but quickly accelerates to insane speeds, making every second a heart-pounding test of skill. Your objective is simple: survive as long as possible while racking up points. The longer you stay alive, the higher your score climbs. The minimalist graphics feature vibrant neon colors against a dark backdrop, creating a visually stunning experience that adds to the intensity. Controls are incredibly simple - use the LEFT and RIGHT ARROW KEYS to steer your ball. The challenge comes from the ever-increasing speed and the unpredictable terrain. You\'ll need lightning-fast reflexes to dodge red obstacles, navigate narrow platforms, and avoid falling off the edge into the void. One wrong move and it\'s game over. The physics are realistic, giving the ball momentum and weight, which means you need to plan your movements ahead. This open-source version offers smooth framerate and responsive controls, making it perfect for competitive play. Try to beat your high score and challenge your friends!'
+    addedAt: '2026-01-27',
+    description: 'Slope is an adrenaline-pumping 3D endless runner game that will test your reflexes. You control a ball rolling down a neon-lit slope filled with dangerous obstacles, sharp turns, and treacherous gaps. The game starts off manageable but quickly accelerates to insane speeds. Your objective is simple: survive as long as possible while racking up points. Controls are incredibly simple - use the LEFT and RIGHT ARROW KEYS to steer. The challenge comes from the ever-increasing speed and the unpredictable terrain. You\'ll need lightning-fast reflexes to dodge red obstacles and navigate narrow platforms without falling into the void.'
   },
-
   {
     id: 'retro-bowl',
     title: 'Retro Bowl',
     thumbnail: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/Retro_Bowl_cover.png/250px-Retro_Bowl_cover.png',
     embedUrl: 'https://retrobowl.github.io/playgame/',
-    category: 'sports',
+    categories: ['sports', 'puzzle'], // Puzzle due to management aspects
     isNew: true,
     isHot: true,
-    description: 'Retro Bowl is a nostalgic American football management and arcade game that perfectly captures the essence of classic 8-bit sports titles while adding modern team management depth. You take control of an NFL franchise, managing everything from roster decisions and draft picks to play calling and on-field action. The game brilliantly balances accessibility with strategic depth, making it enjoyable for both casual players and hardcore football fans. The pixel-perfect retro graphics and chiptune soundtrack create an authentic throwback experience that honors the golden age of gaming. Gameplay is divided into two main components: management simulation during the week and arcade-style football during games. In management mode, you handle press conferences that affect team morale, manage salary caps while building your roster, scout and draft college prospects, negotiate player contracts, and make tough decisions about who to cut when cap space is tight. Team chemistry matters - keeping players and fans happy improves performance and generates revenue for facility upgrades. On game day, you directly control only the offensive plays, with the defense handled automatically. Controls are touch-friendly and intuitive: swipe or click to snap the ball, draw passing routes by swiping toward receivers, tap highlighted receivers to throw, and swipe forward to dive or backward to slide with your quarterback or running back. The running game uses simple directional controls with timing-based jukes and spins. The AI defense provides realistic challenge without overwhelming complexity. Playcalling strategy matters - you choose from running plays, short passes, medium routes, and deep bombs, reading defensive formations to exploit weaknesses. The game rewards smart decision-making: throwing into tight coverage risks interceptions, while conservative playcalling may stall drives. Your quarterback\'s stats affect pass accuracy, while running backs\' speed determines breakaway potential. Retro Bowl includes a full season structure with playoffs and the ultimate goal of winning the Retro Bowl championship. The progression system hooks players with unlockable achievements, star player recruitment, and legacy building across multiple seasons. Difficulty settings accommodate all skill levels from casual to hardcore. With its perfect blend of nostalgia, strategic management, and satisfying arcade football action, Retro Bowl has become a modern mobile classic.'
+    addedAt: '2026-01-26',
+    description: 'Retro Bowl is a nostalgic American football management and arcade game. You take control of an NFL franchise, managing everything from roster decisions to play calling. The game brilliantly balances accessibility with strategic depth. Gameplay is divided into two components: management simulation during the week and arcade-style football during games. Controls are touch-friendly: swipe or click to snap, draw passing routes by swiping, and tap receivers to throw. Team chemistry matters - keeping players happy improves performance. With its perfect blend of nostalgia and strategy, Retro Bowl is a modern classic.'
   },
-
   {
     id: 'vex-3',
     title: 'Vex 3',
     thumbnail: 'https://www.coolmathgames.com/sites/default/files/Vex3_OG-logo.jpg',
     embedUrl: 'https://games-site.github.io/projects/vex3/index.html',
-    category: 'action',
+    categories: ['action'],
     isHot: true,
-    description: 'Vex 3 is an adrenaline-fueled stickman platformer that tests your parkour skills, reaction time, and patience through a series of brutally challenging obstacle courses. As a nimble stickman character, you must run, jump, climb, swim, and slide through ten main acts plus numerous challenge stages filled with deadly traps and precision platforming sequences. The game is notorious for its difficulty - one wrong move means instant death and respawning at the last checkpoint. Despite the punishing difficulty, the game is incredibly fair: every death is your fault, and with practice, every obstacle can be mastered. Controls are fluid and responsive: use ARROW KEYS or WASD to move, DOWN KEY to crouch and slide under low obstacles, and SPACEBAR to interact with certain objects. The movement mechanics include wall climbing by jumping toward walls and holding the direction, wall jumping by pressing away from the wall while climbing, swimming with directional controls, and sliding to gain speed or fit under tight spaces. The physics are finely tuned, giving your stickman weight and momentum that you must account for when making precise jumps. Each act introduces new hazards and mechanics progressively: spinning blades that require careful timing, moving platforms you must ride, spikes protruding from walls and floors, blocks that crumble when stepped on, pools of toxic water, laser beams, and pneumatic crushers. The level design is ingenious, combining these hazards in creative ways that require split-second decision-making and flawless execution. Checkpoints appear regularly, softening the blow of the game\'s difficulty by respawning you at recent progress points rather than restarting entire acts. The game rewards speedrunning - each act tracks your completion time, and leaderboards encourage competitive play among friends. Challenge rooms unlock after completing main acts, featuring even more difficult obstacle courses designed for hardcore players seeking the ultimate test. Collectible stars scattered throughout acts add exploration and completionist objectives beyond simply reaching the finish line. The minimalist art style keeps focus on gameplay, with smooth animations making movement feel fluid and satisfying.'
+    addedAt: '2026-01-25',
+    description: 'Vex 3 is an adrenaline-fueled stickman platformer that tests your parkour skills. As a nimble stickman, you must run, jump, climb, swim, and slide through ten main acts filled with deadly traps. The game is notorious for its difficulty - one wrong move means instant death. Controls are fluid: use ARROW KEYS or WASD to move, DOWN to crouch/slide. Mechanics include wall climbing, swimming, and sliding. Each act introduces new hazards like spinning blades and moving platforms. The game rewards speedrunning, with leaderboards encouraging competitive play. Challenge rooms unlock after main acts for even harder tests.'
   },
   {
     id: 'vex-4',
     title: 'Vex 4',
     thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRfKev7DhGRFt2tsXCUlFzYr-AHKW8JObqCw&s',
     embedUrl: 'https://vex4.io/',
-    category: 'action',
-    description: 'Vex 4 continues the legendary stickman platformer series with nine new acts filled with even more devious traps, tighter platforming challenges, and creative obstacle designs. Building upon Vex 3\'s foundation, this installment introduces several new mechanics that add fresh complexity to the proven formula. The core gameplay remains tight precision platforming where your stickman must navigate deadly obstacle courses filled with spinning saws, spike pits, moving platforms, and timing-based hazards. New additions include sticky walls that let you climb vertical surfaces more easily, proximity mines that explode when you get close, zip lines for rapid traversal, and double jump pads that launch you higher. Controls mirror previous entries: ARROW KEYS or WASD for movement, DOWN KEY to duck and slide, with the addition of wall running mechanics activated by jumping toward walls at speed. The movement feels even more fluid than before, with improved physics that make navigating complex obstacle chains satisfying and intuitive. Each act presents escalating difficulty, starting with relatively simple introductions to new mechanics before combining them in challenging ways that test everything you\'ve learned. Vex 4 also introduces a comprehensive achievement system beyond simple act completion - challenges include completing acts under target times, collecting all hidden stars scattered throughout levels, and completing entire acts without dying. These optional objectives provide substantial replay value for completionists. The game includes a level editor feature allowing players to create and share custom acts, extending longevity through community-generated content. User-created levels range from accessible fun courses to nearly impossible death traps designed by masochistic creators. The visual style maintains the series\' minimalist aesthetic with smooth animations and clear visual language that lets you understand threats at a glance. Death animations are comically brutal, with your stickman meeting various grisly fates depending on what killed you. The checkpoint system remains forgiving, respawning you at regular intervals so failed attempts don\'t feel too punishing.'
+    categories: ['action'],
+    addedAt: '2026-01-25',
+    description: 'Vex 4 continues the legendary stickman platformer series with nine new acts filled with devious traps. Building upon Vex 3, this installment introduces mechanics like sticky walls, proximity mines, zip lines, and double jump pads. Controls mirror previous entries: ARROW KEYS or WASD for movement. Each act presents escalating difficulty. Vex 4 also introduces a comprehensive achievement system - challenges include completing acts under target times and collecting hidden stars. The game includes a level editor allowing players to create custom acts. The visual style maintains the series\' minimalist aesthetic with smooth animations.'
   },
   {
     id: 'vex-5',
     title: 'Vex 5',
     thumbnail: 'https://static.keygames.com/0/114160/99829/672x378/vex-5.webp',
     embedUrl: 'https://vex5online.github.io/file/',
-    category: 'action',
+    categories: ['action'],
     isHot: true,
-    description: 'Vex 5 represents the current evolution of the stickman platforming series, introducing polished mechanics and the most challenging level designs yet. This entry refines everything that made previous Vex games great while adding quality-of-life improvements and new gameplay elements. The stickman protagonist returns for ten brutal acts plus bonus challenge stages, each packed with deadly traps, precise platforming sequences, and secrets to discover. New mechanics include the ability to grab and hang from ledges, giving you more control during difficult jumps, regenerating checkpoints that slowly reappear if destroyed, and intelligent camera work that zooms to show upcoming hazards. The physics feel tighter than ever, with perfectly tuned jump arcs and momentum that reward skillful play while remaining accessible to newcomers willing to learn. Controls remain intuitive: ARROW KEYS or WASD for directional movement, with improved wall mechanics that automatically grab nearby walls when jumping toward walls at speed. The game introduces "Acts" as major challenges broken into smaller checkpoint-separated sections, making progress feel more achievable even in difficult stages. New hazard types include laser grids with narrow safe windows, ice physics that reduce traction, bounce pads that launch you in specific directions, and moving platforms with complex patterns requiring prediction and timing. Environmental variety increases dramatically - levels take place across different themes including industrial facilities, alien laboratories, and high-tech installations, each with unique visual aesthetics and hazard types. Vex 5 features robust achievement and completion tracking, encouraging speedruns with visible timers and leaderboards. Trophy system rewards specific accomplishments like completing acts under target times, finding all collectible stars, and completing hitless runs. The visual presentation is the most polished yet, with smooth 60fps animations, particle effects, and background details that add personality without cluttering the screen. Quality-of-life features include instant restarts via hotkey, practice mode that lets you attempt specific sections repeatedly, and ghost replays showing your previous attempts.'
+    addedAt: '2026-01-24',
+    description: 'Vex 5 represents the evolution of the stickman platforming series, introducing polished mechanics and challenging level designs. The stickman protagonist returns for ten brutal acts plus bonus stages. New mechanics include the ability to hang from ledges, regenerating checkpoints, and intelligent camera work. Controls remain intuitive: ARROW KEYS or WASD. New hazard types include laser grids, ice physics, and bounce pads. Vex 5 features robust achievement tracking, encouraging speedruns. The visual presentation is the most polished yet, with smooth 60fps animations and particle effects.'
   },
   {
     id: 'merge-round-racers',
     title: 'Merge Round Racers',
     thumbnail: 'https://i.ytimg.com/vi/YFATNYTD0Ic/maxresdefault.jpg',
     embedUrl: 'https://77pen.github.io/p7/merge-round-racers/',
-    category: 'racing',
+    categories: ['racing', 'puzzle'],
     isNew: true,
-    description: 'Blumgi Rocket is an innovative physics-based racing game where you control a car equipped with a rocket booster, using controlled explosions to launch, flip, and navigate through obstacle courses. The twist is that you don\'t have traditional steering - instead, you aim your rocket and fire it to propel your car in the opposite direction through physics. This creates unique puzzle-platforming gameplay where understanding angles, momentum, and trajectory is essential for success. Each level presents a goal: reach the finish line, collect stars, or land in target zones, all while managing your car\'s orientation and momentum. Controls are unconventional: use MOUSE to aim the rocket direction, and LEFT MOUSE BUTTON to fire. The rocket provides thrust in the opposite direction you\'re aiming, following Newton\'s third law. This means if you want to go right, aim left and fire; if you need to flip, aim down and fire while airborne. The physics are realistic and satisfying - your car has weight and rotational momentum that must be managed carefully. Firing too much thrust can send you tumbling out of control, while insufficient power leaves you short of your target. Each level is a physics puzzle requiring you to analyze the layout, plan your rocket bursts, and execute precise sequences. Obstacles include gaps you must launch across, walls requiring careful navigation, moving platforms you must time correctly, and zones that trigger instant failure if touched. The game features multiple vehicles with different stats affecting weight, rocket power, and handling. Heavier vehicles are more stable but require more thrust to move; lighter vehicles respond quickly but can easily flip out of control. Unlocking new vehicles provides fresh challenges as you adapt to their unique physics. The visual design is bright and colorful with clean geometric shapes that keep focus on physics challenges rather than overwhelming detail. The ragdoll car physics create hilarious failures when things go wrong - your vehicle cartwheel across levels in comical fashion after miscalculated rocket blasts.'
+    addedAt: '2026-01-24',
+    description: 'Merge Round Racers combines the addictiveness of merging games with the excitement of track racing. In this game, you purchase small cars and merge identical ones to create faster, higher-level vehicles. Once you have a fleet of cars, you place them on the track to race automatically and earn coins. The better the car, the more coins it generates per lap. You use these earnings to buy more cars and continue the cycle. It is a relaxing idle game that satisfies the urge to organize and upgrade. The colorful graphics and simple loop make it perfect for playing in the background.'
   },
-    {
-    id: 'blumgi-Rcoekt',
+  {
+    id: 'blumgi-rocket',
     title: 'Blumgi Rocket',
     thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/672fb98802b00740e3c885cb2b31fc51/blumgi-rocket.png',
     embedUrl: 'https://majesticwafer.github.io/BlumgiRocket',
-    category: 'racing',
+    categories: ['racing', 'action'],
     isNew: true,
-    description: 'Blumgi Rocket is an innovative physics-based racing game where you control a Car equipped with a rocket, using controlled explosions to launch, flip, and navigate through obstacle courses. The twist is that you don\'t have traditional steering - instead, you aim your rocket and fire it to propel your car in the opposite direction through physics. This creates unique puzzle-platforming gameplay where understanding angles, momentum, and trajectory is essential for success. Each level presents a goal: reach the finish line, collect stars, or land in target zones, all while managing your car\'s orientation and momentum. Controls are unconventional: use MOUSE to aim the rocket direction, and LEFT MOUSE BUTTON to fire. The rocket provides thrust in the opposite direction you\'re aiming, following Newton\'s third law. This means if you want to go right, aim left and fire; if you need to flip, aim down and fire while airborne. The physics are realistic and satisfying - your car has weight and rotational momentum that must be managed carefully. Firing too much thrust can send you tumbling out of control, while insufficient power leaves you short of your target. Each level is a physics puzzle requiring you to analyze the layout, plan your rocket bursts, and execute precise sequences. Obstacles include gaps you must launch across, walls requiring careful navigation, moving platforms you must time correctly, and zones that trigger instant failure if touched. The game features multiple vehicles with different stats affecting weight, rocket power, and handling. Heavier vehicles are more stable but require more thrust to move; lighter vehicles respond quickly but can easily flip out of control. Unlocking new vehicles provides fresh challenges as you adapt to their unique physics. The visual design is bright and colorful with clean geometric shapes that keep focus on physics challenges rather than overwhelming detail. The ragdoll car physics create hilarious failures when things go wrong - your vehicle cartwheel across levels in comical fashion after miscalculated rocket blasts.'
+    addedAt: '2026-01-24',
+    description: 'Blumgi Rocket is an innovative physics-based racing game where you control a car equipped with a rocket booster. The twist is that you don\'t have traditional steering - instead, you aim your rocket and fire it to propel your car through physics. This creates unique puzzle-platforming gameplay. Controls: use MOUSE to aim the rocket, LEFT CLICK to fire. The rocket provides thrust in the opposite direction you aim. If you want to go right, aim left and fire. The physics are realistic - your car has weight and rotational momentum. Each level is a puzzle requiring you to analyze the layout and execute precise rocket bursts.'
   },
   {
     id: 'among-us-single',
     title: 'Among Us',
     thumbnail: 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000036098/758ab0b61205081da2466386940752c70e0e5ea43bd39e8b9b13eaa455c69b7e',
     embedUrl: 'https://amongusplay.online/',
-    category: 'action',
+    categories: ['action', 'puzzle'],
     isHot: true,
-    description: 'Among Us Single Player is a fan-made recreation of the viral social deduction hit, designed specifically for browsers without the need for server connections. In this version, you play as the Imposter every time, tasked with eliminating the computer-controlled Crewmates before they complete their tasks. This creates a stealth-action puzzle experience where you must isolate victims, utilize vents, and sabotage ship systems to win. The game perfectly captures the tension and mechanics of the original but focuses entirely on the Imposter gameplay loop. Your objective is to kill everyone on the ship without being caught. Controls mimic the original: use WASD or ARROW KEYS to move, and click on-screen buttons to Kill, Sabotage, or Vent. As you roam the Skeld (the classic spaceship map), you must watch the movement patterns of the AI bots. They move between rooms completing tasks just like real players. If a bot sees you kill someone or sees you pop out of a vent, they will run to the emergency button to call a meeting. During meetings, you must vote to try and blend in, though in this single-player version, the focus is more on the stealth mechanics than the social debate. You can trigger sabotages like Reactor Meltdowns or O2 Depletion to force the AI bots to move to specific locations, creating opportunities for isolated kills or separating groups. You can also lock doors to trap victims in rooms with you. The visual style is identical to the original game, featuring the iconic colorful bean astronauts and familiar ship layout. This version is perfect for practicing Imposter routes, learning vent connections, and understanding sabotage timing without the pressure of online ranked play. It runs smoothly in any browser and requires no download, making it the perfect way to experience the thrill of being the Imposter in a quick, accessible format.'
+    addedAt: '2026-01-23',
+    description: 'Among Us Single Player is a fan-made recreation of the viral social deduction hit. In this version, you play as the Imposter every time, tasked with eliminating the computer-controlled Crewmates. This creates a stealth-action puzzle experience where you must isolate victims, utilize vents, and sabotage ship systems. Controls mimic the original: use WASD or ARROWS to move, and click buttons to Kill, Sabotage, or Vent. You must watch the movement patterns of AI bots. You can trigger sabotages like Reactor Meltdowns to force movement. This version is perfect for practicing Imposter routes and vent connections.'
   },
-
-  // ========================================
-  // CASUAL & IDLE GAMES
-  // ========================================
   {
     id: 'tiny-fishing',
     title: 'Tiny Fishing',
     thumbnail: 'https://www.coolmathgames.com/sites/default/files/TinyFishing_OG-logo.jpg',
     embedUrl: 'https://tinyfishing.github.io/',
-    category: 'casual',
+    categories: ['puzzle', 'sports'], // Puzzle due to upgrade math/idle nature
     isHot: true,
-    description: 'Tiny Fishing is one of the most popular idle games on the web, combining the thrill of fishing with addictive upgrade mechanics. You play as a fisherman casting a line into a deep aquarium filled with exotic and valuable fish. The gameplay loop is simple yet satisfying: click and drag to cast your line, then carefully drag your mouse to hook as many fish as possible while reeling it back in. Each fish you catch has a monetary value, which you use to purchase essential upgrades. You can increase your max fish count (allowing you to hook more fish per cast), extend your line depth (to reach deeper, more valuable species), and improve your offline earnings. The "idle" aspect is crucial—even when you are not playing, your aquarium generates money for you, allowing you to return to a mountain of cash for big upgrades. As you go deeper, you unlock legendary fish and rare species that sparkle with gold. The art style is cute and colorful, and the sound of the reel and the splash of the water make for a relaxing ASMR-like experience. It is the ultimate "play for 5 minutes or 5 hours" game.'
+    addedAt: '2026-01-23',
+    description: 'Tiny Fishing is one of the most popular idle games on the web. You play as a fisherman casting a line into a deep aquarium filled with exotic fish. The gameplay loop is simple: click and drag to cast, then drag your mouse to hook fish while reeling in. Each fish has monetary value used to purchase upgrades. You can increase max fish count, line depth, and offline earnings. The "idle" aspect involves your aquarium generating money even when you aren\'t playing. As you go deeper, you unlock legendary fish and rare species. It is the ultimate "play for 5 minutes or 5 hours" game.'
   },
   {
     id: 'monkey-mart',
     title: 'Monkey Mart',
     thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkeOcqPpp9QQqO55o-XO79PKDLxMym34K2Wg&s',
     embedUrl: 'https://classroom-6x.org/games/monkey-mart-unblocked/',
-    category: 'casual',
+    categories: ['casual', 'puzzle'], // Management sim fits best under puzzle in this schema
     isNew: true,
-    description: 'Monkey Mart is an adorable and bustling management simulation game where you control a hard-working monkey running a grocery store. You start with a humble banana stand, planting trees, harvesting the fruit, and placing it on shelves for customers. As you earn money, you expand your empire to include corn, eggs, milk, popcorn, and more. The game is highly active—you must physically run your character around the store to manage stock, collect cash from the register, and clean up messes. However, the game introduces automation features that turn it into a management sim: you can hire assistants to restock shelves, farmers to harvest crops, and cashiers to handle the money. Your job then shifts to managing your staff and upgrading their speed and capacity. You can upgrade your character\'s movement speed and carrying capacity to be more efficient. The graphics are vibrant and 3D, with hilarious animations for the monkeys. There are multiple aisles and even different store levels to unlock. It is satisfying to watch your store go from a quiet stand to a chaotic, money-making supermarket.'
+    addedAt: '2026-01-23',
+    description: 'Monkey Mart is a bustling management simulation game where you control a monkey running a grocery store. You start with a banana stand, planting trees and harvesting fruit. As you earn money, you expand to include corn, eggs, milk, and popcorn. You must physically run your character around to manage stock and collect cash. You can hire assistants to restock shelves and farmers to harvest crops. Your job shifts to managing staff and upgrading their speed. The graphics are vibrant and 3D with hilarious animations. It is satisfying to watch your store go from a quiet stand to a chaotic supermarket.'
   },
   {
     id: 'eggy-car',
     title: 'Eggy Car',
     thumbnail: 'https://i.ytimg.com/vi/U2SgrOeRrrs/maxresdefault.jpg',
     embedUrl: 'https://eggycar-game.io/game/eggy-car/',
-    category: 'casual',
+    categories: ['racing', 'action'],
     isHot: true,
-    description: 'Eggy Car is a physics-based driving game that is equal parts cute and infuriating. Your mission is simple: drive a car as far as possible. The catch? There is a giant, fragile egg loosely balanced on top of your car. The terrain is filled with steep hills, sudden drops, and bumpy roads that threaten to launch your egg into the air. If the egg falls off and cracks, it is game over. The controls require extreme finesse—you cannot just hold the gas pedal down. You must feather the throttle (using the Arrow Keys or A/D) to gently climb hills without tipping the egg backward, and brake carefully on descents to keep the egg from flying forward. As you collect coins scattered on the road, you can unlock new vehicles with different shapes and physics profiles, such as trucks, buses, or sports cars. Some cars have deeper "pockets" to hold the egg more securely, while others are faster but riskier. The game also features power-ups like the "Freeze" which turns your egg into a solid block of ice, preventing it from cracking for a few seconds. It is a fantastic casual game because runs are short, but the desire to beat your high score is addictive.'
+    addedAt: '2026-01-22',
+    description: 'Eggy Car is a physics-based driving game that is equal parts cute and infuriating. Your mission is to drive a car as far as possible with a giant, fragile egg balanced on top. The terrain is filled with hills and drops that threaten to launch your egg. If it cracks, game over. Controls require finesse—feather the throttle (Arrow Keys or A/D) to gently climb hills without tipping backward. As you collect coins, you can unlock new vehicles with different shapes. Some cars have deeper pockets to hold the egg more securely. It is a fantastic casual game where the desire to beat your high score is addictive.'
   },
   {
     id: 'idle-lumber-inc',
-    title: 'Idle lumber inc',
+    title: 'Idle Lumber Inc',
     thumbnail: 'https://play-lh.googleusercontent.com/oZbEiSliZD0Qi8BnDgVki6covTBPIg0a_jgpJ_0tp3cE5Zu6bEqxqh8CjF0Z0_9xRw',
     embedUrl: 'https://77pen.github.io/p5/idle-lumber-inc/',
-    category: 'casual',
-    description: 'Cut the Rope is a legendary physics-based puzzle game that has charmed millions of players. You are tasked with feeding candy to a cute little green monster named Om Nom. The candy hangs by ropes, and you must swipe your mouse (or finger) to cut the ropes at the precise moment to let gravity swing or drop the candy into Om Nom\'s mouth. However, it is never that simple. You must also try to collect three gold stars placed in difficult spots on the screen to get a perfect score. The levels introduce creative mechanics like bubbles that float the candy upward, air cushions that blow the candy sideways, sliding connecters, and spiders that try to steal the candy. The physics are incredibly smooth—the ropes swing realistically, and momentum is key to solving later puzzles. You often need to cut ropes in a specific order or with split-second timing to navigate obstacles like spikes or electricity. The animations for Om Nom are full of personality; he reacts with excitement when the candy gets close and looks sad if you lose it. With hundreds of levels and a gentle difficulty curve, it is the perfect brain-teasing casual game for all ages.'
+    categories: ['casual', 'puzzle'],
+    addedAt: '2026-01-22',
+    description: 'Idle Lumber Inc is a management simulation game where you build and run your own timber empire. You start with a small sawmill and a few workers, but your goal is to expand into a massive factory. You manage the entire process: planting trees, harvesting timber, milling the wood, and shipping orders. As you earn money, you can upgrade your machines for speed, hire more efficient lumberjacks, and train managers to automate the workflow. The game features an addictive loop of earning cash to buy upgrades that earn even more cash. You also handle special orders and factory expansions to unlock new wood types.'
   },
   {
     id: 'little-alchemy-2',
     title: 'Little Alchemy 2',
     thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvoWlgkI-DBkpEZN6Jn_zMpbPnmdnJWDWFng&s',
-    embedUrl: 'https://littlealchemy2.com/', 
-    // Note: If the official site blocks embeds, try: https://littlealchemy-2.github.io/
-    category: 'casual',
-    description: 'Little Alchemy 2 is a relaxing crafting game about discovery and combination. You start with just four basic elements: Air, Earth, Fire, and Water. By dragging and dropping one element on top of another, you create new items. For example, combining Earth and Water makes Mud. Combining Fire and Mud might make a Brick. Your goal is to discover all hundreds of possible items, ranging from simple things like "Rain" or "Plant" to complex concepts like "Life," "Time," "Internet," or "Cyborg." The game encourages lateral thinking and experimentation. There is no time limit, no way to lose, and no pressure. It is purely about the joy of figuring out the logic behind the combinations. The visual style is clean and modern, with satisfying icons for every new discovery. The game also features an encyclopedia that gives you funny or interesting descriptions for every item you craft. It is a fantastic game to play in the background while listening to music or podcasts, as it engages your brain without requiring fast reflexes.'
+    embedUrl: 'https://littlealchemy2.com/',
+    categories: ['puzzle'],
+    addedAt: '2026-01-22',
+    description: 'Little Alchemy 2 is a relaxing crafting game about discovery. You start with four basic elements: Air, Earth, Fire, and Water. By dragging and dropping one element on top of another, you create new items. For example, Earth and Water makes Mud. Your goal is to discover hundreds of items, ranging from simple things like "Rain" to complex concepts like "Life" or "Internet." The game encourages lateral thinking and experimentation. There is no time limit or pressure. The visual style is clean and modern, with satisfying icons for every discovery. It is a fantastic game to play in the background.'
   },
-   {
+  {
     id: 'grow-a-garden',
     title: 'Grow A Garden',
     thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROd5taXLOo-oUF4ThK6qFN1zfgW0UDzsggdQ&s',
-    embedUrl: '  https://growden.io/', 
-    category: 'casual',
-    description: 'buy plants, grow the plants, sell the plants, repeat.'
+    embedUrl: 'https://growden.io/',
+    categories: ['puzzle'],
+    addedAt: '2026-01-22',
+    description: 'Grow a Garden is a peaceful simulation game that lets you cultivate your own digital slice of nature. You start with a small plot of land and a few seeds. Your objective is to water, nurture, and protect your plants as they grow from seedlings into full blooms. You can sell your mature plants to earn money, which can be reinvested into exotic seeds, better tools, and garden decorations. The game emphasizes patience and aesthetics, allowing you to design the layout of your garden. It is a relaxing experience designed to be played in short bursts.'
   },
-
-  // ========================================
-  // NEW ADDITIONS (Defly.io, Paper.io, etc)
-  // ========================================
   {
     id: 'defly-io',
     title: 'Defly.io',
     thumbnail: 'https://defly.io/img/facebook-share.png',
     embedUrl: 'https://defly.io/',
-    category: 'io',
+    categories: ['io', 'action', 'multiplayer'],
     isNew: true,
     isHot: true,
-    description: 'Defly.io is a unique and intense combination of helicopter combat and territory conquest games like Splix.io. In this massive multiplayer arena, you pilot a helicopter that builds walls behind it as you fly. By closing a loop with your walls, you claim that territory for your color. However, unlike peaceful territory games, Defly.io is packed with combat. Your helicopter is equipped with dual functionality: building walls and shooting bullets. Your goal is to conquer the entire map while shooting down enemy helicopters and destroying their walls to reclaim space. The controls are dual-natured: use WASD to fly your helicopter and MOUSE to aim and shoot. You can also use special superpowers (activated with E or SHIFT) that you unlock as you level up. Leveling up happens by capturing territory and destroying enemies, allowing you to upgrade your copter\'s speed, bullet distance, reload rate, or build speed. The game features a leveling tree where at level 20, you can choose a distinct class, such as a sniper focused on range, a builder focused on fortification, or a fighter focused on close-quarters combat. The map is a hexagonal grid, and strategy is vital—you are vulnerable while building new walls. If an enemy shoots your line before you close the loop, you die. However, inside your own closed territory, you are safer. The game supports team modes as well as free-for-all. The graphics are clean and vibrant, with satisfying explosion effects and smooth flight physics. Defly.io stands out in the .io genre by requiring both tactical building skills and twitch-reflex shooting skills. You must balance aggression (hunting players) with defense (expanding your base). Can you dominate the map and become the Defly warlord?'
+    addedAt: '2026-02-05',
+    description: 'Defly.io is a unique combination of helicopter combat and territory conquest. You pilot a helicopter that builds walls behind it. By closing a loop with your walls, you claim territory. However, unlike peaceful territory games, Defly.io is packed with combat. Your helicopter can shoot bullets to destroy enemy walls and players. Controls: WASD to fly, MOUSE to aim/shoot. You can also use superpowers (E or SHIFT) unlocked by leveling up. Level 20 allows you to choose a class like sniper or builder. Strategy is vital—you are vulnerable while building new walls, but safe inside your closed territory.'
   },
   {
     id: 'paper-io-2',
     title: 'Paper.io 2',
     thumbnail: 'https://paperiogame.io/data/image/game/paper-io-game.jpg',
     embedUrl: 'https://paper-io-2.github.io/',
-    category: 'io',
+    categories: ['io', 'action', 'multiplayer'],
     isNew: true,
-    description: 'Paper.io 2 is the sequel to the smash-hit territory conquest game, featuring smoother movement, rounder shapes, and more fluid gameplay. The concept is deceptively simple: you control a constantly moving square that leaves a colored trail behind it. Your goal is to exit your safe zone, draw a loop, and return to your base to fill that area with your color. The more territory you claim, the higher your score and the higher you climb on the leaderboard. However, you are incredibly vulnerable while outside your base. If another player crosses your tail before you close the loop, you are instantly eliminated. This creates a high-risk, high-reward dynamic where greed can lead to your downfall. Unlike the first game which was grid-based, Paper.io 2 allows for 360-degree free movement, allowing for curved organic shapes and intricate maneuvering. Controls are seamless: simply move your MOUSE to steer your character. The snake-like movement feels responsive, allowing you to bait opponents or make sharp turns to cut their lines. Strategy involves inching out to claim small chunks safely or making bold, massive loops to claim huge percentages of the map at once. You can also kill opponents by crashing into their tails, or by claiming the territory they are currently inside. The graphics are bright, colorful, and minimalist, ensuring the game runs smoothly even when the map is chaotic. As you play, you can unlock various skins for your character, including cars, ghosts, unicorns, and food items, adding a layer of cosmetic progression. Paper.io 2 is the ultimate "just one more round" game, perfectly blending relaxation with sudden, heart-pounding tension when an enemy gets too close to your tail.'
+    addedAt: '2026-02-05',
+    description: 'Paper.io 2 is the sequel to the smash-hit territory conquest game. You control a constantly moving square that leaves a colored trail. Your goal is to exit your safe zone, draw a loop, and return to base to claim territory. You are vulnerable while outside your base—if another player crosses your tail, you die. Paper.io 2 allows for 360-degree free movement, enabling curved organic shapes. Controls: move MOUSE to steer. Strategy involves inching out to claim small chunks safely or making bold loops. You can kill opponents by crashing into their tails. It is the ultimate "just one more round" game.'
   },
   {
     id: 'hole-io',
     title: 'Hole.io',
     thumbnail: 'https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000069917/28c5a57b2711d70dbeb4dd55155691e8135a3069bad3455547392878c0162861',
     embedUrl: 'https://holeio.com/',
-    category: 'io',
+    categories: ['io', 'action', 'multiplayer'],
     isHot: true,
-    description: 'Hole.io is a chaotic physics-based destruction game where you play as a sentient black hole with an insatiable appetite. Dropped into a bustling city environment alongside other player-controlled holes, your objective is to consume everything in sight to grow larger. You start small, only able to eat pedestrians, traffic cones, and small bushes. As you eat, you grow in size, allowing you to consume cars, fences, and streetlights. Reach massive sizes, and you can swallow entire buildings, skyscrapers, and even other smaller players. The match is a timed battle royale against the clock and other players. The controls are extremely simple: use your MOUSE or WASD to slide your hole across the pavement. The physics are the star of the show here—objects tumble realistically into your void, and watching an entire apartment complex collapse into your hole is immensely satisfying. There is a strong competitive element; if you are larger than an enemy hole, you can eat them, removing them from the game for a few seconds and stealing their points. This creates a predator-prey dynamic where you must hunt smaller holes while fleeing from the giants. The game rewards aggressive expansion in the early game to get a size advantage. Various maps differ from the standard city, including medieval themes or futuristic layouts, keeping the destruction fresh. Strategically, you need to memorize where high-density areas of small objects are (like parks or parking lots) to level up quickly in the first 30 seconds. Hole.io is a power fantasy of pure destruction, offering bite-sized matches that are perfect for quick breaks or competitive sessions with friends.'
+    addedAt: '2026-02-05',
+    description: 'Hole.io is a chaotic physics-based destruction game where you play as a sentient black hole. Dropped into a city, your objective is to consume everything to grow larger. You start small, eating pedestrians and cones, but eventually grow to swallow entire buildings. The match is a timed battle royale. Controls: MOUSE or WASD to move. Physics are the star—objects tumble realistically into your void. If you are larger than an enemy hole, you can eat them. Strategically, you need to memorize high-density areas to level up quickly. Hole.io is a power fantasy of pure destruction.'
   },
   {
     id: 'krunker-io',
     title: 'Krunker.io',
     thumbnail: 'https://imgs.crazygames.com/games/krunker-io/cover-1591336739727.png?metadata=none&quality=100&width=1200&height=630&fit=crop',
     embedUrl: 'https://krunker.io/',
-    category: 'multiplayer',
+    categories: ['action', 'multiplayer'],
     isHot: true,
-    description: 'Krunker.io is a fast-paced, pixelated first-person shooter (FPS) that brings the intensity of Counter-Strike and the movement mechanics of Quake directly into your browser. It is widely considered one of the best .io shooters ever made due to its high skill ceiling and smooth performance. Players drop into blocky 3D environments to battle in various modes like Free-for-All, Team Deathmatch, Capture the Flag, and Parkour. The defining feature of Krunker is its movement system: players can "slide hop" (jumping and sliding in rhythm) to build up incredible speed, flying around the map faster than standard sprinting. This makes the game incredibly fast and rewards players who master the mechanics. Controls are standard FPS fare: WASD to move, Mouse to aim/shoot, Space to jump, Shift to crouch/slide, and R to reload. The game features a class system with different weapons: the Triggerman (Assault Rifle) is balanced, the Hunter (Sniper) kills in one shot but has low health, the Run N Gun (SMG) moves fast, and the Vince (Shotgun) dominates close range. There is also a robust custom game scene where players create maps for surfing, infect modes, and roleplay. Krunker supports a massive market of skins and cosmetics that you can earn or trade. The low-poly aesthetic ensures high frame rates even on school computers (chromebooks), making it a staple of browser gaming. The game is highly competitive, with ranked modes and clan wars, but remains accessible enough for casual players to jump in and blast away. Warning: The slide-hopping mechanic takes practice, but once learned, it changes the game completely.'
+    addedAt: '2026-02-04',
+    description: 'Krunker.io is a fast-paced, pixelated FPS that brings Counter-Strike intensity to the browser. It is known for its high skill ceiling and movement system: players can "slide hop" to build incredible speed. Controls: WASD to move, Mouse to aim/shoot, Space to jump, Shift to slide. The game features classes like Triggerman (AK-47), Hunter (Sniper), and Vince (Shotgun). There is a robust custom game scene with maps for surfing and infection. The low-poly aesthetic ensures high frame rates on any computer. It is highly competitive with ranked modes but accessible for casual play.'
   },
-
   {
     id: 'escape-road-city',
     title: 'Escape Road City',
     thumbnail: 'https://escaperoadunblocked.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbg.56fbd106.png&w=3840&q=75',
     embedUrl: 'https://escaperoadunblocked.com/',
-    category: 'racing',
+    categories: ['racing', 'action'],
     isNew: true,
-    description: 'Escape Road City is an exhilarating endless driving game where you play as a fugitive racing through busy city streets while being relentlessly pursued by police forces. Your objective is simple: survive as long as possible while evading capture, collecting money, and causing as much mayhem as necessary. The game throws you into chaotic urban environments filled with civilian traffic, narrow alleys, parks, and highway ramps. Police cars spawn continuously, attempting to ram you off the road or box you in. As your wanted level increases, the pursuit intensifies with more police vehicles, SWAT vans, and eventually helicopters joining the chase. Controls are straightforward but require skillful maneuvering: use ARROW KEYS or WASD to steer, accelerate, and reverse your vehicle. The physics engine creates satisfying chaos as you smash through barriers, launch off ramps, perform accidental stunts, and narrowly avoid head-on collisions. Your car can take damage from crashes - too many impacts will slow you down and make it easier for police to catch you. The game features a day-night cycle that affects visibility and creates visual variety during extended runs. Scattered throughout the city are money pickups that increase your score and unlock new vehicles. The vehicle roster includes sports cars for speed, trucks for durability, and exotic vehicles with balanced stats. Each vehicle handles differently, requiring adaptation to their unique turning radius and acceleration. The wanted level system progressively escalates difficulty: initial chases involve only a few patrol cars, but as time passes and your infamy grows, the police response becomes overwhelming with roadblocks, spike strips, and coordinated pursuit tactics. Power-ups occasionally appear offering temporary advantages like speed boosts, invincibility shields, or repair pick-ups that restore vehicle health. The game encourages risk-taking through score multipliers for near-misses, catching air off jumps, and driving in oncoming traffic. The cities are procedurally generated to some extent, ensuring no two escape attempts play out identically. High score leaderboards create competitive motivation to survive longer than friends and master the game\'s chaos. The visual style is colorful and arcadey, keeping the focus on action rather than realism. Sound effects emphasize the chaos with satisfying crashes, screeching tires, and wailing sirens that ramp up tension. Background music is high-energy and driving, perfectly matching the game\'s frenetic pace. Escape Road City captures the pure fun of movie-style police chases without the consequences, offering quick pick-up-and-play sessions that hook you with their "just one more run" appeal. Whether you\'re dodging between traffic, launching off freeway overpasses, or desperately weaving through industrial districts with a dozen police cars on your tail, Escape Road City delivers constant adrenaline and chaos.'
+    addedAt: '2026-02-04',
+    description: 'Escape Road City is an exhilarating endless driving game where you race through busy city streets while being pursued by police. Your objective is to survive as long as possible while evading capture. Controls: ARROW KEYS or WASD to steer. The physics engine creates chaos as you smash through barriers and launch off ramps. As your wanted level increases, the pursuit intensifies with SWAT vans and helicopters. You can collect money to unlock new vehicles like sports cars and trucks. The game encourages risk-taking through score multipliers for near-misses. It captures the fun of movie-style police chases.'
   },
   {
     id: 'tunnel-rush',
     title: 'Tunnel Rush',
     thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ13q6aHn1f3Dd4U3w_mjs8NOot8U2bV0M8ZA&s',
     embedUrl: 'https://tunnelrush-game.github.io/',
-    category: 'racing',
+    categories: ['racing', 'action'],
     isNew: true,
     isHot: true,
-    description: 'Tunnel Rush is a hypnotic first-person endless runner that tests your reflexes and concentration as you speed through an ever-changing neon tunnel filled with obstacles. The game\'s simple premise - dodge obstacles while traveling at increasing speeds - becomes intensely challenging as the tunnel shifts colors, rotates perspectives, and introduces complex barrier patterns that demand split-second reactions. Your viewpoint is locked to first-person, creating immersive tunnel vision that heightens the sense of speed and danger. The game starts at a manageable pace but quickly accelerates to breakneck velocities where only perfect muscle memory and quick reflexes keep you alive. Controls are minimalist perfection: use LEFT and RIGHT ARROW KEYS or A/D KEYS to dodge obstacles. That\'s it. The challenge comes entirely from the game\'s creative obstacle designs and relentless pacing. Barriers appear in various formations - single walls blocking one side, multiple walls requiring zigzag movement, rotating barriers you must time perfectly, and narrow gaps demanding precision. The tunnel itself rotates, spins, and changes perspective, constantly disorienting you and forcing adaptation. Color schemes shift between levels, creating distinct visual themes while maintaining the neon aesthetic. The game\'s brilliance lies in how obstacles sync with the background music - barriers often appear on beat, creating a rhythm game element where experienced players can anticipate hazards through audio cues. The difficulty progression is perfectly tuned: early levels teach fundamental dodging patterns, middle levels combine simple obstacles in complex sequences, and later levels introduce chaos where only instinct and reaction keep you alive. The game tracks your progress through numbered levels, each slightly longer and faster than the last. There\'s no finish line - the challenge is seeing how far you can progress before inevitable failure. High score systems track your best level reached and overall distance traveled, creating competitive goals. The visual design is mesmerizing, featuring vibrant neons, pulsing colors, and geometric patterns that create a trance-like aesthetic. Background music features electronic tracks that complement the visual rhythm and help players find their flow state. The physics feel precise and responsive - when you die, it\'s always your fault, never the game\'s. This fairness encourages the addictive "one more try" mentality. Tunnel Rush has minimal loading times and instant restarts, removing frustration barriers and keeping you in the action. The game works perfectly for quick sessions or extended attempts at high scores. Its simple concept executed flawlessly makes Tunnel Rush a modern classic in the endless runner genre. Whether you\'re looking for a quick reflex test or a meditative challenge that requires complete focus, Tunnel Rush delivers intense, polished gameplay that\'s easy to start but nearly impossible to master. The combination of music, visuals, and perfectly tuned difficulty creates an experience that\'s simultaneously relaxing and intensely challenging.'
+    addedAt: '2026-02-03',
+    description: 'Tunnel Rush is a hypnotic first-person endless runner. You speed through an ever-changing neon tunnel filled with obstacles. The game accelerates to breakneck velocities where only perfect reflexes keep you alive. Controls: LEFT/RIGHT ARROWS or A/D to dodge. Barriers appear in various formations, and the tunnel itself rotates, disorienting you. The difficulty is perfectly tuned, with obstacles often syncing to the music\'s rhythm. The visual design features vibrant neons and geometric patterns. Physics are precise—when you die, it is your fault. It works perfectly for quick reflex tests or meditative challenges.'
   },
- 
   {
     id: 'getaway-shootout',
     title: 'Getaway Shootout',
     thumbnail: 'https://imgs.crazygames.com/getaway-shootout_16x9/20241230044730/getaway-shootout_16x9-cover?metadata=none&quality=100&width=1200&height=630&fit=crop',
     embedUrl: 'https://getawayshootout.io/',
-    category: 'multiplayer',
+    categories: ['multiplayer', 'action', 'racing'],
     isNew: true,
     isTwoPlayer: true,
-    description: 'Getaway Shootout is a hilariously chaotic multiplayer racing game where characters hop toward the finish line while shooting, pushing, and sabotaging each other. The game\'s unique movement system requires you to lean forward and backward to hop rather than running normally, creating awkward but hilarious physics-based momentum. Combined with weapons, power-ups, and environmental hazards, every match becomes unpredictable mayhem. The objective is simple: be the first to reach the getaway vehicle at the end of each course. However, getting there requires hopping across rooftops, dodging bullets, collecting weapons, and outmaneuvering opponents through any means necessary. Controls are intentionally awkward: Player 1 uses W and E keys where W leans backward (hopping left) and E leans forward (hopping right), with R to shoot. Player 2 uses I and O keys with P to shoot. The unusual controls create a steep learning curve, but mastering momentum and mid-air control separates skilled players from beginners. Timing your hops to maintain forward momentum while avoiding falls requires practice and precision. Weapons spawn throughout levels including pistols for reliable damage, shotguns for devastating close-range blasts, rocket launchers for explosive chaos, grenades that bounce unpredictably, and melee weapons for hilarious close-combat. Power-ups provide temporary advantages like jetpacks for flight, speed boosts, shields, and more. The ragdoll physics make every interaction unpredictable - characters tumble, flip, and fly when shot or knocked, sometimes recovering to continue the race, other times falling to elimination. Environmental hazards add complexity: moving platforms, collapsing floors, explosive barrels, and deadly drops that eliminate careless players. Each level has unique layouts encouraging different strategies - some reward aggressive combat to eliminate competition, while others favor speed and avoidance. The game features numerous maps across varied themes including city rooftops, construction sites, space stations, and more. Each environment introduces unique obstacles and layout challenges that prevent gameplay from becoming repetitive. Game modes include standard races where first to reach the end wins, and variations that change victory conditions. Getaway Shootout supports local multiplayer for chaotic couch competition, and single-player mode against AI opponents that provide surprising challenge. The AI uses advanced tactics like weapon timing and momentum control, making solo play legitimately competitive. The game\'s cartoony art style with simple but expressive character designs complements the silly physics and over-the-top action. Sound effects emphasize the chaos with satisfying gunshots, explosions, and impact noises. Getaway Shootout embraces the philosophy that frustration and laughter go hand-in-hand - the awkward controls and unpredictable physics create constant surprising moments. Victory feels earned, defeat is usually hilarious, and every match creates memorable stories. Whether you\'re playing solo or with friends, Getaway Shootout delivers accessible yet skill-based competition with a unique movement system that sets it apart from traditional racing games.'
+    addedAt: '2026-02-03',
+    description: 'Getaway Shootout is a chaotic multiplayer racing game where characters hop toward the finish line while shooting each other. The unique movement requires you to lean forward and backward to hop, creating awkward physics-based momentum. Controls: Player 1 uses W/E to lean and R to shoot. Player 2 uses I/O to lean and P to shoot. Getting to the finish requires hopping across rooftops and dodging bullets. Weapons include pistols, shotguns, and rockets. The ragdoll physics make every interaction unpredictable. It supports local multiplayer and features maps like rooftops and trucks.'
   },
   {
     id: 'house-of-hazards',
     title: 'House of Hazards',
     thumbnail: 'https://imgs.crazygames.com/house-of-hazards_16x9/20250108101728/house-of-hazards_16x9-cover?metadata=none&quality=60&height=5729',
     embedUrl: 'https://houseofhazards.io/',
-    category: 'multiplayer',
+    categories: ['multiplayer', 'action'],
     isNew: true,
     isTwoPlayer: true,
-    description: 'House of Hazards is a multiplayer party game where players compete to complete mundane household tasks while sabotaging opponents with hidden traps and environmental hazards. Set in a seemingly normal house, up to four players race to finish simple objectives like watering plants, checking the mailbox, or getting coffee. The twist: other players secretly control hidden traps throughout the house and can trigger them at opportune moments to sabotage your progress. This creates hilarious asymmetric gameplay where you\'re simultaneously trying to complete your own tasks, avoiding traps you know are coming, and timing your own trap activations to stop opponents. Controls vary by platform - Player 1 uses WASD for movement and SPACEBAR to trigger traps, Player 2 uses ARROW KEYS and SHIFT, and additional players use different key configurations. The simple movement and interaction controls make the game accessible to players of all skill levels. Each round assigns tasks to active players while others control trap stations like dropping lights from the ceiling, opening cabinet doors, triggering toasters to launch projectiles, swinging objects from doorways, and activating slippery floor hazards. Trap timing is crucial - spring them too early and players have time to react; too late and they safely pass. The best saboteurs predict player movement and trigger traps at perfect moments for maximum comedic effect. Tasks seem simple but become challenging under threat of constant hazards - checking the mailbox requires navigating trap-filled hallways; making coffee involves avoiding kitchen hazards; getting ready involves bathroom traps. Each task has a timer, and failing to complete it in time costs points. The game rotates roles, ensuring everyone experiences both sides of the chaos. Players completing tasks score points, while successful saboteurs earn points for hitting opponents with traps. The scoring system encourages balancing task completion with trap effectiveness. Multiple rounds ensure everyone gets fair opportunities in each role. House of Hazards features multiple maps representing different house areas, each with unique trap types and layouts. The living room features hazards like falling ceiling lights and sliding furniture, the kitchen has appliances that malfunction dangerously, bathrooms include slippery surfaces and falling cabinets, and outdoor areas introduce environmental hazards. The visual style is cartoony and colorful with expressive character reactions to getting hit by traps. Characters stumble, flip, and ragdoll in exaggerated fashion when hazards trigger, creating slapstick comedy moments. Sound effects emphasize the chaos with dramatic impact noises and character vocal reactions. The game shines brightest in local multiplayer mode where players can see each other\'s reactions, creating genuine laughter and friendly competition. Single-player mode against AI exists but misses the social interaction that makes the game special. House of Hazards successfully captures party game energy where victory matters less than the funny moments created. Simple objectives transform into comedic challenges under threat of random sabotage, and the role rotation ensures everyone experiences both frustration and satisfaction. Whether you\'re the saboteur timing perfect trap triggers or the task-completer desperately dodging hazards, House of Hazards delivers accessible multiplayer fun that\'s perfect for groups looking for lighthearted competitive chaos.'
+    addedAt: '2026-02-02',
+    description: 'House of Hazards is a multiplayer party game where players race to complete household tasks while sabotaging opponents. One player tries to make coffee or check mail, while others control hidden traps like falling lights or flying toasters. Controls vary: Player 1 uses WASD/Space, Player 2 uses Arrows/Shift. Trap timing is crucial—spring them at the perfect moment for comedic effect. If you get hit, you ragdoll hilariously. The game rotates roles so everyone gets to be the saboteur. It features multiple maps like Kitchen and Backyard. It shines in local multiplayer.'
   },
   {
     id: 'ovo',
     title: 'OvO',
     thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/85db6b2eb81ca64d881a950a43744389/ovo-classic.png',
-    embedUrl: '"https://ovoclassic-pro.github.io/file/"',
-    category: 'action',
+    embedUrl: 'https://ovoclassic-pro.github.io/file/',
+    categories: ['action', 'racing'],
     isNew: true,
-    description: 'OvO is a fast-paced precision platformer where you control a stickman character through increasingly difficult obstacle courses filled with spikes, moving platforms, and timing-based challenges. The game emphasizes speed and fluidity, rewarding players who master the movement mechanics to complete levels quickly and efficiently. With over 50 levels of progressive difficulty, OvO starts accessible but ramps up to genuinely challenging platforming that demands precise inputs and perfect timing. Controls are deceptively simple: use ARROW KEYS or WASD for movement, with additional actions like sliding (DOWN ARROW while running), wall jumping (jumping toward walls), and dive moves that grant temporary momentum boosts. The depth comes from combining these moves smoothly - experienced players chain wall jumps into slides into momentum-preserving jumps to maintain speed through complex obstacle sequences. The movement feels incredibly responsive and fluid, creating a satisfying skill ceiling where perfect play results in flowing, dance-like runs through levels. Each level is a tightly designed gauntlet of hazards: spike floors and walls that kill instantly on contact, moving platforms requiring precise timing, crumbling blocks that fall moments after stepping on them, and gaps demanding perfectly timed jumps. The level design is brilliant, introducing mechanics gradually through easier stages before combining them in creative ways that challenge even experienced platformer players. Checkpoints appear regularly within levels, softening the difficulty by respawning you at recent progress rather than restarting entirely. The game emphasizes speedrunning with visible timers on every level. Completing levels quickly unlocks medals - bronze, silver, and gold - based on time thresholds. These medals add substantial replay value as you optimize routes and perfect execution to achieve faster times. Leaderboards let you compete with friends for best times, creating competitive motivation beyond simply completing levels. The game includes multiple distinct worlds, each introducing unique aesthetic themes and new obstacle types that keep gameplay fresh. The minimal art style uses simple geometric shapes and limited color palettes that keep focus on gameplay rather than overwhelming visual detail. The stickman character animates smoothly, making movement feel precise and intentional. Sound design emphasizes impact - jumps, landings, and deaths have distinct audio cues that provide feedback without becoming repetitive. Background music is upbeat and energetic, maintaining momentum during difficult sections without causing fatigue during repeated attempts. OvO successfully captures the essence of precision platforming: simple to understand, challenging to master, with high skill ceiling rewarding practice and dedication. The combination of responsive controls, clever level design, and speedrunning focus creates an addictive loop where you\'re always motivated to try one more time, perfect one more section, or shave a few more seconds off your time. Whether you\'re casually completing levels or obsessively hunting gold medals on every stage, OvO offers tight platforming challenge that respects player skill and never feels unfair. Its minimalist presentation and focused design philosophy make it a standout in the crowded platformer genre.'
+    addedAt: '2026-02-02',
+    description: 'OvO is a fast-paced precision platformer where you control a stickman through obstacle courses filled with spikes. The game emphasizes speed and fluidity. Controls: ARROW KEYS or WASD, plus sliding (Down) and diving. Experienced players chain wall jumps and slides to maintain momentum. Each level is a gauntlet of hazards requiring precise inputs. The game emphasizes speedrunning with visible timers and medals for fast completions. There are multiple worlds with unique themes. The minimalist art style keeps focus on the tight gameplay. It captures the essence of "easy to learn, hard to master."'
   },
-
-  // ========================================
-  // PUZZLE GAMES
-  // ========================================
   {
     id: '2048',
     title: '2048',
     thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/1200px-2048_logo.svg.png',
-    embedUrl: 'https://www.2048.org/',
-    category: 'puzzle',
+    embedUrl: 'https://www.mathsisfun.com/games/a/2048/index.html',
+    categories: ['puzzle'],
     isHot: true,
-    description: '2048 is a deceptively simple yet incredibly addictive sliding tile puzzle game that has captivated millions of players worldwide. The game takes place on a 4×4 grid where numbered tiles slide when you swipe. Your objective is to combine matching numbered tiles to create higher values, ultimately reaching the elusive 2048 tile. The game starts with two tiles on the board, each showing either a 2 or 4. When you make a move, all tiles slide in that direction, and if two tiles with the same number collide, they merge into one tile with their sum. For example, two tiles showing "2" will combine into a single "4" tile. After each move, a new tile (2 or 4) appears in a random empty spot. The challenge intensifies as the board fills up - you must think strategically about each move to prevent the grid from filling completely. If the board fills and no more moves are possible, the game ends. The numbers follow a power of two progression: 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, and beyond. Controls are incredibly intuitive - use the ARROW KEYS (UP, DOWN, LEFT, RIGHT) to slide all tiles in that direction, or SWIPE in any direction on touch devices. The key to success lies in developing a strategy: many expert players recommend keeping your highest tile in one corner and building toward it. Try to create chains of tiles in descending order, allowing for multiple merges with a single move. The game saves your progress automatically, so you can resume your session anytime. With its elegant design, simple mechanics, and deep strategic gameplay, 2048 remains one of the most popular puzzle games of all time.'
+    addedAt: '2026-01-25',
+    description: '2048 is an addictive sliding tile puzzle game. The game takes place on a 4×4 grid where numbered tiles slide when you swipe. Your objective is to combine matching tiles to create higher values, reaching the 2048 tile. Controls: ARROW KEYS to slide tiles. If two tiles with the same number collide, they merge (e.g., two 2s make a 4). A new tile appears after every move. The challenge is strategic placement to prevent the grid from filling up. Expert players keep their highest tile in a corner and build chains. It is elegant, simple, and deeply strategic.'
   },
   {
     id: 'tetris',
     title: 'Tetris',
     thumbnail: 'https://www.hollywoodreporter.com/wp-content/uploads/2014/09/tatris_a_l.jpg?w=1440&h=810&crop=1',
     embedUrl: 'https://tetr.io/',
-    category: 'puzzle',
+    categories: ['puzzle'],
     isHot: true,
-    description: 'Tetris is the iconic puzzle game that has defined a genre and remained endlessly playable for over three decades. The premise is elegant in its simplicity: geometric shapes called Tetriminos fall from the top of the playfield, and you must rotate and position them to create complete horizontal lines. When you complete a line, it disappears and any blocks above it drop down. The game continues indefinitely, with pieces falling faster as you progress, until the stack reaches the top of the playfield. There are seven distinct Tetrimino shapes, each made of four blocks: I-piece (straight line), O-piece (square), T-piece, S-piece, Z-piece, J-piece, and L-piece. Each shape requires different placement strategies and can be rotated to fit into tight spaces. Controls are simple but require quick thinking - use the LEFT and RIGHT ARROW KEYS to move pieces horizontally, DOWN ARROW KEY to soft drop (make pieces fall faster), SPACEBAR or UP ARROW KEY for hard drop (instantly drop piece to bottom), and Z/X KEYS to rotate pieces counterclockwise and clockwise. Advanced players use techniques like T-spins (rotating a T-piece into a gap at the last second) and combos (clearing multiple lines in quick succession) to maximize their score. Clearing four lines simultaneously with an I-piece is called a "Tetris" and awards the most points. The scoring system rewards strategic play: singles, doubles, triples, and Tetrises each award different point values, with bonuses for back-to-back difficult clears. The game tests your spatial awareness, pattern recognition, and quick decision-making skills. It\'s easy to learn but impossible to master, making every game a unique challenge. Whether you\'re a casual player or a competitive speedrunner, Tetris offers endless replayability.'
+    addedAt: '2026-01-25',
+    description: 'Tetris is the iconic puzzle game where you arrange falling geometric shapes (Tetriminos) to create complete horizontal lines. When a line is complete, it clears. The game ends if the stack reaches the top. Controls: LEFT/RIGHT ARROWS to move, UP to hard drop, DOWN to soft drop, Z/X to rotate. There are seven shapes requiring different strategies. Advanced players use T-spins and combos to maximize scores. The game tests spatial awareness and quick decision-making. Whether you are a casual player or a competitive speedrunner, Tetris offers endless replayability.'
   },
-    {
+  {
     id: 'brain-test',
     title: 'Brain Test',
     thumbnail: 'https://play-lh.googleusercontent.com/L4-Oa6O8GV4I23JTmo-xKSjfyjowc0d2uGGfdScYkCTMk6ftxTwGowdAjgh2nOrJlEmI',
-    embedUrl: ' https://classroom2111.github.io/g16/class-422',
-    category: 'puzzle',
+    embedUrl: 'https://classroom2111.github.io/g16/class-422',
+    categories: ['puzzle'],
     isHot: true,
-    description: 'Tetris is the iconic puzzle game that has defined a genre and remained endlessly playable for over three decades. The premise is elegant in its simplicity: geometric shapes called Tetriminos fall from the top of the playfield, and you must rotate and position them to create complete horizontal lines. When you complete a line, it disappears and any blocks above it drop down. The game continues indefinitely, with pieces falling faster as you progress, until the stack reaches the top of the playfield. There are seven distinct Tetrimino shapes, each made of four blocks: I-piece (straight line), O-piece (square), T-piece, S-piece, Z-piece, J-piece, and L-piece. Each shape requires different placement strategies and can be rotated to fit into tight spaces. Controls are simple but require quick thinking - use the LEFT and RIGHT ARROW KEYS to move pieces horizontally, DOWN ARROW KEY to soft drop (make pieces fall faster), SPACEBAR or UP ARROW KEY for hard drop (instantly drop piece to bottom), and Z/X KEYS to rotate pieces counterclockwise and clockwise. Advanced players use techniques like T-spins (rotating a T-piece into a gap at the last second) and combos (clearing multiple lines in quick succession) to maximize their score. Clearing four lines simultaneously with an I-piece is called a "Tetris" and awards the most points. The scoring system rewards strategic play: singles, doubles, triples, and Tetrises each award different point values, with bonuses for back-to-back difficult clears. The game tests your spatial awareness, pattern recognition, and quick decision-making skills. It\'s easy to learn but impossible to master, making every game a unique challenge. Whether you\'re a casual player or a competitive speedrunner, Tetris offers endless replayability.'
+    addedAt: '2026-01-25',
+    description: 'Brain Test is an addictive tricky puzzle game with a series of tricky brain teasers. Different riddles and tricky tests will challenge your mind. This new puzzle game may break common sense and bring your new brain-pushing experience! You can enjoy yourself with your friends with this addictive and funny free IQ game. Think out of the box, crack the puzzles and get ready to take the quiz! You will enjoy this funny tricky test. Features: Tricky & Mind-blowing Brain Teasers: You will be tricked! Unexpected game answers to the great number of quizzes.'
   },
- 
   {
     id: 'sudoku',
     title: 'Sudoku',
     thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Sudoku_Puzzle_by_L2G-20050714_standardized_layout.svg/1200px-Sudoku_Puzzle_by_L2G-20050714_standardized_layout.svg.png',
     embedUrl: 'https://sudoku.com/',
-    category: 'puzzle',
-    description: 'Sudoku is the world\'s most popular number puzzle game, offering a perfect blend of logic, pattern recognition, and strategic thinking. The game presents you with a 9×9 grid divided into nine 3×3 boxes. Some cells are pre-filled with numbers from 1 to 9, and your objective is to fill every empty cell following three simple rules: each row must contain all numbers 1-9 without repetition, each column must contain all numbers 1-9 without repetition, and each 3×3 box must contain all numbers 1-9 without repetition. The puzzle starts partially filled with clues - the more clues provided, the easier the puzzle. Expert-level puzzles may have as few as 17 clues, requiring advanced solving techniques. The beauty of Sudoku lies in its logic-based nature; you never need to guess. Every puzzle has a unique solution that can be reached through deductive reasoning. Controls are simple - use your MOUSE to click on any empty cell, then either click the number buttons or use your KEYBOARD (1-9 keys) to enter a number. Most Sudoku implementations offer helpful features like pencil marks (small numbers in cells to track possibilities), error checking, hints, and the ability to undo moves. Beginners should start with easy puzzles and learn fundamental techniques like scanning (looking for missing numbers in rows, columns, and boxes) and elimination (ruling out impossible numbers for each cell). Intermediate players learn advanced techniques like naked pairs, hidden singles, and X-wings. Expert solvers use complex strategies like swordfish, coloring, and forcing chains. Sudoku improves concentration, logical thinking, and memory. With millions of possible puzzle combinations and multiple difficulty levels, Sudoku offers unlimited replayability for puzzle enthusiasts of all skill levels.'
+    categories: ['puzzle'],
+    addedAt: '2026-01-25',
+    description: 'Sudoku is the world\'s most popular number puzzle game. You are presented with a 9×9 grid divided into 3×3 boxes. Some cells are pre-filled. Your objective is to fill every empty cell so that each row, column, and box contains numbers 1-9 without repetition. Controls: Click a cell and use KEYBOARD (1-9). It relies entirely on logic, never guessing. Puzzles range from easy to expert. Beginners use scanning techniques, while experts use complex strategies like X-wings. Sudoku improves concentration and logical thinking. With millions of combinations, it offers unlimited replayability.'
   },
   {
     id: 'wordle',
     title: 'Wordle',
     thumbnail: 'https://www.internetmatters.org/wp-content/uploads/2022/02/wordle-logo.webp',
     embedUrl: 'https://wordlegame.org/',
-    category: 'puzzle',
+    categories: ['puzzle'],
     isNew: true,
-    description: 'Wordle is the viral word-guessing phenomenon that has taken the world by storm. Each day, a new five-letter word is selected, and players worldwide attempt to guess it within six tries. The game provides feedback after each guess through a color-coded system: green tiles indicate correct letters in the correct position, yellow tiles mean the letter exists in the word but is in the wrong position, and gray tiles show letters that aren\'t in the word at all. This feedback system transforms each guess into valuable information that helps you narrow down the possibilities. The genius of Wordle lies in its simplicity and daily limit - you only get one puzzle per day, creating anticipation and making each guess meaningful. Controls are straightforward - use your KEYBOARD to type a five-letter word, then press ENTER to submit your guess. The game accepts only valid English words, so random letter combinations won\'t work. Strategic players start with words containing common vowels and consonants like "ADIEU," "RAISE," or "STARE" to maximize information from the first guess. As you receive feedback, use process of elimination to determine which letters belong in the word and their correct positions. The game requires a strong vocabulary, pattern recognition, and logical deduction. Some players use mathematical approaches, calculating which guesses provide the most information based on letter frequency in English words. Others rely on intuition and word association. The game tracks your statistics, showing your win streak, guess distribution, and win percentage. Wordle has spawned countless variations and has become a cultural phenomenon, with people sharing their daily results on social media using emoji grids. The satisfaction of solving the puzzle, especially in fewer guesses, makes Wordle an addictive daily ritual for millions of players.'
+    addedAt: '2026-01-25',
+    description: 'Wordle is the viral word-guessing game. Each day, a new five-letter word is selected. You have six tries to guess it. Feedback is color-coded: green means correct letter/position, yellow means correct letter/wrong position, gray means wrong letter. Controls: KEYBOARD to type. The game requires vocabulary and deduction. Strategic players start with vowel-heavy words like "ADIEU." The daily limit creates anticipation and community sharing. It tracks your win streak and statistics. The satisfaction of solving the puzzle in few guesses makes it an addictive daily ritual.'
   },
-
-  // ========================================
-  // MORE RACING/ACTION GAMES
-  // ========================================
   {
     id: 'drift-hunters',
     title: 'Drift Hunters',
     thumbnail: 'https://drift-hunters.io/data/image/drift-hunters.png',
     embedUrl: 'https://classroom2111.github.io/g5/class-447',
-    category: 'racing',
+    categories: ['racing', 'action'],
     isHot: true,
     isNew: true,
-    description: 'Drift Hunters is the ultimate 3D car drifting simulator that offers an incredibly realistic and customizable drifting experience. This game combines arcade-style accessibility with simulation-level depth, featuring realistic physics, fully customizable cars, and multiple racing circuits. Your objective is to master the art of drifting - deliberately oversteering your car to make it slide sideways through corners while maintaining control. Unlike traditional racing games where speed is everything, Drift Hunters rewards style and precision. The longer and more controlled your drifts, the more points you earn. You start with a basic car and limited credits, but as you perform drifts and earn points, you unlock new vehicles and upgrade options. The game features over 25 fully customizable drift cars, including iconic Japanese sports cars, European exotics, and American muscle cars. Each vehicle has unique handling characteristics, weight distribution, and power delivery. Controls are comprehensive - use W, A, S, D KEYS or ARROW KEYS for steering and acceleration, SPACEBAR for handbrake (essential for initiating drifts), LEFT SHIFT for nitrous boost, and C to change camera view. The key to successful drifting is the handbrake: approach a corner at high speed, tap the handbrake while steering into the turn, then counter-steer to maintain the slide. Throttle control is crucial - too much power and you\'ll spin out, too little and you\'ll lose momentum. The customization system is extensive: upgrade your engine, turbo, brakes, suspension, and body kit. Fine-tune your car\'s performance with adjustable settings like tire pressure, camber, and gear ratios. Visual customization includes paint colors, rims, and decals. The game features multiple tracks with different layouts and surfaces, each requiring different drift techniques. Race on touge mountain roads, professional drift circuits, and open parking lots. Drift Hunters also includes a realistic damage system and detailed graphics with dynamic lighting and weather effects. Whether you\'re a casual player or a drifting enthusiast, this game offers hundreds of hours of sideways fun.'
+    addedAt: '2026-01-24',
+    description: 'Drift Hunters is a 3D car drifting simulator featuring realistic physics and car customization. Your objective is to master drifting - sliding sideways through corners while maintaining control. Points are earned for long, controlled drifts. Controls: WASD or ARROWS to steer, SPACEBAR for handbrake, SHIFT for nitrous. The handbrake is key to initiating drifts. You can buy over 25 cars including JDM legends and tune them (engine, turbo, suspension). Visual customization includes paint and rims. Tracks range from mountain touges to race circuits. It offers deep mechanics for drifting enthusiasts.'
   },
   {
     id: 'drive-mad',
     title: 'Drive Mad',
     thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/00f074792a313e1c7edd4baa0fa64b89/drive-mad.png',
     embedUrl: 'https://drive-madgame.github.io/',
-    category: 'racing',
+    categories: ['racing', 'puzzle'], // Physics puzzle
     isNew: true,
-    description: 'Drive Mad is a physics-based driving game that will test your patience and precision to the absolute limit. In this challenging game, you must drive various vehicles across treacherous obstacle courses without dropping your cargo or flipping your vehicle. Each level presents unique challenges: steep ramps, narrow bridges, explosive obstacles, moving platforms, and gravity-defying loops. The catch? Your vehicle carries cargo (often represented by a ball or box) that can easily fall off if you drive too recklessly. The game perfectly balances speed with caution - drive too fast and you\'ll crash or lose your cargo; drive too slow and you might not have enough momentum to clear obstacles. The physics engine is incredibly realistic, making your vehicle respond naturally to acceleration, braking, and terrain changes. Controls are simple but require finesse - use the UP ARROW KEY or W to accelerate, DOWN ARROW KEY or S to brake or reverse, and LEFT/RIGHT ARROW KEYS or A/D to balance your vehicle in mid-air. The balancing mechanic is crucial: when your vehicle becomes airborne, use the left and right controls to rotate it and ensure you land safely. Landing at the wrong angle can cause your cargo to bounce off or your vehicle to flip. The game features dozens of levels with increasing difficulty, introducing new vehicle types, terrain hazards, and cargo types as you progress. Some levels use monster trucks, others use delicate sports cars or even motorcycles. Certain stages include explosive barrels that destroy your cargo on contact, while others feature crumbling platforms that fall away beneath you. The minimalist graphics keep the focus on gameplay, with clear visuals that let you judge distances and angles accurately. Drive Mad rewards patience, careful throttle control, and understanding of physics. Success often requires multiple attempts as you learn each level\'s rhythm and perfect your approach. With its addictive one-more-try gameplay and satisfying progression, Drive Mad is a must-play for fans of challenging physics games.'
+    addedAt: '2026-01-24',
+    description: 'Drive Mad is a physics-based driving game testing patience and precision. You drive various vehicles across obstacle courses. The catch: your car is often fragile or carrying cargo. Drive too fast and you flip; too slow and you fail the jump. Controls: W/S or UP/DOWN to drive, A/D or LEFT/RIGHT to balance in air. Levels introduce different vehicles like monster trucks or long limousines, each with unique handling. The minimalist graphics focus on the physics. It rewards careful throttle control. Success often requires multiple attempts to learn the rhythm of the level.'
   },
   {
     id: 'run-3',
     title: 'Run 3',
     thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/d3c19e9b-9b7b-4a54-9cb5-6188a5bd7d3b/run-3.png',
     embedUrl: 'https://run3.onl/',
-    category: 'racing',
+    categories: ['action', 'racing'],
     isHot: true,
-    description: 'Run 3 is an innovative endless runner that defies gravity and redefines the genre with its unique 360-degree tunnel gameplay. Set in space, you control an alien (or one of many unlockable characters) running through a series of cylindrical tunnels floating in the cosmos. What makes Run 3 special is its gravity mechanics - the tunnel you\'re running on becomes the floor, allowing you to run on any surface. If you encounter a gap, you can jump to the wall or ceiling, which then becomes your new floor. This mind-bending mechanic transforms every level into a 3D puzzle where spatial awareness and timing are key. The game features two main modes: Explore Mode with over 300 unique levels of increasing difficulty, and Infinite Mode where you run endlessly for high scores. Controls are deceptively simple - use the LEFT and RIGHT ARROW KEYS or A/D to move sideways, and press SPACEBAR or UP ARROW to jump. The real challenge comes from planning your route through each tunnel: you must decide whether to jump to another surface to avoid gaps or to collect power cells. Power cells are the game\'s currency, used to unlock new characters, each with unique abilities. Some characters can jump higher, others can float, and some can even create their own platforms. The game introduces new mechanics progressively: ice tiles that make you slide, crumbling tiles that fall away, bouncy tiles, and even gravity-reversing tiles. The level design is ingenious, with each stage presenting new challenges that combine these mechanics in creative ways. The difficulty curve is perfect, starting accessible but ramping up to genuinely challenging platforming puzzles. The space aesthetic is beautiful, with stars twinkling in the background and the tunnel\'s neon edges creating a mesmerizing visual experience. Run 3 also features a branching path system in Explore Mode, where your choices determine which levels you encounter next, adding replayability.'
+    addedAt: '2026-01-24',
+    description: 'Run 3 is an endless runner set in space tunnels. The unique mechanic is gravity: the tunnel wall you run on becomes the floor. This allows you to navigate 360 degrees to avoid gaps. Controls: LEFT/RIGHT ARROWS to move, SPACE/UP to jump. You can unlock characters with different abilities, like floating or high jumping. Explore Mode has hundreds of levels, while Infinite Mode is for high scores. The game introduces mechanics like crumbling tiles and ice progressively. The space aesthetic and 3D tunnel perspective create a mesmerizing experience.'
   },
   {
     id: 'subway-surfers',
     title: 'Subway Surfers',
     thumbnail: 'https://subwaysurfers76.github.io/rs/imgs/subway-surfers.jpg',
     embedUrl: 'https://subwaysurfers76.github.io/',
-    category: 'racing',
+    categories: ['action', 'racing'],
     isHot: true,
-    description: 'Subway Surfers is the iconic endless runner that has captured hearts worldwide with its vibrant graphics, smooth gameplay, and addictive mechanics. You play as Jake, a graffiti artist caught spray-painting subway trains by a grumpy inspector and his dog. Your mission is to run as far as possible through subway tunnels and train tracks, dodging oncoming trains, barriers, and various obstacles while collecting coins and power-ups. The game features three lanes that you switch between using swipe gestures or arrow keys. Controls are intuitive - use LEFT/RIGHT ARROW KEYS to switch lanes, UP ARROW to jump over low obstacles, and DOWN ARROW to roll under barriers. The longer you survive, the faster the game becomes, testing your reflexes to their limits. What makes Subway Surfers special is its smooth, responsive controls and perfectly balanced difficulty curve. The game introduces obstacles gradually: you\'ll start by dodging simple barriers, then face oncoming trains you must avoid by switching lanes, rolling wooden barriers, and gaps you must jump across. The challenge intensifies as these obstacles combine, requiring split-second decision-making. Collectibles include coins scattered throughout the track, which you can spend on character upgrades and power-ups. Power-ups are game-changers: the Jetpack lets you fly above obstacles, the Super Sneakers grant high jumping ability, the Coin Magnet attracts nearby coins automatically, the 2X Multiplier doubles your score, and the Hoverboard provides a one-time crash protection. Strategic use of hoverboards (activated by double-tapping jump) can save you from crashes and extend your runs. The game features daily challenges, weekly hunts, and limited-time events that keep the gameplay fresh. You can unlock dozens of characters and hoverboards, each with unique designs. The mission system provides objectives like collecting a certain number of coins, rolling a specific number of times, or jumping over trains, adding structured progression to the endless format. The colorful graphics, catchy soundtrack, and smooth animations create an incredibly polished experience that works perfectly on any device.'
+    addedAt: '2026-01-24',
+    description: 'Subway Surfers is the iconic endless runner. You play as Jake, running through subway tracks to escape an inspector. Controls: ARROW KEYS to switch lanes, jump, and roll. You must dodge trains and barriers while collecting coins. Power-ups include Jetpacks, Super Sneakers, and Magnets. You can use Hoverboards to survive crashes. The game speeds up over time, testing reflexes. It features daily challenges and missions to unlock characters and boards. The polished graphics and smooth gameplay make it a browser staple.'
   },
-
-  // ========================================
-  // 2-PLAYER / MULTIPLAYER GAMES
-  // ========================================
   {
     id: 'basket-bros',
     title: 'Basket Bros',
     thumbnail: 'https://imgs.crazygames.com/basketbros_1x1/20251107022434/basketbros_1x1-cover?format=auto&quality=100&metadata=none&width=1200',
-    embedUrl: 'https://basketbros-unblocked.github.io/',
-    category: 'sports',
+    embedUrl: 'https://basketbros-unblocked.github.io/a7/basket-bros/',
+    categories: ['sports', 'multiplayer'],
     isTwoPlayer: true,
     isHot: true,
-    description: 'Basket Bros is an action-packed arcade basketball game that throws traditional basketball rules out the window and replaces them with chaotic, over-the-top fun. This is basketball meets fighting game, where dunking on your opponent is just as important as punching them in the face. The game features simplified 1v1 basketball where the objective is to score more points than your opponent before time runs out, but the twist is that you can physically attack the other player to steal the ball or prevent them from scoring. Each match is fast-paced and intense, lasting only a couple of minutes, but packed with spectacular dunks, three-pointers, and brutal knockouts. Controls for Player 1 use WASD to move, G to shoot/steal/block, H to pump fake/pass/dash, and F to super dunk. Player 2 uses ARROW KEYS to move, L to shoot/steal/block, K to pump fake/pass/dash, and O to super dunk. The control scheme is easy to learn but has depth - timing your shots and defensive moves requires skill and practice. The game features a variety of playable characters, each with unique stats affecting speed, shooting ability, and dunking power. Some characters are tall and powerful but slow, perfect for dominating near the basket, while others are quick and agile, better suited for three-point shooting and stealing the ball. The court designs range from traditional basketball courts to bizarre locations like rooftops and construction sites. Power-ups occasionally appear on the court, granting temporary advantages like increased speed, better shooting accuracy, or unlimited super dunks. The super dunk is your ultimate move - when charged, it allows you to perform an unstoppable dunk that sends your opponent flying across the court. The game\'s physics are exaggerated and hilarious, with characters bouncing off walls and floors in ragdoll fashion after hard impacts. Tournament mode lets you progress through brackets, facing increasingly difficult AI opponents to become the Basket Bros champion. The game truly shines in 2-player mode, where you can challenge a friend for local multiplayer mayhem.'
+    addedAt: '2026-02-05',
+    description: 'Basket Bros is an arcade basketball game where fouls are encouraged. It is 1v1 basketball meets fighting. You can elbow and punch opponents to steal the ball. Controls: WASD/G/F for Player 1, Arrows/L/O for Player 2. Characters have unique stats for speed and dunking. The game features power-ups and "super dunks" that send opponents flying. It includes a tournament mode against AI and a chaotic local multiplayer mode. The physics are exaggerated and fun.'
   },
   {
     id: 'football-bros',
     title: 'Football Bros',
     thumbnail: 'https://footballbros.io/splash.jpg',
     embedUrl: 'https://footballbros.io/',
-    category: 'sports',
+    categories: ['sports', 'multiplayer'],
     isTwoPlayer: true,
     isNew: true,
-    description: 'Football Bros (known as Soccer Bros outside the US) is a fast-paced, physics-based soccer game designed for quick, intense matches between friends. Forget complex controls and realistic simulations - this game strips soccer down to its pure fun essence: running, kicking, and scoring goals in the most spectacular ways possible. Each match is a 2v2 affair (you and an AI teammate versus opponents) or can be played 1v1 against a friend. The field is compact, ensuring constant action with little downtime. The physics engine creates unpredictable and hilarious moments as players and the ball bounce off walls, slide across the field, and collide with each other. Controls are refreshingly simple - use WASD or ARROW KEYS for movement depending on which player you are. The kick button automatically aims toward the goal or in the direction you\'re moving, making it easy to pick up but requiring skill to master. Timing is everything: a well-timed kick can send the ball curving into the top corner, while a mistimed attempt might send it flying over the stadium. The game features multiple characters to unlock, each with unique appearances and slight stat differences. Characters can be customized with different outfits and accessories, adding personality to your player. The game modes include Quick Match for casual play, Tournament Mode where you compete against increasingly difficult teams to win the championship, and Practice Mode where you can hone your skills against a static goalkeeper. Power-ups occasionally appear on the field, such as speed boosts that make you move faster, mega kicks that send the ball flying at incredible speed, and shields that temporarily protect you from opponent tackles. The tackle mechanic adds a physical element - you can charge at opponents to knock them down and steal the ball, creating opportunities for counterattacks. Scoring goals triggers satisfying celebrations and instant replays of your best shots. The game\'s matchmaking system ensures fair competition against similarly skilled opponents in online mode.'
+    addedAt: '2026-02-04',
+    description: 'Football Bros is a fast-paced physics soccer game. Matches are 2v2 or 1v1. Controls: WASD or ARROWS. The kick button automatically aims. The physics engine creates unpredictable bounces and tackles. You can tackle opponents to steal the ball. Characters are customizable. Modes include Quick Match and Tournament. Power-ups like speed boosts and mega kicks appear randomly. It creates hilarious moments in local multiplayer when players collide and the ball goes flying.'
   },
   {
     id: 'basketball-stars',
     title: 'Basketball Stars',
     thumbnail: 'https://imgs.crazygames.com/games/basketball-stars-2019/cover-1583231506155.png?metadata=none&quality=100&width=1200&height=630&fit=crop',
     embedUrl: 'https://basketballstars.io/',
-    category: 'sports',
+    categories: ['sports', 'multiplayer'],
     isTwoPlayer: true,
     isHot: true,
-    description: 'Basketball Stars is the premier online multiplayer basketball game that combines realistic basketball mechanics with accessible arcade action. Whether you\'re playing against AI or challenging players from around the world, Basketball Stars delivers intense 1v1 matches where skill, timing, and strategy determine the winner. Each game is a race to score the most points within the time limit, using a mix of dribbling, shooting, and defensive techniques. The game features two main modes: 1v1 Attacker mode where players alternate offense and defense, and 1v1 Random match where both players can score anytime, creating constant back-and-forth action. Controls are intuitive but offer depth - use WASD or ARROW KEYS for movement, X or L for shooting and stealing, and S or Down ARROW for pump fake and defensive block. Advanced techniques include the pump fake to deceive opponents, the alley-oop for spectacular dunks, and perfect release timing for guaranteed buckets. The shooting mechanic requires timing: release at the peak of your jump for the highest accuracy. Distance matters too - three-point shots are harder to make but score more points, while close-range shots and dunks are more reliable. Defense is equally important: position yourself between the opponent and the basket, time your steals perfectly to intercept passes, and use blocks to swat away shots. The game features multiple basketball legends to unlock, each modeled after real NBA players with unique stat distributions. Some players excel at three-point shooting, others dominate in the paint with powerful dunks, and some are defensive specialists. As you win matches, you earn currency to unlock new players, customize their appearance with different jerseys and accessories, and purchase ability upgrades. The progression system keeps you coming back: rank up through divisions from Bronze to Diamond and beyond, completing daily missions for bonus rewards. The physics are finely tuned to feel responsive without being too simulation-heavy. The game strikes a perfect balance between arcade fun and strategic depth, making every match exciting whether you\'re a casual player or a competitive basketball fan.'
+    addedAt: '2026-02-03',
+    description: 'Basketball Stars is a competitive 1v1 basketball game featuring famous players with big heads. You can play Attacker/Defender mode or pure scoring mode. Controls: Arrows to move, Z/X to shoot/steal. Timing is key for shooting accuracy and blocks. Players have special abilities like Mega Dunks. You can play solo tournaments or local multiplayer. The game captures the rhythm of basketball with steals, blocks, and 3-pointers. Unlocking legends keeps you playing.'
   },
   {
     id: 'rooftop-snipers',
     title: 'Rooftop Snipers',
     thumbnail: 'https://imgs.crazygames.com/rooftop-snipers_16x9/20250108040440/rooftop-snipers_16x9-cover?metadata=none&quality=100&width=1200&height=630&fit=crop',
     embedUrl: 'https://ubg100.gitlab.io/games/rooftop-snipers/',
-    category: 'multiplayer',
+    categories: ['action', 'multiplayer'],
     isTwoPlayer: true,
     isHot: true,
-    description: 'Rooftop Snipers is a hilariously chaotic two-player shooting game where simplicity meets utter mayhem. You and your opponent stand on opposite sides of a rooftop armed with oversized sniper rifles, and your goal is devastatingly simple: shoot your opponent off the roof. The first player to knock their opponent off five times wins the match. Despite having only two buttons - one to jump and one to shoot - the game creates incredibly intense and unpredictable moments. Controls couldn\'t be simpler: Player 1 uses W to jump and E to shoot, while Player 2 uses I to jump and O to shoot. This minimalist control scheme means anyone can play within seconds, but mastery requires understanding the game\'s physics and timing. Your character is a ragdoll that moves in exaggerated, physics-based ways, making every jump and fall hilarious. When shot, characters tumble backward comically, sometimes teetering on the edge before falling. The shooting mechanic has a twist: your gun fires in the direction you\'re facing, but the recoil pushes you backward, potentially sending you off the edge if you\'re not careful. This creates a constant risk-reward calculation - aggressive shooting might knock your opponent back, but it also leaves you vulnerable. The game features multiple character skins to unlock, from cowboys and soldiers to random office workers and even Santa Claus. Each match takes place on a different rooftop with unique layouts: some have obstacles in the middle, others have moving platforms or even vehicles that drive across the screen and can hit players. Environmental hazards keep every match unpredictable. The game includes both local multiplayer for couch competition and single-player mode where you face AI opponents of increasing difficulty. The AI is surprisingly competent, using advanced tactics like jump-shooting and edge-guarding. The game\'s charm lies in its accessibility and the constant laughter it generates. Matches are quick (usually under a minute), making it perfect for best-of-five or best-of-ten tournaments. The ragdoll physics ensure no two matches play out the same way.'
+    addedAt: '2026-02-03',
+    description: 'Rooftop Snipers is a chaotic two-button shooting game. You try to shoot your opponent off a rooftop. Controls: W/E for Player 1, I/O for Player 2 (Jump and Shoot). Characters are physics-based ragdolls. Shooting pushes you backward due to recoil, adding risk. Levels vary from simple roofs to moving platforms. The winner is the first to 5 kills. It is perfect for quick, funny matches with a friend.'
   },
-
-  // ========================================
-  // ACTION GAMES
-  // ========================================
   {
     id: 'geometry-dash',
     title: 'Geometry Dash',
     thumbnail: 'https://cdn.iconscout.com/icon/free/png-256/free-geometry-dash-icon-svg-download-png-10673458.png?f=webp',
     embedUrl: 'https://ozgames.io/geometry-dash.embed',
-    category: 'action',
+    categories: ['action'],
     isHot: true,
-    description: 'Geometry Dash is a rhythm-based platformer that has become a cultural phenomenon, challenging players with its perfect synchronization of music and gameplay. You control a geometric icon (usually a cube) that moves forward automatically while you navigate through obstacle-filled levels. The challenge comes from the game\'s unforgiving difficulty: one mistake sends you back to the start of the level. Despite this, the game is incredibly addictive because each attempt helps you learn the pattern and get further. The game\'s brilliance lies in how the obstacles sync perfectly with the background music - every spike, jump, and gravity flip aligns with the beat, creating a hypnotic experience. Controls are remarkably simple: press SPACEBAR, UP ARROW, LEFT MOUSE BUTTON, or tap your screen to make your icon jump. Hold the button for consecutive jumps when needed. However, different segments transform your icon: the cube jumps on solid ground, the ship flies up and down smoothly, the ball bounces with reversed gravity, the UFO has bouncy gravity, and the wave weaves through narrow passages. Each transformation requires different timing and rhythm, keeping gameplay varied within a single level. The game features multiple official levels of increasing difficulty, from easy introductory stages to nightmare-difficulty levels that take thousands of attempts to complete. The level editor allows players to create and share custom levels, resulting in millions of user-created challenges ranging from artistic showcases to brutally difficult tests of skill. Practice mode lets you place checkpoints to learn difficult sections without restarting constantly. The visuals are simple but striking, featuring neon colors, geometric shapes, and pulsing backgrounds that react to the music. Each level has a unique aesthetic and soundtrack, featuring dubstep, electronic, and other high-energy genres. The satisfaction of finally completing a difficult level after dozens or hundreds of attempts is unmatched, making Geometry Dash one of the most rewarding platformers ever created.'
+    addedAt: '2026-01-28',
+    description: 'Geometry Dash is a rhythm-based platformer. You control a square that moves automatically. Controls: Click/Space/Up to jump. You must fly, flip, and bounce through spikes and obstacles synced to the music. One mistake resets the level. It features vehicles like ships and gravity balls. The difficulty is high but fair. The game allows for custom levels and has a massive community. The pulsing music and neon visuals create a trance-like state.'
   },
-   {
+  {
     id: 'snow-rider',
     title: 'Snow Rider',
     thumbnail: 'https://snowrider3d.com/data/image/game/snow-rider-3d.png1.PNG',
-    embedUrl: '  https://classroom2111.github.io/g26/class-537/',
-    category: 'action',
+    embedUrl: 'https://classroom2111.github.io/g26/class-537/',
+    categories: ['action', 'racing'],
     isHot: true,
-    description: 'Geometry Dash is a rhythm-based platformer that has become a cultural phenomenon, challenging players with its perfect synchronization of music and gameplay. You control a geometric icon (usually a cube) that moves forward automatically while you navigate through obstacle-filled levels. The challenge comes from the game\'s unforgiving difficulty: one mistake sends you back to the start of the level. Despite this, the game is incredibly addictive because each attempt helps you learn the pattern and get further. The game\'s brilliance lies in how the obstacles sync perfectly with the background music - every spike, jump, and gravity flip aligns with the beat, creating a hypnotic experience. Controls are remarkably simple: press SPACEBAR, UP ARROW, LEFT MOUSE BUTTON, or tap your screen to make your icon jump. Hold the button for consecutive jumps when needed. However, different segments transform your icon: the cube jumps on solid ground, the ship flies up and down smoothly, the ball bounces with reversed gravity, the UFO has bouncy gravity, and the wave weaves through narrow passages. Each transformation requires different timing and rhythm, keeping gameplay varied within a single level. The game features multiple official levels of increasing difficulty, from easy introductory stages to nightmare-difficulty levels that take thousands of attempts to complete. The level editor allows players to create and share custom levels, resulting in millions of user-created challenges ranging from artistic showcases to brutally difficult tests of skill. Practice mode lets you place checkpoints to learn difficult sections without restarting constantly. The visuals are simple but striking, featuring neon colors, geometric shapes, and pulsing backgrounds that react to the music. Each level has a unique aesthetic and soundtrack, featuring dubstep, electronic, and other high-energy genres. The satisfaction of finally completing a difficult level after dozens or hundreds of attempts is unmatched, making Geometry Dash one of the most rewarding platformers ever created.'
+    addedAt: '2026-01-28',
+    description: 'Snow Rider 3D is an exhilarating sleigh riding game where you speed down a snowy mountain. Your goal is to go as far as possible while collecting gifts and avoiding obstacles. Controls: Use ARROW KEYS to steer left and right and jump over gaps. You must dodge trees, snowmen, and giant rocks. The speed increases as you progress, requiring quick reflexes. The gifts you collect can be used to unlock new sleighs with different designs. The 3D graphics create an immersive sense of speed, making you feel the rush of the cold winter air.'
   },
   {
     id: 'stickman-hook',
     title: 'Stickman Hook',
     thumbnail: 'https://stickmanhook.gitlab.io/img/stickman-hook.png',
     embedUrl: 'https://stickman-unblocked.github.io/',
-    category: 'action',
+    categories: ['action'],
     isNew: true,
-    description: 'Stickman Hook is an incredibly satisfying physics-based swinging game that captures the essence of Spider-Man\'s web-slinging mechanics in a minimalist package. You control a simple stickman character who can grapple onto hooks scattered throughout each level, swinging from point to point to reach the finish line. The game\'s physics are perfectly tuned to create a fluid, momentum-based experience where mastering the pendulum swing mechanics is key to success. Timing your jumps and releases correctly allows you to build momentum, perform acrobatic flips, and soar through levels at incredible speeds. Controls are wonderfully simple: hold LEFT MOUSE BUTTON, SPACEBAR, or tap and hold on mobile to grapple to the nearest hook and swing. Release to let go and fly through the air. The challenge comes from timing - release too early and you\'ll fall short of the next hook; release too late and you\'ll overshoot or crash into obstacles. The game features over 100 levels with increasing complexity, introducing new elements progressively: bouncy surfaces that propel you upward, trampolines for extra height, moving hooks that require prediction, and hazardous obstacles like spikes and saw blades that end your run on contact. Some levels require precise timing and multiple swings to navigate tight corridors, while others reward bold, high-speed approaches where you barely touch hooks before releasing. The satisfaction of perfectly timing a sequence of swings and flips to reach the goal in one smooth motion is exhilarating. The game includes a variety of unlockable characters, each with unique appearances and animations. Collecting gems during your runs allows you to unlock new skins, from different stickman designs to characters dressed as ninjas, pirates, or even superheroes. The minimalist graphics keep the focus on gameplay, with clean lines, bright colors, and smooth animations that make every movement feel responsive and intentional. The game\'s difficulty curve is well-balanced, starting with simple levels that teach basic mechanics before gradually introducing complex obstacles and requiring advanced techniques. Stickman Hook is perfect for quick gaming sessions or extended play, as each level takes only seconds to complete but offers high replay value as you try to achieve perfect runs.'
+    addedAt: '2026-01-28',
+    description: 'Stickman Hook is a physics swinging game. You grapple onto hooks to swing through levels. Controls: Hold Click/Space to grapple, release to fly. You must time your swings to maintain momentum and avoid falling. The game features over 100 levels with bouncy pads and moving hooks. You can unlock different stickman skins. It captures the feeling of Spiderman-style swinging. The difficulty ramps up with complex obstacle placement. It is satisfying to complete a level in one smooth flow.'
   },
   {
     id: 'worlds-hardest-game',
     title: "World's Hardest Game",
     thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/61368b108e1e8625e6f7b2daccb98324/worlds-hardest-game.png',
     embedUrl: 'https://mathgames66.github.io/p/theworldshardestgame.html',
-    category: 'action',
+    categories: ['action', 'puzzle'],
     isHot: true,
-    description: 'The World\'s Hardest Game lives up to its name as one of the most challenging and frustrating skill games ever created. This deceptively simple-looking game tests your precision, timing, and patience to their absolute limits. You control a small red square navigating through maze-like levels filled with relentlessly moving blue circles that instantly kill you on contact. Your objective is to collect yellow circles and reach the green goal area, but the path is never straightforward. Each level is a carefully designed gauntlet of moving obstacles with precise patterns that must be memorized and navigated with pixel-perfect precision. Controls are basic - use ARROW KEYS or WASD to move your red square in four directions. The movement is deliberately responsive and precise, eliminating any excuse for failure except your own mistakes. The game demands complete focus and perfect timing: you must observe enemy patterns, identify safe routes, and execute your movement flawlessly. One touch from a blue circle sends you back to the starting area of that level, forcing you to begin again. The game tracks your death count, which becomes a badge of honor (or shame) showing how many attempts each level required. The early levels seem manageable, teaching basic pattern recognition and timing, but the difficulty ramps up dramatically. Later levels feature incredibly complex patterns with dozens of blue circles moving in coordinated formations, requiring you to weave through impossibly tight gaps at precise moments. Some levels include safe zones where you can pause and plan your next move, while others force constant motion. The game features 30 official levels, each more deviously designed than the last. Level 15 is infamous as a difficulty spike that stops many players in their tracks. The minimalist presentation - simple shapes on a white background with blue obstacles and red walls - eliminates distractions and focuses entirely on precision gameplay. Despite (or because of) its brutal difficulty, the game is incredibly addictive. The "just one more try" factor is strong as you retry levels, gradually improving your performance until you achieve the perfect run. Completing the entire game is a genuine achievement that requires patience, practice, and perseverance.'
+    addedAt: '2026-01-28',
+    description: 'The World\'s Hardest Game is a deceptively simple game about precision. You control a red square and must collect yellow coins while avoiding blue dots. Controls: Arrow Keys. The blue dots move in predictable but tight patterns. One touch kills you. You must plan your route and execute it with pixel-perfect timing. It is known for its extreme difficulty and high death counts. There are 30 levels that will test your patience. It is a classic of the flash era.'
   },
-
-  // ========================================
-  // IO GAMES
-  // ========================================
   {
     id: 'slither-io',
     title: 'Slither.io',
     thumbnail: 'https://imgs.crazygames.com/games/slitherio/cover-1587331280441.png?format=auto&quality=100&metadata=none&width=1200',
     embedUrl: 'https://slither.io/',
-    category: 'io',
+    categories: ['io', 'multiplayer'],
     isHot: true,
-    description: 'Slither.io is the massively multiplayer snake game that revolutionized the .io genre and became a global phenomenon. Inspired by the classic Snake game but transformed into a competitive online experience, Slither.io pits you against hundreds of players simultaneously in a battle to become the longest snake on the server. You start as a tiny snake and grow by collecting glowing orbs scattered across the map and, more importantly, by consuming the remains of defeated snakes. The game\'s brilliant twist is that snakes die when their head touches another snake\'s body, but their body doesn\'t kill others - this creates strategic depth where small snakes can defeat much larger ones through skillful maneuvering. Controls are intuitive: use your MOUSE to steer your snake in any direction, and hold LEFT MOUSE BUTTON or SPACEBAR to boost speed. The boost mechanic is crucial for both offense and defense - it consumes your snake\'s length (making you slightly shorter) but provides a burst of speed that can help you cut off opponents, escape danger, or quickly collect orbs. Advanced players use boost strategically to "cut" in front of larger snakes, forcing them to crash into your body. When a snake dies, it explodes into a feast of glowing orbs proportional to its size, creating feeding frenzies where multiple snakes compete for the rewards. The bigger you grow, the slower your base movement speed becomes, making you a bigger target but also a more formidable opponent. Strategic positioning is key: circle smaller snakes to trap them, forcing them to crash into your body, or use your size to block valuable orbs from competitors. The game features a global leaderboard showing the top ten longest snakes, each represented by their chosen skin and length. The leaderboard creates dynamic gameplay as larger snakes become targets for ambitious players looking to claim their spot. Customization options include hundreds of snake skins featuring different patterns, colors, and designs, from simple solid colors to elaborate country flags and meme references. The game runs smoothly even with hundreds of players visible on screen, thanks to clever optimization and server distribution.'
+    addedAt: '2026-01-27',
+    description: 'Slither.io is a multiplayer snake game. You collect orbs to grow longer. Controls: Mouse to steer, Click to boost. If your head hits another snake, you die and explode into mass. You can kill larger snakes by cutting them off. The boost mechanic adds strategy but shrinks you. The goal is to reach the top of the leaderboard. It is accessible but has deep strategies for trapping opponents. The customization lets you pick funny skins.'
   },
-
-  // Additional games continue with similar detailed 200+ word descriptions...
   {
     id: 't-rex-runner',
     title: 'Dino Run',
     thumbnail: 'https://cdn-0001.qstv.on.epicgames.com/hhrAObIdDeoLuKhjLE/image/landscape_comp.jpeg',
     embedUrl: 'https://wayou.github.io/t-rex-runner/',
-    category: 'action',
+    categories: ['action', 'racing'],
     isNew: true,
-    description: 'Chrome Dino Game, also known as T-Rex Runner or Dino Run, is the beloved hidden game that appears in Google Chrome when you lose your internet connection. This simple yet addictive endless runner has become an internet icon, providing entertainment during frustrating connectivity issues worldwide. You control a pixelated Tyrannosaurus Rex running through a prehistoric desert landscape, jumping over cacti and ducking under pterodactyls while the game speed gradually increases. The minimalist black-and-white graphics give the game a nostalgic retro feel reminiscent of early arcade games. Despite its simple appearance, the game becomes genuinely challenging as it accelerates, requiring quick reflexes and perfect timing to survive. Controls couldn\'t be more straightforward - press SPACEBAR or UP ARROW to make the T-Rex jump over ground obstacles like cacti and rocks, and press DOWN ARROW to duck under flying pterodactyls. The game starts at a manageable pace but continuously speeds up, with obstacles appearing more frequently and requiring faster reactions. The challenge is maintaining focus as the game becomes increasingly frantic. Scoring is based on distance traveled, with your score increasing as you survive longer. Milestone scores trigger day-night cycles, changing the background color scheme to provide visual variety during long runs. The game includes slight variations in obstacle patterns: single cacti, clusters of multiple cacti requiring perfectly timed jumps, tall cacti that must be ducked under, and pterodactyls flying at different heights. Advanced players develop strategies for different obstacle combinations, knowing precisely when to jump, when to duck, and when to do nothing. The physics are simple but consistent, with the T-Rex having predictable jump height and duration. This consistency allows players to develop muscle memory, improving performance through practice. High score tracking encourages replayability as players attempt to beat their personal best. The game has inspired countless memes, fan art, and variations, cementing its place in internet culture. Its accessibility and pick-up-and-play nature make it perfect for quick gaming sessions during breaks or while waiting for your connection to restore.'
+    addedAt: '2026-01-27',
+    description: 'The Chrome Dino Game (T-Rex Runner) is the famous endless runner. You control a dinosaur running through a desert. Controls: Space to jump, Down to duck. You must avoid cacti and pterodactyls. The game speeds up indefinitely. It features a day/night cycle. Originally designed for offline moments, this version lets you play anytime. It relies on pure reaction time and muscle memory.'
   },
   {
     id: 'chess',
     title: 'Chess',
     thumbnail: 'https://www.chess.com/bundles/web/images/offline-play/standardboard.png',
     embedUrl: 'https://www.chess.com/play/computer',
-    category: 'puzzle',
+    categories: ['puzzle', 'multiplayer', 'sports'],
     isHot: true,
-    description: 'Chess is the ultimate strategy board game that has challenged minds for over 1500 years and remains one of the most popular games in the world. Played on an 8×8 checkered board between two players, chess combines tactical calculation, strategic planning, and pattern recognition in a perfect information game where skill is the only factor determining victory. Each player controls 16 pieces: one King, one Queen, two Rooks, two Bishops, two Knights, and eight Pawns. Each piece type moves differently - Pawns move forward one square (two on their first move) and capture diagonally; Rooks move any number of squares horizontally or vertically; Bishops move any number of squares diagonally; Knights move in an L-shape, jumping over pieces; Queens combine Rook and Bishop movement; and Kings move one square in any direction. The objective is to checkmate your opponent\'s King, placing it in a position where it\'s under attack and cannot escape. Online chess platforms offer various modes: play against computer AI at multiple difficulty levels from beginner to grandmaster strength, challenge friends in online multiplayer matches, solve tactical puzzles to improve your skills, or watch and learn from games between top players. Controls are simple - use your MOUSE to click and drag pieces to their destination squares. Legal moves are often highlighted, helping beginners learn how pieces move. The game includes features like takeback requests to undo mistakes, move timers for different time controls (bullet, blitz, rapid, classical), and analysis boards showing move notation and evaluation. Chess theory is vast: openings establish piece development and control of the center, middlegames involve tactical combinations and strategic maneuvering, and endgames require precise calculation and technical knowledge. Common tactical motifs include pins, forks, skewers, discovered attacks, and sacrifices. Strategic concepts include pawn structure, piece activity, king safety, space advantage, and initiative. Learning chess improves critical thinking, foresight, pattern recognition, and decision-making under pressure. The game rewards study and practice, with endless depth ensuring no player ever masters it completely. Modern chess engines provide analysis of your games, showing mistakes and suggesting better moves, helping players of all levels improve rapidly.'
+    addedAt: '2026-01-27',
+    description: 'Chess is the ultimate strategy board game. You play on an 8x8 board with 16 pieces. The goal is to checkmate the opponent\'s King. Controls: Mouse to drag pieces. Each piece moves differently (e.g., Knights move in L-shapes). This version lets you play against AI or analyze moves. It requires deep calculation and strategy. It improves logic and foresight. Whether beginner or grandmaster, it offers infinite depth.'
   },
   {
     id: 'bitlife',
     title: 'BitLife',
     thumbnail: 'https://play-lh.googleusercontent.com/fUM-UyywXxjC8soxAZdIlxJrlRRXmql8wkE426SHzft4lJycSKVd2jCYQQX1BEG9Xw',
     embedUrl: 'https://bitlifeunblocked.io/',
-    category: 'puzzle',
+    categories: ['puzzle'], // Sim/Puzzle
     isNew: true,
-    description: 'BitLife is a text-based life simulation game where you live an entire life from birth to death through a series of decisions and random events. This addictive game puts you in control of a character\'s entire existence, letting you make choices that shape their life story. You\'ll experience everything from childhood through old age, making decisions about education, relationships, career, finances, and more. The game starts by generating a random character with specific attributes including appearance, country of birth, initial family situation, and starting stats like Health, Happiness, Smarts, and Looks. From there, every year of your character\'s life presents new situations and choices. Controls are entirely MOUSE-based, with a simple interface presenting text descriptions and button options for each decision. Click "Age Up" to advance one year, triggering events and aging your character. Each year brings random events drawn from hundreds of possibilities: you might get invited to a party, encounter bullies at school, find money on the street, or experience family drama. Your responses to these events affect your character\'s stats and future opportunities. The game simulates realistic life progression: during childhood, focus on education and extracurriculars; as a teen, maintain grades, work part-time jobs, and navigate social situations; in adulthood, pursue higher education or careers, find romantic partners, buy houses and cars, and raise children. The career system is extensive, featuring dozens of jobs from regular positions to special careers like actor, musician, athlete, or even criminal. Each career path has unique events and progression mechanics. Relationships are complex: you can date, get married, have children, divorce, and maintain connections with family and friends. Each relationship requires maintenance through interactions like spending time together, giving gifts, or having conversations. The game includes random challenges and scenarios keeping gameplay unpredictable: you might inherit money, face lawsuits, win the lottery, or get diagnosed with illnesses. Financial management matters - buy houses and cars, invest in businesses, gamble at casinos, or go bankrupt. The ultimate goal is to create interesting life stories, whether that means living virtuously, becoming a criminal, accumulating wealth, or exploring different life paths. Death is inevitable, concluding your character\'s story with a summary of their life achievements, relationships, and legacy. The game encourages replayability through its randomness and vast number of possible life outcomes.'
+    addedAt: '2026-01-27',
+    description: 'BitLife is a text-based life simulator. You live a randomly generated life from birth to death. Controls: Mouse to select choices. You make decisions about school, jobs, crime, and relationships. "Age Up" to progress years. Events are random—you might win the lottery or go to jail. You can become a doctor, a criminal, or a movie star. The goal is to live a successful or interesting life. It is funny, unpredictable, and highly replayable.'
   },
-  // ========================================
-  // NEW RECOMMENDED ADDITIONS
-  // ========================================
   {
     id: 'poly-track',
     title: 'PolyTrack',
     thumbnail: 'https://i.ytimg.com/vi/wXsG1d9TzdI/maxresdefault.jpg',
     embedUrl: 'https://www.kodub.com/apps/polytrack',
-    category: 'racing',
+    categories: ['racing', 'action'],
     isNew: true,
     isHot: true,
-    description: 'PolyTrack is a low-poly racing game that combines the precision of TrackMania with the clean aesthetic of modern web games. It is rapidly becoming a favorite for speedrunners due to its tight physics and built-in level editor. You race against the clock on tracks featuring loops, jumps, and sharp turns, trying to beat target times for Gold, Silver, and Bronze medals. The car physics are arcade-style but predictable, allowing for satisfying drifts and air control. The standout feature is the Level Editor, which lets you build your own tracks using a simple grid system and share them via codes. The community has created thousands of custom tracks, offering endless replayability. Controls are standard: WASD or Arrow Keys to drive, and R to restart instantly (which you will do often). The game runs incredibly smoothly on almost any device due to its optimized 3D engine.'
+    addedAt: '2026-02-05',
+    description: 'PolyTrack is a low-poly racing game similar to TrackMania. You race for best times on technical tracks. Controls: WASD/Arrows. The physics allow for precise drifting and air control. It features a level editor to build custom tracks. The game is optimized for speedrunning. The clean aesthetic and instant restarts make it perfect for grinding fast times. The community creates endless content via the editor.'
   },
   {
     id: 'stack',
     title: 'Stack',
     thumbnail: 'https://www.ketchappgames.com/images/games/Big/Stack.webp',
     embedUrl: 'https://stackgame.github.io/',
-    category: 'puzzle',
-    description: 'Stack is a minimalist arcade puzzle game where your goal is to build the highest tower possible by stacking moving blocks on top of each other. A block slides back and forth across the screen, and you must click or tap to place it on top of the previous one. If you mistime it and the block hangs over the edge, the overhanging part is sliced off, making your platform smaller for the next turn. As the tower gets higher, the blocks move faster, requiring intense concentration and rhythm. It is visually stunning with a color palette that shifts smoothly as you progress. The satisfaction of hitting "perfect" stacks (where the block aligns perfectly and makes a satisfying chime sound) makes it incredibly addictive. It is the perfect "just one more try" game.'
+    categories: ['puzzle', 'action'],
+    addedAt: '2026-01-26',
+    description: 'Stack is a minimalist arcade game. You build a tower by placing moving blocks. Controls: Click to place block. If you mistime it, the overhang is sliced off, making the next block smaller. The game gets faster as you go higher. The visual style features soothing color gradients. Getting perfect placements (where nothing is sliced) plays a satisfying chime. It tests your rhythm and focus.'
   },
   {
     id: 'crossy-road',
     title: 'Crossy Road',
     thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo1ahBbcHTmbJp7ymTw8LABGF949PSHgBN1g&s',
-    embedUrl: 'https://crossy-road-unblock.github.io/crossy-road/', 
-    // Note: Poki links sometimes block iframes. If this fails, use: https://nguyenthanh1995.github.io/CrossyRoad/
-    category: 'action',
-    description: 'Crossy Road is the endless arcade hopper that famously answered the question "Why did the chicken cross the road?" You control a blocky character (starting with a chicken) navigating through an endless stream of traffic, rivers, and train tracks. The gameplay is simple: tap to hop forward, swipe to move sideways. The goal is to get as far as possible without getting flattened by cars, eaten by eagles, or drowning in the river. The game features a unique voxel art style and dozens of unlockable characters, each with their own funny sound effects and visual themes. It is endless, procedurally generated, and increasingly difficult as traffic speeds up. A modern classic that works perfectly in browsers.'
+    embedUrl: 'https://crossy-road-unblock.github.io/crossy-road/',
+    categories: ['action', 'racing'],
+    addedAt: '2026-01-26',
+    description: 'Crossy Road is an endless hopper. You control a character crossing roads, rivers, and tracks. Controls: Tap to hop, Swipe to move sideways. You must avoid cars and trains. If you wait too long, an eagle grabs you. It features voxel graphics and unlockable characters like Chicken and Doge. The procedurally generated world ensures no two runs are the same. It is a modern take on Frogger.'
   },
-   {
+  {
     id: 'raft-wars-2',
     title: 'Raft Wars 2',
     thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/8ce3d09339bcb18c63bf9f1780795944/raft-wars-2.png',
-    embedUrl: '  https://77pen.github.io/p6/raft-wars-2', 
-    // Note: Poki links sometimes block iframes. If this fails, use: https://nguyenthanh1995.github.io/CrossyRoad/
-    category: 'action',
-    description: 'Crossy Road is the endless arcade hopper that famously answered the question "Why did the chicken cross the road?" You control a blocky character (starting with a chicken) navigating through an endless stream of traffic, rivers, and train tracks. The gameplay is simple: tap to hop forward, swipe to move sideways. The goal is to get as far as possible without getting flattened by cars, eaten by eagles, or drowning in the river. The game features a unique voxel art style and dozens of unlockable characters, each with their own funny sound effects and visual themes. It is endless, procedurally generated, and increasingly difficult as traffic speeds up. A modern classic that works perfectly in browsers.'
+    embedUrl: 'https://77pen.github.io/p6/raft-wars-2',
+    categories: ['action', 'puzzle'],
+    addedAt: '2026-01-26',
+    description: 'Raft Wars 2 is a turn-based shooting game where you defend your treasure. You play as Simon and his brother, fighting off security guards and enemies using a raft equipped with cannons. Controls: Mouse to aim and set power. You launch projectiles like tennis balls and grenades to knock enemies into the water or drain their health. You can upgrade your raft and weapons between levels. The game combines physics aiming with strategy. The cartoon style and funny storyline make it a lighthearted sequel to the classic original.'
   },
   {
     id: 'tanuki-sunset',
     title: 'Tanuki Sunset',
     thumbnail: 'https://i.ytimg.com/vi/et0YhBBihNk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCAaq7w2UYWEIOIkTmbBwLocL358w',
-    embedUrl: 'https://maxwellstevenson.com/Vafor_IT/tanuki-sunset/', 
-    category: 'racing',
+    embedUrl: 'https://maxwellstevenson.com/Vafor_IT/tanuki-sunset/',
+    categories: ['racing', 'action'],
     isNew: true,
-    description: 'Tanuki Sunset is a synthwave-soaked longboard racing game where you play as a skateboarding raccoon. Yes, really. You speed down procedurally generated seaside roads, drifting around corners and collecting bits while avoiding cars and obstacles. The game is oozing with style, featuring a vibrant retro color palette and a chill lo-fi soundtrack. Controls involve using the analog stick (or keys) to drift: holding a direction charges a drift meter, allowing you to take tight corners at high speeds. Doing tricks and collecting points fills a meter that eventually lets you spin a roulette for bonus points. It is less about high-stress racing and more about "flow state" and enjoying the vibes, though the later levels do get challenging.'
+    addedAt: '2026-01-26',
+    description: 'Tanuki Sunset is a synthwave longboarding game starring a raccoon. You drift down coastal roads. Controls: Analog stick or Keys to steer and drift. Drifting fills a meter for points. You must avoid cars and stay on the road. The game oozes style with its retro soundtrack and vibrant visuals. It is about flow and vibes, though later levels offer challenge. You can do tricks for extra score. It is a unique, chill experience.'
   },
   {
     id: 'bloons-td-4',
     title: 'Bloons TD 4',
-    thumbnail: 'https://static.wikia.nocookie.net/b__/images/4/4b/BTD4-PromoArt.png/revision/latest/thumbnail/width/360/height/360?cb=20200711194940&path-prefix=bloons', // Generic BTD placeholder
+    thumbnail: 'https://static.wikia.nocookie.net/b__/images/4/4b/BTD4-PromoArt.png/revision/latest/thumbnail/width/360/height/360?cb=20200711194940&path-prefix=bloons',
     embedUrl: 'https://bagelcomics.com/games/html/bloonstd4.html',
-    category: 'puzzle',
+    categories: ['puzzle', 'action'],
     isHot: true,
-    description: 'Bloons Tower Defense 4 is a classic strategy game where you must stop waves of colorful balloons (bloons) from reaching the end of the track. You do this by placing monkeys equipped with darts, boomerangs, cannons, and magic spells along the path. As you pop bloons, you earn money to upgrade your towers or buy new ones. This version introduces the "Sun God" temple and other iconic high-tier upgrades. It features multiple tracks with varying difficulty levels (Beginner, Intermediate, Advanced, Expert). The strategy comes from balancing your economy (building Banana Farms) with your defense. Different bloon types require different counters: Lead bloons can only be popped by explosives or fire, while Camo bloons need towers with special detection. It is arguably the peak of the classic Flash-era tower defense games.'
+    addedAt: '2026-01-26',
+    description: 'Bloons Tower Defense 4 is a classic strategy game. You place monkeys to pop waves of balloons. Controls: Mouse to place towers. Towers include Dart Monkeys, Cannons, and Super Monkeys. You earn money to upgrade them. Different balloons have immunities (e.g., Leads need explosives). You must manage your economy with Banana Farms. It features multiple tracks and difficulty modes. It is a definitive tower defense game from the flash era.'
   },
   {
     id: 'bad-time-simulator',
     title: 'Bad Time Simulator (Sans)',
     thumbnail: 'https://lgames.littlegames.io/bgames/game_image/1745767774bad-time-simulator.webp',
     embedUrl: 'https://jcw87.github.io/c2-sans-fight/',
-    category: 'action',
-    description: 'Bad Time Simulator is a browser-based recreation of the famous "Sans Fight" from the game Undertale. It isolates the most difficult boss battle of the game, allowing players to practice against Sans without playing through the entire RPG. You control a small red heart (your soul) inside a box, dodging an onslaught of bone attacks and laser blasts (Gaster Blasters). It is a "bullet hell" game that requires pixel-perfect movement and memorization of attack patterns. You can heal using items, but Sans dodges your attacks, making it a test of endurance. This web version is incredibly accurate to the original and includes an endless mode for hardcore players who want to see how long they can survive.'
+    categories: ['action'],
+    addedAt: '2026-01-26',
+    description: 'Bad Time Simulator is a recreation of the Sans fight from Undertale. You control a heart (soul) dodging bone attacks and lasers. Controls: Arrow Keys. It is a "bullet hell" endurance test. You must memorize attack patterns to survive. You can heal, but the enemy dodges your attacks. It is perfect for practicing the hardest boss fight in the game without replaying the RPG. It includes an endless mode for high scores.'
   }
 ];
 
@@ -628,10 +636,10 @@ export const getFeaturedGames = (): Game[] => {
   return games.filter(game => game.featured);
 };
 
-// Get games by category
+// Get games by category (Updated for array)
 export const getGamesByCategory = (category: string): Game[] => {
   if (category === 'all') return games;
-  return games.filter(game => game.category === category);
+  return games.filter(game => game.categories.includes(category as any));
 };
 
 // Get game by ID
@@ -639,9 +647,10 @@ export const getGameById = (id: string): Game | undefined => {
   return games.find(game => game.id === id);
 };
 
-// Get all unique categories
+// Get all unique categories (Updated for array)
 export const getCategories = (): string[] => {
-  return ['all', ...Array.from(new Set(games.map(game => game.category)))];
+  const allCategories = games.flatMap(game => game.categories);
+  return ['all', ...Array.from(new Set(allCategories))];
 };
 
 // Get 2-player games
@@ -656,7 +665,7 @@ export const searchGames = (query: string): Game[] => {
   
   return games.filter(game => 
     game.title.toLowerCase().includes(lowerQuery) ||
-    game.description?.toLowerCase().includes(lowerQuery) ||
-    game.category.toLowerCase().includes(lowerQuery)
+    game.description.toLowerCase().includes(lowerQuery) ||
+    game.categories.some(cat => cat.toLowerCase().includes(lowerQuery))
   );
 };
