@@ -383,7 +383,7 @@ export const games: Game[] = [
     id: 'drift-hunters',
     title: 'Drift Hunters',
     thumbnail: 'https://drift-hunters.io/data/image/drift-hunters.png',
-    embedUrl: 'https://drifthunters-game.github.io/',
+    embedUrl: 'https://classroom2111.github.io/g5/class-447',
     category: 'racing',
     isHot: true,
     isNew: true,
