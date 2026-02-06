@@ -176,7 +176,7 @@ export const games: Game[] = [
     addedAt: '2026-01-25',
     description: 'Vex 3 is an adrenaline-fueled stickman platformer that tests your parkour skills. As a nimble stickman, you must run, jump, climb, swim, and slide through ten main acts filled with deadly traps. The game is notorious for its difficulty - one wrong move means instant death. Controls are fluid: use ARROW KEYS or WASD to move, DOWN to crouch/slide. Mechanics include wall climbing, swimming, and sliding. Each act introduces new hazards like spinning blades and moving platforms. The game rewards speedrunning, with leaderboards encouraging competitive play. Challenge rooms unlock after main acts for even harder tests.'
   },
-  {
+    {
     id: 'vex-4',
     title: 'Vex 4',
     thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRfKev7DhGRFt2tsXCUlFzYr-AHKW8JObqCw&s',
@@ -185,7 +185,7 @@ export const games: Game[] = [
     addedAt: '2026-01-25',
     description: 'Vex 4 continues the legendary stickman platformer series with nine new acts filled with devious traps. Building upon Vex 3, this installment introduces mechanics like sticky walls, proximity mines, zip lines, and double jump pads. Controls mirror previous entries: ARROW KEYS or WASD for movement. Each act presents escalating difficulty. Vex 4 also introduces a comprehensive achievement system - challenges include completing acts under target times and collecting hidden stars. The game includes a level editor allowing players to create custom acts. The visual style maintains the series\' minimalist aesthetic with smooth animations.'
   },
-  {
+    {
     id: 'vex-5',
     title: 'Vex 5',
     thumbnail: 'https://static.keygames.com/0/114160/99829/672x378/vex-5.webp',
@@ -196,6 +196,15 @@ export const games: Game[] = [
     description: 'Vex 5 represents the evolution of the stickman platforming series, introducing polished mechanics and challenging level designs. The stickman protagonist returns for ten brutal acts plus bonus stages. New mechanics include the ability to hang from ledges, regenerating checkpoints, and intelligent camera work. Controls remain intuitive: ARROW KEYS or WASD. New hazard types include laser grids, ice physics, and bounce pads. Vex 5 features robust achievement tracking, encouraging speedruns. The visual presentation is the most polished yet, with smooth 60fps animations and particle effects.'
   },
   {
+    id: 'murder',
+    title: 'Murder',
+    thumbnail: 'https://play-lh.googleusercontent.com/BT7zrf4JNZj4pRV5YIRT4D0DydkuLEzVvnOwKmmOxuc1sbIUJyZbeaFOhjuLK4CXWFg',
+    embedUrl: '  https://basketbros-unblocked.github.io/a5/murder/',
+    categories: ['action',],
+    addedAt: '2026-01-24',
+    description: 'Blumgi Rocket is an innovative physics-based racing game where you control a car equipped with a rocket booster. The twist is that you don\'t have traditional steering - instead, you aim your rocket and fire it to propel your car through physics. This creates unique puzzle-platforming gameplay. Controls: use MOUSE to aim the rocket, LEFT CLICK to fire. The rocket provides thrust in the opposite direction you aim. If you want to go right, aim left and fire. The physics are realistic - your car has weight and rotational momentum. Each level is a puzzle requiring you to analyze the layout and execute precise rocket bursts.'
+  },
+   {
     id: 'merge-round-racers',
     title: 'Merge Round Racers',
     thumbnail: 'https://i.ytimg.com/vi/YFATNYTD0Ic/maxresdefault.jpg',
@@ -204,6 +213,7 @@ export const games: Game[] = [
     addedAt: '2026-01-24',
     description: 'Merge Round Racers combines the addictiveness of merging games with the excitement of track racing. In this game, you purchase small cars and merge identical ones to create faster, higher-level vehicles. Once you have a fleet of cars, you place them on the track to race automatically and earn coins. The better the car, the more coins it generates per lap. You use these earnings to buy more cars and continue the cycle. It is a relaxing idle game that satisfies the urge to organize and upgrade. The colorful graphics and simple loop make it perfect for playing in the background.'
   },
+
   {
     id: 'blumgi-rocket',
     title: 'Blumgi Rocket',
@@ -213,6 +223,7 @@ export const games: Game[] = [
     addedAt: '2026-01-24',
     description: 'Blumgi Rocket is an innovative physics-based racing game where you control a car equipped with a rocket booster. The twist is that you don\'t have traditional steering - instead, you aim your rocket and fire it to propel your car through physics. This creates unique puzzle-platforming gameplay. Controls: use MOUSE to aim the rocket, LEFT CLICK to fire. The rocket provides thrust in the opposite direction you aim. If you want to go right, aim left and fire. The physics are realistic - your car has weight and rotational momentum. Each level is a puzzle requiring you to analyze the layout and execute precise rocket bursts.'
   },
+
   {
     id: 'among-us-single',
     title: 'Among Us',
@@ -455,6 +466,19 @@ export const games: Game[] = [
     addedAt: '2026-02-05',
     description: 'Basket Bros is an arcade basketball game where fouls are encouraged. It is 1v1 basketball meets fighting. You can elbow and punch opponents to steal the ball. Controls: WASD/G/F for Player 1, Arrows/L/O for Player 2. Characters have unique stats for speed and dunking. The game features power-ups and "super dunks" that send opponents flying. It includes a tournament mode against AI and a chaotic local multiplayer mode. The physics are exaggerated and fun.'
   },
+
+    {
+    id: 'basket-random',
+    title: 'Basket Random',
+    thumbnail: 'https://play-lh.googleusercontent.com/gP8T5Z1O-ngxIloiwcBZzrzyLPYDp0R_1BDNKUDZboIRPVImeyWI8-7aExvB9gAGNKc',
+    embedUrl: '  https://basketbros-unblocked.github.io/a8/basket-random/',
+    categories: ['sports', 'multiplayer'],
+    isTwoPlayer: true,
+    isHot: true,
+    addedAt: '2026-02-06',
+    description: 'Basket Random is an arcade basketball game where fouls are encouraged. It is 1v1 basketball meets fighting. You can elbow and punch opponents to steal the ball. Controls: WASD/G/F for Player 1, Arrows/L/O for Player 2. Characters have unique stats for speed and dunking. The game features power-ups and "super dunks" that send opponents flying. It includes a tournament mode against AI and a chaotic local multiplayer mode. The physics are exaggerated and fun.'
+  },
+
 
   {
     id: 'basketball-stars',
