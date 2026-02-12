@@ -35,17 +35,19 @@ export const games: Game[] = [
   // ========================================
   // FEATURED GAMES
   // ========================================
-  {
-    id: 'duck-life',
-    title: 'Duck Life',
-    thumbnail: 'https://www.coolmathgames.com/sites/default/files/styles/mobile_game_image/public/DuckLife_OG-logo.jpg.webp?itok=YPMNTKNM',
-    embedUrl: 'https://dnrweqffuwjtx.cloudfront.net/games/2024/wix/duck-life-4/index.html',
+
+    {
+    id: 'duck-life-4',
+    title: 'Duck Life 4',
+    thumbnail: 'https://www.coolmathgames.com/sites/default/files/DuckLife4_OG-logo.jpg',
+    embedUrl: '  https://dnrweqffuwjtx.cloudfront.net/games/2024/wix/duck-life-4/index.html',
     categories: ['puzzle', 'racing', 'sports'],
     featured: true,
     isHot: true,
-    addedAt: '2026-02-04',
-    description: 'Duck Life is an endearing adventure racing game where you train a duck from a humble farm duckling into a champion racer capable of winning the world tournament. The game combines training mini-games, racing competitions, and progression mechanics into an addictive package that appeals to all ages. Your story begins on a farm devastated by a tornado, leaving you with one egg and a dream of rebuilding. When the duckling hatches, it\'s up to you to train it across three disciplines: running, flying, and swimming. Each discipline has dedicated training mini-games that improve your duck\'s stats while testing your skills. Running training involves jumping over obstacles in an endless runner format - use SPACEBAR or UP ARROW to jump. Flying training requires navigating through caves while collecting coins - use ARROW KEYS. Swimming training challenges you to dive and surface - press DOWN ARROW to dive. The more you train, the higher your stats climb. Winning races earns money for seeds and cosmetic upgrades.'
+    addedAt: '2026-02-12',
+    description: 'Duck Life 4 is an endearing adventure racing game where you train a duck from a humble farm duckling into a champion racer capable of winning the world tournament. The game combines training mini-games, racing competitions, and progression mechanics into an addictive package that appeals to all ages. Your story begins on a farm devastated by a tornado, leaving you with one egg and a dream of rebuilding. When the duckling hatches, it\'s up to you to train it across three disciplines: running, flying, and swimming. Each discipline has dedicated training mini-games that improve your duck\'s stats while testing your skills. Running training involves jumping over obstacles in an endless runner format - use SPACEBAR or UP ARROW to jump. Flying training requires navigating through caves while collecting coins - use ARROW KEYS. Swimming training challenges you to dive and surface - press DOWN ARROW to dive. The more you train, the higher your stats climb. Winning races earns money for seeds and cosmetic upgrades.'
   },
+
   {
     id: 'cookie-clicker',
     title: 'Cookie Clicker',
@@ -116,6 +118,16 @@ export const games: Game[] = [
     addedAt: '2026-02-04',
     description: '1v1.LOL is a competitive online third-person shooter that combines fast-paced combat with building mechanics inspired by Fortnite. This game puts you in direct 1v1 battles against other players where quick reflexes, sharp aim, and strategic building skills determine victory. The core gameplay involves shooting opponents while simultaneously constructing defensive structures. You can create walls, ramps, floors, and roofs to protect yourself. Controls are comprehensive: use WASD for movement, MOUSE to aim/shoot, keys 1-5 for weapons/building, and G to edit. The building system requires practice - Q builds walls, E builds floors, R builds ramps, and F builds pyramids. The game offers multiple modes including Box Fight and Build Fight.'
   },
+    {
+    id: 'duck-life',
+    title: 'Duck Life',
+    thumbnail: 'https://www.coolmathgames.com/sites/default/files/styles/mobile_game_image/public/DuckLife_OG-logo.jpg.webp?itok=YPMNTKNM',
+    embedUrl: 'https://dnrweqffuwjtx.cloudfront.net/games/2024/wix/duck-life-4/index.html',
+    categories: ['puzzle', 'racing', 'sports'],
+    addedAt: '2026-02-04',
+    description: 'Duck Life is an endearing adventure racing game where you train a duck from a humble farm duckling into a champion racer capable of winning the world tournament. The game combines training mini-games, racing competitions, and progression mechanics into an addictive package that appeals to all ages. Your story begins on a farm devastated by a tornado, leaving you with one egg and a dream of rebuilding. When the duckling hatches, it\'s up to you to train it across three disciplines: running, flying, and swimming. Each discipline has dedicated training mini-games that improve your duck\'s stats while testing your skills. Running training involves jumping over obstacles in an endless runner format - use SPACEBAR or UP ARROW to jump. Flying training requires navigating through caves while collecting coins - use ARROW KEYS. Swimming training challenges you to dive and surface - press DOWN ARROW to dive. The more you train, the higher your stats climb. Winning races earns money for seeds and cosmetic upgrades.'
+  },
+
 
   {
     id: 'wings-io',
