@@ -1,9 +1,8 @@
 /**
- * LAZY LOADING IMAGE COMPONENT
- * 
- * Only loads images when they're about to enter the viewport
- * Shows skeleton loader while loading
- * Fallback placeholder for broken images
+ * LAZY LOADING IMAGE COMPONENT - Updated with Fallback Support
+ * * 1. Tries to load 'src' (Local image)
+ * 2. If it fails, switches to 'fallbackSrc' (Original URL)
+ * 3. Only shows error icon if BOTH fail
  */
 
 import { useState, useEffect, useRef } from 'react';
@@ -11,16 +10,25 @@ import { ImageOff } from 'lucide-react';
 
 interface LazyImageProps {
   src: string;
+  fallbackSrc?: string; // New prop for the backup URL
   alt: string;
   className?: string;
   fallbackIcon?: boolean;
 }
 
-export default function LazyImage({ src, alt, className = '', fallbackIcon = true }: LazyImageProps) {
+export default function LazyImage({ src, fallbackSrc, alt, className = '', fallbackIcon = true }: LazyImageProps) {
+  const [imgSrc, setImgSrc] = useState(src); // State to track which URL we are currently using
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
+
+  // Reset state if the primary src prop changes (important for lists)
+  useEffect(() => {
+    setImgSrc(src);
+    setHasError(false);
+    setIsLoading(true);
+  }, [src]);
 
   // Intersection Observer to detect when image enters viewport
   useEffect(() => {
@@ -36,7 +44,7 @@ export default function LazyImage({ src, alt, className = '', fallbackIcon = tru
         });
       },
       {
-        rootMargin: '50px', // Start loading 50px before entering viewport
+        rootMargin: '50px',
         threshold: 0.01
       }
     );
@@ -54,9 +62,17 @@ export default function LazyImage({ src, alt, className = '', fallbackIcon = tru
   };
 
   const handleError = () => {
-    setIsLoading(false);
-    setHasError(true);
-    console.warn(`Failed to load image: ${src}`);
+    // Logic: If we are currently trying the local image (src) AND we have a fallback available...
+    if (fallbackSrc && imgSrc === src) {
+      // Switch to the fallback URL
+      setImgSrc(fallbackSrc);
+      // We are still loading, just trying a new source
+    } else {
+      // If we failed and have no fallback (or the fallback also failed)
+      setIsLoading(false);
+      setHasError(true);
+      console.warn(`Failed to load image for: ${alt}`);
+    }
   };
 
   return (
@@ -79,9 +95,9 @@ export default function LazyImage({ src, alt, className = '', fallbackIcon = tru
       )}
 
       {/* Actual Image - only load when in view */}
-      {isInView && (
+      {isInView && !hasError && (
         <img
-          src={src}
+          src={imgSrc} // We use the state 'imgSrc', not the prop 'src'
           alt={alt}
           className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
           onLoad={handleLoad}
