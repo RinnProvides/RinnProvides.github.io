@@ -1,59 +1,57 @@
 /**
- * LAZY LOADING IMAGE COMPONENT - Updated with Fallback Support
- * * 1. Tries to load 'src' (Local image)
- * 2. If it fails, switches to 'fallbackSrc' (Original URL)
- * 3. Only shows error icon if BOTH fail
+ * LAZY LOADING IMAGE COMPONENT - Multi-Format Support
+ * Logic:
+ * 1. Try local images in order (webp -> png -> jpg)
+ * 2. If all local fail, use fallbackSrc (original URL)
+ * 3. If that fails, show error icon
  */
 
 import { useState, useEffect, useRef } from 'react';
 import { ImageOff } from 'lucide-react';
 
 interface LazyImageProps {
-  src: string;
-  fallbackSrc?: string; // New prop for the backup URL
+  src: string | string[]; // Can now be a single string OR a list of strings
+  fallbackSrc?: string;
   alt: string;
   className?: string;
   fallbackIcon?: boolean;
 }
 
 export default function LazyImage({ src, fallbackSrc, alt, className = '', fallbackIcon = true }: LazyImageProps) {
-  const [imgSrc, setImgSrc] = useState(src); // State to track which URL we are currently using
+  // Convert single string to array for consistent handling
+  const srcList = Array.isArray(src) ? src : [src];
+  
+  const [currentSrcIndex, setCurrentSrcIndex] = useState(0);
+  const [imgSrc, setImgSrc] = useState<string | undefined>(undefined);
+  
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
 
-  // Reset state if the primary src prop changes (important for lists)
+  // Initialize with the first image in the list
   useEffect(() => {
-    setImgSrc(src);
+    setImgSrc(srcList[0]);
+    setCurrentSrcIndex(0);
     setHasError(false);
     setIsLoading(true);
   }, [src]);
 
-  // Intersection Observer to detect when image enters viewport
   useEffect(() => {
     if (!imgRef.current) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsInView(true);
-            observer.disconnect(); // Stop observing once loaded
+            observer.disconnect();
           }
         });
       },
-      {
-        rootMargin: '50px',
-        threshold: 0.01
-      }
+      { rootMargin: '50px', threshold: 0.01 }
     );
-
     observer.observe(imgRef.current);
-
-    return () => {
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
 
   const handleLoad = () => {
@@ -62,22 +60,27 @@ export default function LazyImage({ src, fallbackSrc, alt, className = '', fallb
   };
 
   const handleError = () => {
-    // Logic: If we are currently trying the local image (src) AND we have a fallback available...
-    if (fallbackSrc && imgSrc === src) {
-      // Switch to the fallback URL
+    const nextIndex = currentSrcIndex + 1;
+
+    // 1. Try the next local file format (e.g., switch from webp -> png)
+    if (nextIndex < srcList.length) {
+      setCurrentSrcIndex(nextIndex);
+      setImgSrc(srcList[nextIndex]);
+    } 
+    // 2. If ran out of local files, try the fallback URL (from games.ts)
+    else if (fallbackSrc && imgSrc !== fallbackSrc) {
       setImgSrc(fallbackSrc);
-      // We are still loading, just trying a new source
-    } else {
-      // If we failed and have no fallback (or the fallback also failed)
+    } 
+    // 3. Give up
+    else {
       setIsLoading(false);
       setHasError(true);
-      console.warn(`Failed to load image for: ${alt}`);
     }
   };
 
   return (
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
-      {/* Skeleton Loader */}
+      {/* Loading Skeleton */}
       {isLoading && !hasError && (
         <div className="absolute inset-0 bg-gradient-to-r from-game-surface-hover via-game-surface to-game-surface-hover animate-pulse">
           <div className="absolute inset-0 flex items-center justify-center">
@@ -86,18 +89,18 @@ export default function LazyImage({ src, fallbackSrc, alt, className = '', fallb
         </div>
       )}
 
-      {/* Error Placeholder */}
+      {/* Error State */}
       {hasError && fallbackIcon && (
         <div className="absolute inset-0 bg-game-surface-hover flex flex-col items-center justify-center text-game-text-muted">
           <ImageOff className="w-12 h-12 mb-2" />
-          <p className="text-xs">Image not available</p>
+          <p className="text-xs">No Image</p>
         </div>
       )}
 
-      {/* Actual Image - only load when in view */}
-      {isInView && !hasError && (
+      {/* The Image */}
+      {isInView && imgSrc && !hasError && (
         <img
-          src={imgSrc} // We use the state 'imgSrc', not the prop 'src'
+          src={imgSrc}
           alt={alt}
           className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
           onLoad={handleLoad}
