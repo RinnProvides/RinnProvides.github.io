@@ -1,15 +1,7 @@
 /**
- * GAME CARD COMPONENT - Updated with Favorites
- * 
- * Displays a game thumbnail with hover effects.
- * Features:
- * - 16:9 aspect ratio (enforced with aspect-video)
- * - Hover zoom effect (scale-105)
- * - Game title overlay at bottom
- * - Rounded corners and shadow
- * - Lazy loading for images
- * - Rating system display
- * - Favorite heart icon
+ * GAME CARD COMPONENT - Updated with Smart Image Loading
+ * * Now attempts to load local thumbnails first!
+ * Path: /public/images/thumbnails/{game-id}.webp
  */
 
 import { useState, useEffect } from 'react';
@@ -26,6 +18,10 @@ interface GameCardProps {
 
 export default function GameCard({ game, onClick }: GameCardProps) {
   const [favorited, setFavorited] = useState(false);
+
+  // 1. Construct the path to the local image
+  // This assumes your files are named "duck-life.webp", "moto-x3m.webp", etc.
+  const localThumbnail = `/images/thumbnails/${game.id}.webp`;
 
   // Check if game is favorited on mount
   useEffect(() => {
@@ -50,7 +46,8 @@ export default function GameCard({ game, onClick }: GameCardProps) {
       {/* Thumbnail with 16:9 aspect ratio + Lazy Loading */}
       <div className="relative aspect-video overflow-hidden bg-game-bg">
         <LazyImage
-          src={game.thumbnail}
+          src={localThumbnail}         // Try to load local file first
+          fallbackSrc={game.thumbnail} // If local fails, use the URL from games.ts
           alt={game.title}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
@@ -81,7 +78,7 @@ export default function GameCard({ game, onClick }: GameCardProps) {
 
         {/* Badges */}
         <div className="absolute top-2 right-2 flex flex-col gap-2">
-          {/* NEW Badge - Automatically shown if game added within last 5 days */}
+          {/* NEW Badge */}
           {isGameNew(game) && (
             <div className="bg-red-600 px-3 py-1 rounded-full text-xs font-bold text-white uppercase shadow-lg animate-pulse flex items-center gap-1">
               <span className="text-yellow-300">✨</span>
