@@ -168,15 +168,15 @@ export const games: Game[] = [
     addedAt: '2026-01-27',
     description: 'Slope is an adrenaline-pumping 3D endless runner game that will test your reflexes. You control a ball rolling down a neon-lit slope filled with dangerous obstacles, sharp turns, and treacherous gaps. The game starts off manageable but quickly accelerates to insane speeds. Your objective is simple: survive as long as possible while racking up points. Controls are incredibly simple - use the LEFT and RIGHT ARROW KEYS to steer. The challenge comes from the ever-increasing speed and the unpredictable terrain. You\'ll need lightning-fast reflexes to dodge red obstacles and navigate narrow platforms without falling into the void.'
   },
-    {
+   {
     id: 'hollow-knight',
     title: 'Hollow Knight',
     thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYiyfb6-cPwR66wBcsj1Vwz0qZiTmcVZel9g&s',
     embedUrl: 'https://2games.io/game/hollow-knight/',
-    categories: ['racing', 'action'],
+    categories: ['puzzle', 'action'],
     isHot: true,
-    addedAt: '2026-01-27',
-    description: 'Slope is an adrenaline-pumping 3D endless runner game that will test your reflexes. You control a ball rolling down a neon-lit slope filled with dangerous obstacles, sharp turns, and treacherous gaps. The game starts off manageable but quickly accelerates to insane speeds. Your objective is simple: survive as long as possible while racking up points. Controls are incredibly simple - use the LEFT and RIGHT ARROW KEYS to steer. The challenge comes from the ever-increasing speed and the unpredictable terrain. You\'ll need lightning-fast reflexes to dodge red obstacles and navigate narrow platforms without falling into the void.'
+    addedAt: '2026-02-18',
+    description: 'Hollow Knight is a hauntingly beautiful 2D action-adventure game that will test your exploration and combat skills. You control a silent, masked hero descending into the ruined underground kingdom of Hallownest, filled with corrupted bugs, deadly traps, and ancient secrets. The game starts off manageable but quickly plunges you into a sprawling labyrinth of punishing encounters. Your objective is monumental: uncover the kingdom\'s dark mysteries while surviving its infected depths. Controls are tight and responsive - use your Nail to strike, jump over hazards, and dash out of danger. The challenge comes from the unforgiving boss fights and the intricate, perilous environments. You\'ll need pixel-perfect precision to dodge devastating attacks and navigate thorny caverns without losing your life to the abyss.'
   },
   {
     id: 'retro-bowl',
