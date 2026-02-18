@@ -220,7 +220,7 @@ export const games: Game[] = [
     id: 'merge-round-racers',
     title: 'Merge Round Racers',
     thumbnail: 'https://i.ytimg.com/vi/YFATNYTD0Ic/maxresdefault.jpg',
-    embedUrl: 'https://77pen.github.io/p7/merge-round-racers/',
+    embedUrl: 'https://ubg6969.gitlab.io/merge-round-racers/',
     categories: ['racing', 'puzzle', 'casual'],
     addedAt: '2026-01-24',
     description: 'Merge Round Racers combines the addictiveness of merging games with the excitement of track racing. In this game, you purchase small cars and merge identical ones to create faster, higher-level vehicles. Once you have a fleet of cars, you place them on the track to race automatically and earn coins. The better the car, the more coins it generates per lap. You use these earnings to buy more cars and continue the cycle. It is a relaxing idle game that satisfies the urge to organize and upgrade. The colorful graphics and simple loop make it perfect for playing in the background.'
@@ -576,7 +576,7 @@ export const games: Game[] = [
     id: 'chess',
     title: 'Chess',
     thumbnail: 'https://www.chess.com/bundles/web/images/offline-play/standardboard.png',
-    embedUrl: 'https://www.chess.com/play/computer',
+    embedUrl: 'https://chessunblock.github.io/file/',
     categories: ['puzzle', 'multiplayer', 'sports'],
     isHot: true,
     addedAt: '2026-01-27',
@@ -586,7 +586,7 @@ export const games: Game[] = [
     id: 'bitlife',
     title: 'BitLife',
     thumbnail: 'https://play-lh.googleusercontent.com/fUM-UyywXxjC8soxAZdIlxJrlRRXmql8wkE426SHzft4lJycSKVd2jCYQQX1BEG9Xw',
-    embedUrl: 'https://bitlifeunblocked.io/',
+    embedUrl: 'https://htmlxm.github.io/h/bitlife/',
     categories: ['puzzle', 'casual'], // Sim/Puzzle
     addedAt: '2026-01-27',
     description: 'BitLife is a text-based life simulator. You live a randomly generated life from birth to death. Controls: Mouse to select choices. You make decisions about school, jobs, crime, and relationships. "Age Up" to progress years. Events are random—you might win the lottery or go to jail. You can become a doctor, a criminal, or a movie star. The goal is to live a successful or interesting life. It is funny, unpredictable, and highly replayable.'
@@ -595,7 +595,7 @@ export const games: Game[] = [
     id: 'poly-track',
     title: 'PolyTrack',
     thumbnail: 'https://i.ytimg.com/vi/wXsG1d9TzdI/maxresdefault.jpg',
-    embedUrl: 'https://www.kodub.com/apps/polytrack',
+    embedUrl: 'https://poly-track.io/polytrack.embed',
     categories: ['racing', 'action'],
     isHot: true,
     addedAt: '2026-02-05',
@@ -623,7 +623,7 @@ export const games: Game[] = [
     id: 'raft-wars-2',
     title: 'Raft Wars 2',
     thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/8ce3d09339bcb18c63bf9f1780795944/raft-wars-2.png',
-    embedUrl: 'https://77pen.github.io/p6/raft-wars-2',
+    embedUrl: 'https://ub-g.github.io/embed/raft-wars-2',
     categories: ['action', 'puzzle'],
     addedAt: '2026-01-26',
     description: 'Raft Wars 2 is a turn-based shooting game where you defend your treasure. You play as Simon and his brother, fighting off security guards and enemies using a raft equipped with cannons. Controls: Mouse to aim and set power. You launch projectiles like tennis balls and grenades to knock enemies into the water or drain their health. You can upgrade your raft and weapons between levels. The game combines physics aiming with strategy. The cartoon style and funny storyline make it a lighthearted sequel to the classic original.'
