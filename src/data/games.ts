@@ -168,11 +168,21 @@ export const games: Game[] = [
     addedAt: '2026-01-27',
     description: 'Slope is an adrenaline-pumping 3D endless runner game that will test your reflexes. You control a ball rolling down a neon-lit slope filled with dangerous obstacles, sharp turns, and treacherous gaps. The game starts off manageable but quickly accelerates to insane speeds. Your objective is simple: survive as long as possible while racking up points. Controls are incredibly simple - use the LEFT and RIGHT ARROW KEYS to steer. The challenge comes from the ever-increasing speed and the unpredictable terrain. You\'ll need lightning-fast reflexes to dodge red obstacles and navigate narrow platforms without falling into the void.'
   },
+    {
+    id: 'hollow-knight',
+    title: 'Hollow Knight',
+    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYiyfb6-cPwR66wBcsj1Vwz0qZiTmcVZel9g&s',
+    embedUrl: 'https://2games.io/game/hollow-knight/',
+    categories: ['racing', 'action'],
+    isHot: true,
+    addedAt: '2026-01-27',
+    description: 'Slope is an adrenaline-pumping 3D endless runner game that will test your reflexes. You control a ball rolling down a neon-lit slope filled with dangerous obstacles, sharp turns, and treacherous gaps. The game starts off manageable but quickly accelerates to insane speeds. Your objective is simple: survive as long as possible while racking up points. Controls are incredibly simple - use the LEFT and RIGHT ARROW KEYS to steer. The challenge comes from the ever-increasing speed and the unpredictable terrain. You\'ll need lightning-fast reflexes to dodge red obstacles and navigate narrow platforms without falling into the void.'
+  },
   {
     id: 'retro-bowl',
     title: 'Retro Bowl',
     thumbnail: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/Retro_Bowl_cover.png/250px-Retro_Bowl_cover.png',
-    embedUrl: 'https://retrobowl.github.io/playgame/',
+    embedUrl: 'https://ubg669.gitlab.io/retro-bowl/',
     categories: ['sports', 'puzzle'], // Puzzle due to management aspects
     isHot: true,
     addedAt: '2026-01-26',
