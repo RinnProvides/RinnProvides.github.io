@@ -40,7 +40,7 @@ export const games: Game[] = [
     id: 'duck-life-4',
     title: 'Duck Life 4',
     thumbnail: 'https://www.coolmathgames.com/sites/default/files/DuckLife4_OG-logo.jpg',
-    embedUrl: 'https://unblocked-games.s3.amazonaws.com/games/2024/wix/duck-life-4/index.html',
+    embedUrl: 'https://ub-g.githb.io/embed/duck-life-4',
     categories: ['puzzle', 'racing', 'sports'],
     featured: true,
     isHot: true,
