@@ -24,9 +24,6 @@ import PanicButton from '@/components/features/PanicButton';
 import TopRatedSection from '@/components/features/TopRatedSection';
 import GameCollection from '@/components/features/GameCollection';
 
-// --- 1. IMPORT SMART ADS LOGIC ---
-import { triggerSmartAd } from '@/lib/ads';
-
 export default function HomePage() {
   const navigate = useNavigate();
   const [currentCategory, setCurrentCategory] = useState('all');
@@ -67,8 +64,6 @@ export default function HomePage() {
 
   // --- 2. UPDATED CLICK HANDLER WITH SMART ADS ---
   const handleGameClick = (gameId: string) => {
-    // Run the ad logic (checks cooldowns, updates counters, etc.)
-    triggerSmartAd();
 
     // Navigate immediately to the game
     navigate(`/play/${gameId}`);
