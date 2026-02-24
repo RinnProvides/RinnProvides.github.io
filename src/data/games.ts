@@ -162,7 +162,7 @@ export const games: Game[] = [
     id: 'slope',
     title: 'Slope',
     thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2HXY67NSbyMMpzlnSbBWUpcSmNMDM3CPoEA&s',
-    embedUrl: 'https://bigfoot9999.github.io/Slope-Game/',
+    embedUrl: 'https://windowslover1234.github.io/games/slope/',
     categories: ['racing', 'action'],
     isHot: true,
     addedAt: '2026-01-27',
