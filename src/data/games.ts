@@ -569,7 +569,7 @@ export const games: Game[] = [
     title: "Papa's Freezeria",
     thumbnail: 'https://www.coolmathgames.com/sites/default/files/PapasFreezeria_OG-logo.jpg',
     embedUrl: 'https://ubg6969.gitlab.io/papasfreezeria/',
-    categories: ['casual', 'strategy'],
+    categories: ['casual', 'puzzle'],
     isHot: true,
     addedAt: '2026-02-24',
     description: 'Papa\'s Freezeria is a delightfully chaotic time-management restaurant game that will test your multitasking skills. You control a newly hired worker managing a beachfront ice cream shop filled with demanding customers, customizable sundaes, and complex orders. The game starts off manageable with simple treats but quickly accelerates into a frantic rush hour of churning blenders and precise topping placements. Your objective is simple: serve perfect freezer sundaes to keep your customers happy while racking up tips and unlocking new upgrades. Controls are incredibly simple - use your MOUSE to drag, drop, and click through the different building stations. The challenge comes from the ever-increasing volume of customers and their highly specific, timed requests. You\'ll need sharp memory and quick reflexes to juggle multiple orders and hit the perfect blend timing without ruining the treat.'
