@@ -1,6 +1,6 @@
 /**
  * MAIN APP COMPONENT
- * Added: Discord Webhook Notification with Geolocation
+ * Added: Discord Webhook Notification
  */
 
 import { useEffect } from 'react';
@@ -27,46 +27,30 @@ function App() {
         return; // Too soon, don't spam
       }
 
+      // 2. Prepare the message
+      const payload = {
+        content: "🔔 **New Visitor!** Someone just opened the website.",
+        embeds: [{
+          title: "Visitor Details",
+          color: 5814783, // Blue-ish color
+          fields: [
+            { name: "Page", value: window.location.pathname, inline: true },
+            { name: "Referrer", value: document.referrer || "Direct", inline: true },
+            { name: "Screen", value: `${window.screen.width}x${window.screen.height}`, inline: true }
+          ],
+          timestamp: new Date().toISOString()
+        }]
+      };
+
+      // 3. Send to Discord
       try {
-        // 2. Get Geolocation Data (Using a free API)
-        let city = 'Unknown City';
-        let country = 'Unknown Country';
-        
-        try {
-          const geoResponse = await fetch('https://ipapi.co/json/');
-          const geoData = await geoResponse.json();
-          if (geoData.city) city = geoData.city;
-          if (geoData.country_name) country = geoData.country_name;
-        } catch (geoError) {
-          console.warn('Could not fetch location data');
-        }
-
-        // 3. Prepare the message with a sleek embed
-        const payload = {
-          username: "RinnProvides Traffic Bot",
-          avatar_url: "https://cdn-icons-png.flaticon.com/512/5260/5260498.png",
-          embeds: [{
-            title: "🚀 New Visitor Arrived!",
-            color: 5814783, // Blue-ish color
-            fields: [
-              { name: "📍 Location", value: `${city}, ${country}`, inline: true },
-              { name: "🖥️ Screen", value: `${window.screen.width}x${window.screen.height}`, inline: true },
-              { name: "🔗 Referrer", value: document.referrer || "Direct", inline: true },
-              { name: "📄 Landing Page", value: window.location.pathname, inline: false }
-            ],
-            footer: { text: "Site Analytics" },
-            timestamp: new Date().toISOString()
-          }]
-        };
-
-        // 4. Send to Discord
         await fetch(WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
         
-        // 5. Update the cooldown timer
+        // 4. Update the cooldown timer
         localStorage.setItem('last_visit_ping', now.toString());
       } catch (err) {
         console.error("Failed to notify Discord", err);
