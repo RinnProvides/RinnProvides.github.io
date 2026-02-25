@@ -276,6 +276,16 @@ export const games: Game[] = [
     description: 'Monkey Mart is a bustling management simulation game where you control a monkey running a grocery store. You start with a banana stand, planting trees and harvesting fruit. As you earn money, you expand to include corn, eggs, milk, and popcorn. You must physically run your character around to manage stock and collect cash. You can hire assistants to restock shelves and farmers to harvest crops. Your job shifts to managing staff and upgrading their speed. The graphics are vibrant and 3D with hilarious animations. It is satisfying to watch your store go from a quiet stand to a chaotic supermarket.'
   },
   {
+    id: 'bob-the-robber-2',
+    title: 'Bob the Robber 2',
+    thumbnail: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/bob-the-robber-2.png',
+    embedUrl: 'https://ubg6969.gitlab.io/bobtherobber2/',
+    categories: ['puzzle', 'strategy'],
+    isHot: true,
+    addedAt: '2026-02-24',
+    description: 'Bob the Robber 2 is a thrilling stealth-puzzle game that will test your cunning and timing. You control the titular sneaky thief, navigating through heavily guarded buildings filled with security cameras, laser tripwires, and patrolling guards. The game starts off manageable but quickly escalates into complex heists requiring careful planning. Your objective is simple: infiltrate the premises, steal the loot, and escape without getting caught. Controls are incredibly simple - use the ARROW KEYS to move and the UP ARROW or SPACEBAR to interact with objects, pick locks, and knock out guards. The challenge comes from the ever-increasing security measures and the unpredictable guard patrols. You\'ll need sharp reflexes and strategic thinking to hide in the shadows and bypass alarms without triggering a lockdown.'
+  },
+  {
     id: 'eggy-car',
     title: 'Eggy Car',
     thumbnail: 'https://i.ytimg.com/vi/U2SgrOeRrrs/maxresdefault.jpg',
