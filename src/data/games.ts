@@ -563,6 +563,18 @@ export const games: Game[] = [
     addedAt: '2026-01-28',
     description: 'The World\'s Hardest Game is a deceptively simple game about precision. You control a red square and must collect yellow coins while avoiding blue dots. Controls: Arrow Keys. The blue dots move in predictable but tight patterns. One touch kills you. You must plan your route and execute it with pixel-perfect timing. It is known for its extreme difficulty and high death counts. There are 30 levels that will test your patience. It is a classic of the flash era.'
   },
+
+  {
+    id: 'papas-freezeria',
+    title: "Papa's Freezeria",
+    thumbnail: 'https://www.coolmathgames.com/sites/default/files/PapasFreezeria_OG-logo.jpg',
+    embedUrl: 'https://ubg6969.gitlab.io/papasfreezeria/',
+    categories: ['casual', 'strategy'],
+    isHot: true,
+    addedAt: '2026-02-24',
+    description: 'Papa\'s Freezeria is a delightfully chaotic time-management restaurant game that will test your multitasking skills. You control a newly hired worker managing a beachfront ice cream shop filled with demanding customers, customizable sundaes, and complex orders. The game starts off manageable with simple treats but quickly accelerates into a frantic rush hour of churning blenders and precise topping placements. Your objective is simple: serve perfect freezer sundaes to keep your customers happy while racking up tips and unlocking new upgrades. Controls are incredibly simple - use your MOUSE to drag, drop, and click through the different building stations. The challenge comes from the ever-increasing volume of customers and their highly specific, timed requests. You\'ll need sharp memory and quick reflexes to juggle multiple orders and hit the perfect blend timing without ruining the treat.'
+  },
+  
   {
     id: 'slither-io',
     title: 'Slither.io',
